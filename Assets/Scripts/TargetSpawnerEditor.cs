@@ -11,11 +11,11 @@ namespace Assets.Scripts
         {
             DrawDefaultInspector();
 
-            var ClownSpawnerScript = (TargetSpawner)target;
+            TargetSpawner TargetSpawnerScript = (TargetSpawner)target;
 
-            if (GUILayout.Button("Spawn " + ClownSpawnerScript.NumberOfObjects + " " + ClownSpawnerScript.ObjectToSpawn.name + "s"))
+            if (GUILayout.Button("Spawn " + TargetSpawnerScript.NumberOfObjects + " " + TargetSpawnerScript.ObjectToSpawn.name + "s"))
             {
-                ClownSpawnerScript.Generate();
+                TargetSpawnerScript.Generate();
             }
         }
     }

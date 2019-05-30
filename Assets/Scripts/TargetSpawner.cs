@@ -8,32 +8,32 @@ namespace Assets.Scripts
     public class TargetSpawner : MonoBehaviour
     {
         [Range(1.0f, 20.0f)]
-        public float SpawnRadius = 1.0f;
+        public float Radius = 1.0f;
 
-        [Range(2, 100)]
+        [Range(2, 50)]
         public int NumberOfObjects = 2;
 
-        [Range(0.1f, 20.0f)]
+        [Range(0.3f, 5.0f)]
         public float RotationSpeed = 3.0f;
 
         public Target ObjectToSpawn = null;
 
-        private GameObject[] Objects;
-
+        private GameObject[] Targets;
         private float Angle;
 
+        [UsedImplicitly]
         private void Awake()
         {
-	        // Get all objects of a certain tag
-	        Objects = GameObject.FindGameObjectsWithTag("Target");
+	        // Get all targets in world
+	        Targets = GameObject.FindGameObjectsWithTag("Target");
         }
 
         [UsedImplicitly]
         private void OnDrawGizmos()
         {
             #if UNITY_EDITOR
-			// Draw the spawn radius
-			Handles.DrawWireDisc(transform.position, transform.right, SpawnRadius);	
+			// Draw the radius
+			Handles.DrawWireDisc(transform.position, transform.right, Radius);	
 
 			Gizmos.color = Color.white;
 			Gizmos.DrawSphere(transform.position, 0.1f);
@@ -42,40 +42,37 @@ namespace Assets.Scripts
 
         public void Generate()
         {
-            // Get all spawn points
-            Objects = GameObject.FindGameObjectsWithTag("Target");
+            // Get all targets in world
+            Targets = GameObject.FindGameObjectsWithTag("Target");
 
             // Destroy them all
-            foreach (var Object in Objects)
+            foreach (var Target in Targets)
             {
                 #if UNITY_EDITOR
-				EditorApplication.delayCall += () =>
-				{
-					if (Application.isPlaying)
-						Destroy(Object);
-					else
-						DestroyImmediate(Object);
-				};
+				DestroyImmediate(Target);
                 #endif
             }
 
-            // Spawn new objects
+            // Spawn new targets in a shape of a circle
             Vector3 SpawnPoint = Vector3.zero;
             float Spacing = (360.0f / NumberOfObjects);
 
             for (int i = 0; i < NumberOfObjects; i++)
             {
+				// The Point on cirumference of circle
 	            SpawnPoint.x = transform.position.x;
-	            SpawnPoint.y = transform.position.y + SpawnRadius * Mathf.Cos(Angle*Mathf.Deg2Rad);
-	            SpawnPoint.z = transform.position.z + SpawnRadius * Mathf.Sin(Angle*Mathf.Deg2Rad);
+	            SpawnPoint.y = transform.position.y + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
+	            SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 
-	            var Object = Instantiate<Target>(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
-	            Object.name = ObjectToSpawn.name + "_" + i;
-	            Object.Centre = transform.position;
-	            Object.Radius = SpawnRadius;
-	            Object.Angle = Angle*Mathf.Deg2Rad;
-	            Object.RotateSpeed = RotationSpeed;
+				// Spawn the target on the spawn point and initialize its variables
+	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+	            Target.name = ObjectToSpawn.name + "_" + i;
+	            Target.Centre = transform.position;
+	            Target.Radius = Radius;
+	            Target.Angle = Angle*Mathf.Deg2Rad;
+	            Target.RotationSpeed = RotationSpeed;
 
+				// Increase the angle for next iteration
 	            Angle += Spacing;
             }
         }
