@@ -67,7 +67,7 @@ namespace Assets.Scripts
             // Destroy them all
             foreach (var Clown in Clowns)
             {
-#if UNITY_EDITOR
+                #if UNITY_EDITOR
 				EditorApplication.delayCall += () =>
 				{
 					if (Application.isPlaying)
@@ -75,7 +75,7 @@ namespace Assets.Scripts
 					else
 						DestroyImmediate(Clown);
 				};
-#endif
+                #endif
             }
 
             // Spawn new objects
