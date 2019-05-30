@@ -12,8 +12,10 @@ namespace Assets.Scripts
         [Range(2, 50)]
         public int NumberOfObjects = 2;
 
-        [Range(0.3f, 100.0f)]
-        public float RotationSpeed = 3.0f;
+        [Range(30.0f, 100.0f)]
+        public float RotationSpeed = 30.0f;
+
+        public bool Clockwise = true;
 
         public Target ObjectToSpawn = null;
 
@@ -73,19 +75,18 @@ namespace Assets.Scripts
 	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
                 Target.transform.parent = gameObject.transform;
 	            Target.name = ObjectToSpawn.name + "_" + i;
-	            Target.Centre = transform.position;
-	            Target.Radius = Radius;
-	            Target.Angle = Angle*Mathf.Deg2Rad;
-	            Target.RotationSpeed = RotationSpeed;
 
-				// Increase the angle for next iteration
+                // Increase the angle for next iteration
 	            Angle += Spacing;
             }
         }
 
         private void Rotate()
         {
-            Angle += RotationSpeed * Time.deltaTime;
+            if (Clockwise)
+                Angle += RotationSpeed * Time.deltaTime;
+            else
+                Angle -= RotationSpeed * Time.deltaTime;
 
             transform.Rotate(Vector3.right, Angle);
 
