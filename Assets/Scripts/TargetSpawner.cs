@@ -4,7 +4,6 @@ using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
-    [ExecuteInEditMode]
     public class TargetSpawner : MonoBehaviour
     {
         [Range(1.0f, 20.0f)]
