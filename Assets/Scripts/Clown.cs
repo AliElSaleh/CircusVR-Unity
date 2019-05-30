@@ -42,6 +42,8 @@ namespace Assets.Scripts
             // Draw the spawn radius
             Handles.DrawWireDisc(Target, transform.up, AcceptanceRadius);
 #endif
+
+            tag = "Clown";
         }
     }
 }
