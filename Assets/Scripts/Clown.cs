@@ -1,5 +1,6 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
@@ -15,6 +16,7 @@ namespace Assets.Scripts
         private Vector3 Direction;
         private Vector3 Location;
 
+        [UsedImplicitly]
         private void Start()
         {
             Location = transform.position;
@@ -24,6 +26,7 @@ namespace Assets.Scripts
             Direction = Target - Location;
         }
 
+        [UsedImplicitly]
         private void Update()
         {
             Location = transform.position;
@@ -32,6 +35,7 @@ namespace Assets.Scripts
                 transform.Translate(Direction.normalized * MoveSpeed * Time.deltaTime);
         }
 
+        [UsedImplicitly]
         private void OnDrawGizmos()
         {
 #if UNITY_EDITOR

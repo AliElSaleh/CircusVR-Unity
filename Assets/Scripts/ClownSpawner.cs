@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
@@ -19,6 +20,7 @@ namespace Assets.Scripts
         [HideInInspector]
         private int TotalObjects = 2;
 
+        [UsedImplicitly]
         private void Update()
         {
             #if UNITY_EDITOR
@@ -27,6 +29,7 @@ namespace Assets.Scripts
             #endif
         }
 
+        [UsedImplicitly]
         private void OnDrawGizmos()
         {
             #if UNITY_EDITOR

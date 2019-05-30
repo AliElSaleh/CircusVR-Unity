@@ -1,16 +1,17 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
-    [CustomEditor(typeof(ClownSpawner))]
+    [CustomEditor(typeof(ClownSpawner))][UsedImplicitly]
     public class ClownSpawnerEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
 
-            ClownSpawner ClownSpawnerScript = (ClownSpawner)target;
+            var ClownSpawnerScript = (ClownSpawner)target;
 
             if (GUILayout.Button("Spawn " + ClownSpawnerScript.NumberOfObjects + " " + ClownSpawnerScript.ObjectToSpawn.name + "s"))
             {
