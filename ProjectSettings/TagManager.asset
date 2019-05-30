@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Clown
+  - Target
   layers:
   - Default
   - TransparentFX

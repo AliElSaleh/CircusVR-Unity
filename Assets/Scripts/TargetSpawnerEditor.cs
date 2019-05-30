@@ -4,14 +4,14 @@ using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
-    [CustomEditor(typeof(ClownSpawner))][UsedImplicitly]
-    public class ClownSpawnerEditor : Editor
+    [CustomEditor(typeof(TargetSpawner))][UsedImplicitly]
+    public class TargetSpawnerEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
 
-            var ClownSpawnerScript = (ClownSpawner)target;
+            var ClownSpawnerScript = (TargetSpawner)target;
 
             if (GUILayout.Button("Spawn " + ClownSpawnerScript.NumberOfObjects + " " + ClownSpawnerScript.ObjectToSpawn.name + "s"))
             {

@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 namespace Assets.Scripts
 {
     [ExecuteInEditMode]
-    public class ClownSpawner : MonoBehaviour
+    public class TargetSpawner : MonoBehaviour
     {
         [Range(1.0f, 20.0f)]
         public float SpawnRadius = 1.0f;
@@ -20,13 +20,11 @@ namespace Assets.Scripts
         [HideInInspector]
         private int TotalObjects = 2;
 
-        [UsedImplicitly]
+        private float Angle;
+
         private void Update()
         {
-            #if UNITY_EDITOR
-			if (Application.isEditor && !Application.isPlaying)
-				UpdateObject();
-            #endif
+            UpdateObjects();
         }
 
         [UsedImplicitly]
@@ -34,38 +32,44 @@ namespace Assets.Scripts
         {
             #if UNITY_EDITOR
 			// Draw the spawn radius
-			Handles.DrawWireDisc(transform.position, transform.up, SpawnRadius);	
+			Handles.DrawWireDisc(transform.position, transform.right, SpawnRadius);	
 
 			Gizmos.color = Color.white;
 			Gizmos.DrawSphere(transform.position, 0.1f);
             #endif
         }
 
-        private void UpdateObject()
+        private void UpdateObjects()
         {
             // Get all spawn points
-            var Clowns = GameObject.FindGameObjectsWithTag("Clown");
+            var Objects = GameObject.FindGameObjectsWithTag("Target");
 
-            float AngleInDegrees = (360.0f / TotalObjects);
-            float T = Mathf.Deg2Rad * AngleInDegrees;
+            float Spacing = (360.0f / TotalObjects);
+            float T = Mathf.Deg2Rad * Spacing;
 
+            Angle += 5 * Time.deltaTime;
+
+            var Offset = new Vector3(0.0f, Mathf.Cos(Angle), Mathf.Sin(Angle)) * SpawnRadius;
+            
             // Update them all
-            foreach (GameObject Clown in Clowns)
+            foreach (var Object in Objects)
             {
-                Clown.transform.SetPositionAndRotation(new Vector3(
-                    transform.position.x + SpawnRadius * Mathf.Cos(T) + SpawnOffset.x,
-                    transform.position.y + SpawnOffset.y,
-                    transform.position.z + SpawnRadius * Mathf.Sin(T) + SpawnOffset.z),
-                    Quaternion.identity);
+                var NewPosition = new Vector3(
+                    transform.position.x + SpawnOffset.x,
+                    transform.position.y + SpawnOffset.y + SpawnRadius * Mathf.Cos(T),
+                    transform.position.z + SpawnOffset.z + SpawnRadius * Mathf.Sin(T)
+                    );
 
-                T += Mathf.Deg2Rad * AngleInDegrees;
+                Object.transform.SetPositionAndRotation(transform.position + SpawnOffset + Offset, Object.transform.rotation);
+                
+                T += Mathf.Deg2Rad * Spacing;
             }
         }
 
         public void Generate()
         {
             // Get all spawn points
-            var Clowns = GameObject.FindGameObjectsWithTag("Clown");
+            var Clowns = GameObject.FindGameObjectsWithTag("Target");
 
             // Destroy them all
             foreach (var Clown in Clowns)
@@ -88,12 +92,12 @@ namespace Assets.Scripts
 
             for (int i = 0; i < NumberOfObjects; i++)
             {
-                SpawnPoint.x = transform.position.x + SpawnRadius * Mathf.Cos(T) + SpawnOffset.x;
-                SpawnPoint.y = transform.position.y + SpawnOffset.y;
+                SpawnPoint.x = transform.position.x + SpawnOffset.x;
+                SpawnPoint.y = transform.position.y + SpawnRadius * Mathf.Cos(T) + SpawnOffset.y;
                 SpawnPoint.z = transform.position.z + SpawnRadius * Mathf.Sin(T) + SpawnOffset.z;
 
-                GameObject Clown = Instantiate(ObjectToSpawn, SpawnPoint, Quaternion.identity);
-                Clown.name = "Clown_" + i;
+                var Object = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+                Object.name = ObjectToSpawn.name + "_" + i;
 
                 T += Mathf.Deg2Rad * AngleInDegrees;
             }
