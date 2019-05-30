@@ -15,6 +15,8 @@ namespace Assets.Scripts
         [HideInInspector]
         public Vector3 Centre;
 
+        public GameObject OwnedBy;
+
         [UsedImplicitly]
         private void Awake()
         {
@@ -24,15 +26,6 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-	        Encircle();
-        }
-
-        private void Encircle()
-        {
-	        Angle += RotationSpeed * Time.deltaTime;
-
-	        Vector3 Offset = new Vector3(0.0f, Mathf.Sin(Angle), Mathf.Cos(Angle)) * Radius;
-	        transform.position = Centre + Offset;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Assets.Scripts
         [Range(2, 50)]
         public int NumberOfObjects = 2;
 
-        [Range(0.3f, 5.0f)]
+        [Range(0.3f, 100.0f)]
         public float RotationSpeed = 3.0f;
 
         public Target ObjectToSpawn = null;
@@ -26,6 +26,11 @@ namespace Assets.Scripts
         {
 	        // Get all targets in world
 	        Targets = GameObject.FindGameObjectsWithTag("Target");
+        }
+
+        private void Update()
+        {
+            Rotate();
         }
 
         [UsedImplicitly]
@@ -49,7 +54,8 @@ namespace Assets.Scripts
             foreach (var Target in Targets)
             {
                 #if UNITY_EDITOR
-				DestroyImmediate(Target);
+                if (Target.transform.parent == gameObject.transform)
+				    DestroyImmediate(Target);
                 #endif
             }
 
@@ -59,13 +65,14 @@ namespace Assets.Scripts
 
             for (int i = 0; i < NumberOfObjects; i++)
             {
-				// The Point on cirumference of circle
+				// The Point on circumference of circle
 	            SpawnPoint.x = transform.position.x;
 	            SpawnPoint.y = transform.position.y + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
 	            SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 
 				// Spawn the target on the spawn point and initialize its variables
 	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+                Target.transform.parent = gameObject.transform;
 	            Target.name = ObjectToSpawn.name + "_" + i;
 	            Target.Centre = transform.position;
 	            Target.Radius = Radius;
@@ -75,6 +82,15 @@ namespace Assets.Scripts
 				// Increase the angle for next iteration
 	            Angle += Spacing;
             }
+        }
+
+        private void Rotate()
+        {
+            Angle += RotationSpeed * Time.deltaTime;
+
+            transform.Rotate(Vector3.right, Angle);
+
+            Angle = 0.0f;
         }
     }
 }
