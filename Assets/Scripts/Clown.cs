@@ -9,7 +9,7 @@ namespace Assets.Scripts
         [Range(0.5f, 10.0f)]
         public float AcceptanceRadius = 1.0f;
 
-        public int MoveSpeed = 5;
+        public float MoveSpeed = 5;
 
         public Vector3 Target = new Vector3(0.0f, 0.0f, 0.0f);
 
