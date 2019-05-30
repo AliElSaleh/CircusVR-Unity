@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
     public class Target : MonoBehaviour
     {
-        public float MoveSpeed = 5;
+		[HideInInspector]
+        public float Radius = 1.0f;
+		[HideInInspector]
+        public float RotateSpeed = 3.0f;
+		[HideInInspector]
+        public float Angle;
+ 
+        [HideInInspector]
+        public Vector3 Centre;
 
-        private Vector3 Direction;
-        private Vector3 Location;
-
+        [UsedImplicitly]
         private void Awake()
         {
             tag = "Target";
         }
 
         [UsedImplicitly]
-        private void Start()
-        {
-        }
-
-        [UsedImplicitly]
         private void Update()
         {
+	        Angle += RotateSpeed * Time.deltaTime;
 
+			var Offset = new Vector3(0.0f, Mathf.Sin(Angle), Mathf.Cos(Angle)) * Radius;
+			transform.position = Centre + Offset;
         }
     }
 }

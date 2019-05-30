@@ -13,18 +13,19 @@ namespace Assets.Scripts
         [Range(2, 100)]
         public int NumberOfObjects = 2;
 
-        public GameObject ObjectToSpawn;
-        public Vector3 SpawnOffset = new Vector3(0.0f, 0.5f, 0.0f);
+        [Range(0.1f, 20.0f)]
+        public float RotationSpeed = 3.0f;
 
-        [SerializeField]
-        [HideInInspector]
-        private int TotalObjects = 2;
+        public Target ObjectToSpawn = null;
+
+        private GameObject[] Objects;
 
         private float Angle;
 
-        private void Update()
+        private void Awake()
         {
-            UpdateObjects();
+	        // Get all objects of a certain tag
+	        Objects = GameObject.FindGameObjectsWithTag("Target");
         }
 
         [UsedImplicitly]
@@ -39,70 +40,44 @@ namespace Assets.Scripts
             #endif
         }
 
-        private void UpdateObjects()
-        {
-            // Get all spawn points
-            var Objects = GameObject.FindGameObjectsWithTag("Target");
-
-            float Spacing = (360.0f / TotalObjects);
-            float T = Mathf.Deg2Rad * Spacing;
-
-            Angle += 5 * Time.deltaTime;
-
-            var Offset = new Vector3(0.0f, Mathf.Cos(Angle), Mathf.Sin(Angle)) * SpawnRadius;
-            
-            // Update them all
-            foreach (var Object in Objects)
-            {
-                var NewPosition = new Vector3(
-                    transform.position.x + SpawnOffset.x,
-                    transform.position.y + SpawnOffset.y + SpawnRadius * Mathf.Cos(T),
-                    transform.position.z + SpawnOffset.z + SpawnRadius * Mathf.Sin(T)
-                    );
-
-                Object.transform.SetPositionAndRotation(transform.position + SpawnOffset + Offset, Object.transform.rotation);
-                
-                T += Mathf.Deg2Rad * Spacing;
-            }
-        }
-
         public void Generate()
         {
             // Get all spawn points
-            var Clowns = GameObject.FindGameObjectsWithTag("Target");
+            Objects = GameObject.FindGameObjectsWithTag("Target");
 
             // Destroy them all
-            foreach (var Clown in Clowns)
+            foreach (var Object in Objects)
             {
                 #if UNITY_EDITOR
 				EditorApplication.delayCall += () =>
 				{
 					if (Application.isPlaying)
-						Destroy(Clown);
+						Destroy(Object);
 					else
-						DestroyImmediate(Clown);
+						DestroyImmediate(Object);
 				};
                 #endif
             }
 
             // Spawn new objects
             Vector3 SpawnPoint = Vector3.zero;
-            float AngleInDegrees = (360.0f / NumberOfObjects);
-            float T = Mathf.Deg2Rad * AngleInDegrees;
+            float Spacing = (360.0f / NumberOfObjects);
 
             for (int i = 0; i < NumberOfObjects; i++)
             {
-                SpawnPoint.x = transform.position.x + SpawnOffset.x;
-                SpawnPoint.y = transform.position.y + SpawnRadius * Mathf.Cos(T) + SpawnOffset.y;
-                SpawnPoint.z = transform.position.z + SpawnRadius * Mathf.Sin(T) + SpawnOffset.z;
+	            SpawnPoint.x = transform.position.x;
+	            SpawnPoint.y = transform.position.y + SpawnRadius * Mathf.Cos(Angle*Mathf.Deg2Rad);
+	            SpawnPoint.z = transform.position.z + SpawnRadius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 
-                var Object = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
-                Object.name = ObjectToSpawn.name + "_" + i;
+	            var Object = Instantiate<Target>(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+	            Object.name = ObjectToSpawn.name + "_" + i;
+	            Object.Centre = transform.position;
+	            Object.Radius = SpawnRadius;
+	            Object.Angle = Angle*Mathf.Deg2Rad;
+	            Object.RotateSpeed = RotationSpeed;
 
-                T += Mathf.Deg2Rad * AngleInDegrees;
+	            Angle += Spacing;
             }
-
-            TotalObjects = NumberOfObjects;
         }
     }
 }
