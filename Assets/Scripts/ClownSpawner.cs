@@ -21,21 +21,21 @@ namespace Assets.Scripts
 
         private void Update()
         {
-#if UNITY_EDITOR
+            #if UNITY_EDITOR
 			if (Application.isEditor && !Application.isPlaying)
 				UpdateObject();
-#endif
+            #endif
         }
 
         private void OnDrawGizmos()
         {
-#if UNITY_EDITOR
+            #if UNITY_EDITOR
 			// Draw the spawn radius
 			Handles.DrawWireDisc(transform.position, transform.up, SpawnRadius);	
 
 			Gizmos.color = Color.white;
 			Gizmos.DrawSphere(transform.position, 0.1f);
-#endif
+            #endif
         }
 
         private void UpdateObject()
