@@ -4,6 +4,7 @@ using JetBrains.Annotations;
 
 namespace Assets.Scripts
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(TargetSpawner))][UsedImplicitly]
     public class TargetSpawnerEditor : Editor
     {
@@ -19,4 +20,5 @@ namespace Assets.Scripts
             }
         }
     }
+#endif
 }

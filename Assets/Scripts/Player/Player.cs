@@ -21,6 +21,8 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
 	    private void Update()
         {
+
+
             CheckForApplicationQuit();
         }
 

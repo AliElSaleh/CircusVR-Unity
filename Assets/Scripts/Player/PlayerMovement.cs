@@ -27,7 +27,7 @@ namespace Assets.Scripts.Player
             Vector3 ForwardMovement = transform.forward * HorizontalInput;
             Vector3 RightMovement = transform.right * VerticalInput;
 
-            ApplyMovement(ForwardMovement + -RightMovement);
+            ApplyMovement(ForwardMovement);
         }
 
         private void ApplyMovement(Vector3 WorldDirection)
