@@ -1,5 +1,5 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts.Player
 {
@@ -19,9 +19,11 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void Update()
         {
+            // Get input keys
             float HorizontalInput = Input.GetAxisRaw("Horizontal") * MovementSpeed;
             float VerticalInput = Input.GetAxisRaw("Vertical") * MovementSpeed;
 
+            // Calculate movement directions
             Vector3 ForwardMovement = transform.forward * HorizontalInput;
             Vector3 RightMovement = transform.right * VerticalInput;
 

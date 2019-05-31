@@ -34,17 +34,20 @@ namespace Assets.Scripts.Player
 
         private void RotateCamera()
         {
+            // Get Mouse input axes
             float MouseX = Input.GetAxisRaw(MouseXInputName) * MouseSensitivity;
             float MouseY = Input.GetAxisRaw(MouseYInputName) * MouseSensitivity;
 
             XAxisClamp += MouseY;
 
+            // Clamp if beyond threshold
             if (XAxisClamp > 90.0f)
             {
                 XAxisClamp = 90.0f;
                 MouseY = 0.0f;
                 ClampXAxisRotationToValue(270.0f);
             }
+            // Clamp if below threshold
             else if (XAxisClamp < -90.0f)
             {
                 XAxisClamp = -90.0f;
@@ -52,6 +55,7 @@ namespace Assets.Scripts.Player
                 ClampXAxisRotationToValue(90.0f);
             }
 
+            // Rotate the player with the mouse inputs
             transform.Rotate(Vector3.left * MouseY);
             Player.Rotate(Vector3.up * MouseX);
         }
@@ -60,6 +64,7 @@ namespace Assets.Scripts.Player
         {
             Vector3 EulerRotation = transform.eulerAngles;
             EulerRotation.x = Value;
+
             transform.eulerAngles = EulerRotation;
         }
     }

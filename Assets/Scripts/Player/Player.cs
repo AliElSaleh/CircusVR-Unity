@@ -27,8 +27,10 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void OnDrawGizmos()
         {
+            #if UNITY_EDITOR
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(transform.position, 0.3f);
+            #endif
         }
 
         private static void CheckForApplicationQuit()
