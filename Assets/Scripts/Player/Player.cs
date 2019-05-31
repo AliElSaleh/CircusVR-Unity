@@ -24,6 +24,13 @@ namespace Assets.Scripts.Player
             CheckForApplicationQuit();
         }
 
+        [UsedImplicitly]
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(transform.position, 0.3f);
+        }
+
         private static void CheckForApplicationQuit()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
