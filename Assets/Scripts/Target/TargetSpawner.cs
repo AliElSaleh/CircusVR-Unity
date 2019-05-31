@@ -29,6 +29,7 @@ namespace Assets.Scripts
 	        Targets = GameObject.FindGameObjectsWithTag("Target");
         }
 
+        [UsedImplicitly]
         private void Update()
         {
             Rotate();
