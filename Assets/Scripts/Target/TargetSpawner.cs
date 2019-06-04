@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEditor;
 using JetBrains.Annotations;
 
@@ -17,17 +18,10 @@ namespace Assets.Scripts
 
         public bool Clockwise = true;
 
-        public Target ObjectToSpawn = null;
+        public GameObject ObjectToSpawn = null;
 
-        private GameObject[] Targets;
+        private List<GameObject> ChildObjects = new List<GameObject>();
         private float Angle;
-
-        [UsedImplicitly]
-        private void Awake()
-        {
-	        // Get all targets in world
-	        Targets = GameObject.FindGameObjectsWithTag("Target");
-        }
 
         [UsedImplicitly]
         private void Update()
@@ -49,17 +43,9 @@ namespace Assets.Scripts
 
         public void Generate()
         {
-            // Get all targets in world
-            Targets = GameObject.FindGameObjectsWithTag("Target");
+	        ChildObjects = GetAllChildObjects();
 
-            // Destroy them all
-            foreach (var Target in Targets)
-            {
-                #if UNITY_EDITOR
-                if (Target.transform.parent == gameObject.transform)
-				    DestroyImmediate(Target);
-                #endif
-            }
+	        DestroyAllChildren();
 
             // Spawn new targets in a shape of a circle
             Vector3 SpawnPoint = Vector3.zero;
@@ -73,7 +59,7 @@ namespace Assets.Scripts
 	            SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 
 				// Spawn the target on the spawn point and initialize its variables
-	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+	            GameObject Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
                 Target.transform.parent = gameObject.transform;
 	            Target.name = ObjectToSpawn.name + "_" + i;
 
@@ -92,6 +78,23 @@ namespace Assets.Scripts
             transform.Rotate(Vector3.right, Angle);
 
             Angle = 0.0f;
+        }
+
+		
+        private List<GameObject> GetAllChildObjects()
+        {
+	        List<GameObject> Children = new List<GameObject>();
+
+	        for (int i = 0; i < transform.childCount; i++)
+		        Children.Add(transform.GetChild(i).gameObject);
+
+	        return Children;
+        }
+
+        private void DestroyAllChildren()
+        {
+	        foreach (GameObject Child in ChildObjects)
+		        DestroyImmediate(Child.gameObject);
         }
     }
 }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33111355908400836}
   - component: {fileID: 23276808906192284}
   - component: {fileID: 136330990121947588}
-  - component: {fileID: 114695017464313136}
+  - component: {fileID: 114188408381423434}
   m_Layer: 0
   m_Name: Target
   m_TagString: Target
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946815316419672}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114695017464313136
+--- !u!114 &114188408381423434
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946815316419672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
+  m_Script: {fileID: 11500000, guid: b25ab0454cdb7984eb4c93eaf135cb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
 --- !u!136 &136330990121947588
 CapsuleCollider:
   m_ObjectHideFlags: 1
