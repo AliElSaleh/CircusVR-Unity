@@ -2,11 +2,15 @@
 
 public class Interactable : MonoBehaviour
 {
-    public void Pressed()
-    {
-        MeshRenderer Renderer = GetComponent<MeshRenderer>();
-        bool bFlip = !Renderer.enabled;
+    public Vector3 PickupLocation;
 
-        Renderer.enabled = bFlip;
+    public void Pressed(GameObject GameObject)
+    {
+        GameObject.transform.position = PickupLocation;
+
+        //MeshRenderer Renderer = GetComponent<MeshRenderer>();
+        //bool bFlip = !Renderer.enabled;
+        //
+        //Renderer.enabled = bFlip;
     }
 }

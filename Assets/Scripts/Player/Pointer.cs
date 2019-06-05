@@ -13,7 +13,7 @@ namespace Assets.Scripts.Player
         public LayerMask InteractableMask = 0;
         public UnityAction<Vector3, GameObject> OnPointerUpdate = null;
 
-        private Transform CurrentOrigin = null;
+        public Transform CurrentOrigin = null;
         private GameObject CurrentObject = null;
 
         private void Awake()
@@ -84,7 +84,7 @@ namespace Assets.Scripts.Player
         private void UpdateOrigin(OVRInput.Controller Controller, GameObject ControllerObject)
         {
             // Set origin of pointer
-            CurrentOrigin = ControllerObject.transform;
+            //CurrentOrigin = ControllerObject.transform;
 
             // Is the laser visible?
             if (Controller == OVRInput.Controller.Touchpad)
@@ -116,7 +116,8 @@ namespace Assets.Scripts.Player
                 return;
 
             Interactable Interactable = CurrentObject.GetComponent<Interactable>();
-            Interactable.Pressed();
+            Interactable.PickupLocation = Events.PickupLocation;
+            Interactable.Pressed(CurrentObject);
         }
     }
 }

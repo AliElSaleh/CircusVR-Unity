@@ -14,12 +14,14 @@ namespace Assets.Scripts.Player
         public GameObject RightAnchor;
         public GameObject HeadAnchor;
 
+        public static Vector3 PickupLocation;
+
         private Dictionary<OVRInput.Controller, GameObject> ControllerSets = null;
         private OVRInput.Controller InputSource = OVRInput.Controller.None;
         private OVRInput.Controller Controller = OVRInput.Controller.None;
         private bool InputActive = true;
 
-        private string Log;
+        private bool bHeldDown = false;
 
         private void Awake()
         {
@@ -38,6 +40,7 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void Start()
         {
+            PickupLocation = transform.GetChild(0).GetChild(0).GetChild(5).GetChild(2).transform.position;
         }
 	
         [UsedImplicitly]
@@ -52,6 +55,9 @@ namespace Assets.Scripts.Player
             CheckInputSource();
 
             Input();
+
+            if (!bHeldDown)
+                PickupLocation = transform.GetChild(0).GetChild(0).GetChild(5).GetChild(2).transform.position;
         }
 
         private void CheckInputSource()
@@ -64,13 +70,26 @@ namespace Assets.Scripts.Player
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             {
                 if (OnTouchpadDown != null)
+                {
                     OnTouchpadDown();
+                    bHeldDown = true;
+                }
             }
 
             if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
             {
                 if (OnTouchpadUp != null)
+                {
                     OnTouchpadUp();
+                }
+
+                bHeldDown = false;
+            }
+
+            if (bHeldDown)
+            {
+                if (OnTouchpadDown != null)
+                    OnTouchpadDown();
             }
         }
 
@@ -106,13 +125,13 @@ namespace Assets.Scripts.Player
         private void PlayerFound()
         {
             InputActive = true;
-            Log = "Player Found";
+            Debug.Log("Player found");
         }
 
         private void PlayerLost()
         {
             InputActive = false;
-            Log = "Player Lost";
+            Debug.Log("Player found");
         }
 
         private Dictionary<OVRInput.Controller, GameObject> CreateControllerSets()
