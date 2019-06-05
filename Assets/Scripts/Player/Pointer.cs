@@ -1,15 +1,20 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Player
 {
+    [UsedImplicitly]
     public class Pointer : MonoBehaviour
     {
         public float Distance = 10.0f;
         public LineRenderer LineRenderer = null;
         public LayerMask EverythingLayerMask;
         public LayerMask InteractableMask = 0;
+        public UnityAction<Vector3, GameObject> OnPointerUpdate = null;
 
         private Transform CurrentOrigin = null;
+        private GameObject CurrentObject = null;
 
         private void Awake()
         {
@@ -31,6 +36,10 @@ namespace Assets.Scripts.Player
         private void Update()
         {
             Vector3 HitPoint = UpdateLine();
+
+            CurrentObject = UpdatePointerStatus();
+            if (OnPointerUpdate != null)
+                OnPointerUpdate(HitPoint, CurrentObject);
         }
 
         private Vector3 UpdateLine()
@@ -56,7 +65,7 @@ namespace Assets.Scripts.Player
         {
             RaycastHit Hit;
             Ray Ray = new Ray(CurrentOrigin.position, CurrentOrigin.forward);
-            Physics.Raycast(Ray, out Hit, Layer);
+            Physics.Raycast(Ray, out Hit, Distance, Layer);
 
             return Hit;
         }
@@ -88,9 +97,26 @@ namespace Assets.Scripts.Player
             }
         }
 
+        private GameObject UpdatePointerStatus()
+        {
+            // Create the ray
+            RaycastHit Hit = CreateRaycast(InteractableMask);
+
+            // Check hit
+            if (Hit.collider)
+                return Hit.collider.gameObject;
+
+            // Return the game object
+            return null;
+        }
+
         private void ProcessTouchpadDown()
         {
+            if (!CurrentObject)
+                return;
 
+            Interactable Interactable = CurrentObject.GetComponent<Interactable>();
+            Interactable.Pressed();
         }
     }
 }

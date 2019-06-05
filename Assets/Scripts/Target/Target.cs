@@ -14,5 +14,10 @@ namespace Assets.Scripts
         private void Update()
         {
         }
+
+        private void OnCollisionEnter(Collision Collision)
+        {
+            Destroy(this);
+        }
     }
 }

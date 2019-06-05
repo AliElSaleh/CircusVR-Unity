@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23437499103166746}
   - component: {fileID: 135354580677187708}
   - component: {fileID: 54021074977001590}
-  - component: {fileID: 114509093335746088}
+  - component: {fileID: 114748126614482550}
   m_Layer: 0
   m_Name: Duck_7
   m_TagString: Untagged
@@ -1046,19 +1046,6 @@ MonoBehaviour:
   PhysicMaterial: {fileID: 13400000, guid: f742806f7f345d740ad0c7c00436afc0, type: 2}
   ObjectToSpawn: {fileID: 114782253680299190, guid: a965361318d58bf42b27e8a97b291b64,
     type: 2}
---- !u!114 &114509093335746088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1146346722714346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc9ad34be3b5334f949fa0dd9a28448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Force: 492.39398
-  PhysMaterial: {fileID: 0}
 --- !u!114 &114635305022334564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1085,6 +1072,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Force: 324.68567
   PhysMaterial: {fileID: 0}
+--- !u!114 &114748126614482550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146346722714346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcea3f267d8bde4ea3b605f24b6194b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Force: 300
 --- !u!114 &114757321655200496
 MonoBehaviour:
   m_ObjectHideFlags: 1

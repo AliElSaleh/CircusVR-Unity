@@ -6,6 +6,10 @@ namespace Assets.Scripts.Player
 {
     public class Player : MonoBehaviour
     {
+        public Duck.Duck DuckToSpawn= null;
+
+        public GameObject SpawnLocation = null;
+
         [UsedImplicitly]
         private void Awake()
         {
@@ -21,7 +25,13 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
 	    private void Update()
         {
-
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            {
+                var Duck = Instantiate(DuckToSpawn, SpawnLocation.transform.position, Quaternion.identity);
+                Duck.Direction = Camera.main.transform.forward;
+                Duck.Force = 450.0f;
+                Duck.Throw();
+            }
 
             CheckForApplicationQuit();
         }
@@ -48,6 +58,13 @@ namespace Assets.Scripts.Player
 
                 #endif
             }
+        }
+
+        private void OnMouseDown()
+        {
+            //var Duck = Instantiate(DuckToSpawn, transform.position, Quaternion.identity);
+            //Duck.Force = 100.0f;
+            //Duck.Throw();
         }
     }
 }
