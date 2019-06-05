@@ -7,21 +7,20 @@ namespace Assets.Scripts.Player
 {
     public class Events : MonoBehaviour
     {
-        public static UnityAction OnTouchpadUp = null;
-        public static UnityAction OnTouchpadDown = null;
+        public static UnityAction OnTriggerUp = null;
+        public static UnityAction OnTriggerDown = null;
         public static UnityAction<OVRInput.Controller, GameObject> OnControllerSource;
 
         public GameObject RightAnchor;
-        public GameObject HeadAnchor;
 
         public static Vector3 PickupLocation;
+
+        public static Transform Parent;
 
         private Dictionary<OVRInput.Controller, GameObject> ControllerSets = null;
         private OVRInput.Controller InputSource = OVRInput.Controller.None;
         private OVRInput.Controller Controller = OVRInput.Controller.None;
         private bool InputActive = true;
-
-        private bool bHeldDown = false;
 
         private void Awake()
         {
@@ -40,7 +39,8 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void Start()
         {
-            PickupLocation = transform.GetChild(0).GetChild(0).GetChild(5).GetChild(2).transform.position;
+            Parent = RightAnchor.transform;
+            PickupLocation = RightAnchor.transform.position;
         }
 	
         [UsedImplicitly]
@@ -56,40 +56,32 @@ namespace Assets.Scripts.Player
 
             Input();
 
-            if (!bHeldDown)
-                PickupLocation = transform.GetChild(0).GetChild(0).GetChild(5).GetChild(2).transform.position;
+            PickupLocation = RightAnchor.transform.position;
         }
 
         private void CheckInputSource()
         {
             InputSource = UpdateSource(OVRInput.GetActiveController(), InputSource);
+
+            //Interactable.Controller = OVRInput.GetActiveController();
         }
 
         private void Input()
         {
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             {
-                if (OnTouchpadDown != null)
+                if (OnTriggerDown != null)
                 {
-                    OnTouchpadDown();
-                    bHeldDown = true;
+                    OnTriggerDown();
                 }
             }
 
             if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
             {
-                if (OnTouchpadUp != null)
+                if (OnTriggerUp != null)
                 {
-                    OnTouchpadUp();
+                    OnTriggerUp();
                 }
-
-                bHeldDown = false;
-            }
-
-            if (bHeldDown)
-            {
-                if (OnTouchpadDown != null)
-                    OnTouchpadDown();
             }
         }
 
@@ -125,13 +117,11 @@ namespace Assets.Scripts.Player
         private void PlayerFound()
         {
             InputActive = true;
-            Debug.Log("Player found");
         }
 
         private void PlayerLost()
         {
             InputActive = false;
-            Debug.Log("Player found");
         }
 
         private Dictionary<OVRInput.Controller, GameObject> CreateControllerSets()

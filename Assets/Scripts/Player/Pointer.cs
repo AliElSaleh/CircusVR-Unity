@@ -13,19 +13,25 @@ namespace Assets.Scripts.Player
         public LayerMask InteractableMask = 0;
         public UnityAction<Vector3, GameObject> OnPointerUpdate = null;
 
-        public Transform CurrentOrigin = null;
+        public Transform LineOrigin = null;
+        public Transform GrabTransform = null;
         private GameObject CurrentObject = null;
+        private GameObject CachedObject = null;
+
+        private OVRInput.Controller Controller;
 
         private void Awake()
         {
             Events.OnControllerSource += UpdateOrigin;
-            Events.OnTouchpadDown += ProcessTouchpadDown;
+            Events.OnTriggerDown += ProcessTriggerDown;
+            Events.OnTriggerUp += ProcessTriggerUp;
         }
 
         private void OnDestroy()
         {
             Events.OnControllerSource -= UpdateOrigin;
-            Events.OnTouchpadDown -= ProcessTouchpadDown;
+            Events.OnTriggerDown -= ProcessTriggerDown;
+            Events.OnTriggerUp -= ProcessTriggerUp;
         }
 
         private void Start()
@@ -38,6 +44,7 @@ namespace Assets.Scripts.Player
             Vector3 HitPoint = UpdateLine();
 
             CurrentObject = UpdatePointerStatus();
+
             if (OnPointerUpdate != null)
                 OnPointerUpdate(HitPoint, CurrentObject);
         }
@@ -48,14 +55,14 @@ namespace Assets.Scripts.Player
             RaycastHit Hit = CreateRaycast(EverythingLayerMask);
 
             // Line end
-            Vector3 EndLocation = CurrentOrigin.position + (CurrentOrigin.forward * Distance);
+            Vector3 EndLocation = LineOrigin.position + (LineOrigin.forward * Distance);
 
             // Check hit
             if (Hit.collider != null)
                 EndLocation = Hit.point;
 
             // Set position
-            LineRenderer.SetPosition(0, CurrentOrigin.position);
+            LineRenderer.SetPosition(0, LineOrigin.position);
             LineRenderer.SetPosition(1, EndLocation);
 
             return EndLocation;
@@ -64,7 +71,7 @@ namespace Assets.Scripts.Player
         private RaycastHit CreateRaycast(int Layer)
         {
             RaycastHit Hit;
-            Ray Ray = new Ray(CurrentOrigin.position, CurrentOrigin.forward);
+            Ray Ray = new Ray(LineOrigin.position, LineOrigin.forward);
             Physics.Raycast(Ray, out Hit, Distance, Layer);
 
             return Hit;
@@ -95,6 +102,8 @@ namespace Assets.Scripts.Player
             {
                 LineRenderer.enabled = true;
             }
+
+            this.Controller = Controller;
         }
 
         private GameObject UpdatePointerStatus()
@@ -104,20 +113,35 @@ namespace Assets.Scripts.Player
 
             // Check hit
             if (Hit.collider)
+            {
                 return Hit.collider.gameObject;
+            }
 
-            // Return the game object
+            // Return nothing
             return null;
         }
 
-        private void ProcessTouchpadDown()
+        private void ProcessTriggerDown()
         {
             if (!CurrentObject)
                 return;
 
             Interactable Interactable = CurrentObject.GetComponent<Interactable>();
-            Interactable.PickupLocation = Events.PickupLocation;
+            Interactable.Controller = Controller;
+            Interactable.PickupLocation = GrabTransform.position;
             Interactable.Pressed(CurrentObject);
+            CachedObject = CurrentObject;
+        }
+
+        private void ProcessTriggerUp()
+        {
+            if (!CachedObject)
+                return;
+
+            Interactable Interactable = CachedObject.GetComponent<Interactable>();
+            Interactable.Released(CachedObject);
+            CachedObject = null;
+            CurrentObject = null;
         }
     }
 }
