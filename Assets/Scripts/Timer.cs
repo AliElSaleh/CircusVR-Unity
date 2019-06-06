@@ -1,16 +1,51 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using TMPro;
+using JetBrains.Annotations;
 
-public class Timer : MonoBehaviour {
+namespace Assets.Scripts
+{
+    [ExecuteInEditMode]
+    public class Timer : MonoBehaviour
+    {
+        [Range(1, 60)]
+        public int TimeInSeconds = 60;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        private float TimeLeft;
+
+        private bool bTimerEnded;
+
+        private TextMeshProUGUI TextMeshProUGUIComponent;
+
+        [UsedImplicitly]
+        private void Start()
+        {
+            TextMeshProUGUIComponent = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            TimeLeft = TimeInSeconds;
+        }
+
+        [UsedImplicitly]
+        private void Update()
+        {
+            if (Application.isPlaying && !bTimerEnded)
+                Countdown();
+        }
+
+        [UsedImplicitly]
+        private void OnValidate()
+        {
+            TextMeshProUGUIComponent = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUIComponent.text = TimeInSeconds.ToString();
+        }
+
+        private void Countdown()
+        {
+            TimeLeft -= Time.deltaTime;
+
+            int TimeLeftInt = (int) TimeLeft;
+            TextMeshProUGUIComponent.text = TimeLeftInt.ToString();
+
+            if (TimeLeft < 0.0f)
+                bTimerEnded = true;
+        }
+    }
 }
