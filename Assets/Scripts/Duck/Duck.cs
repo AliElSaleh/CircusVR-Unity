@@ -10,10 +10,7 @@ namespace Assets.Scripts.Duck
 		[HideInInspector]
 		public float Force = 300.0f;
 
-        [HideInInspector]
-        public Vector3 Direction = new Vector3();
-
-		[UsedImplicitly]
+        [UsedImplicitly]
 		private void Start()
 		{
 			Rigidbody = GetComponent<Rigidbody>();
@@ -31,8 +28,14 @@ namespace Assets.Scripts.Duck
         {
             if (Collision.transform.gameObject.tag == "Target")
             {
-                Destroy(Collision.gameObject);
-                Destroy(gameObject);
+                Score.Add(20);
+
+                Destroy(Collision.gameObject); // Destroy target
+                Destroy(gameObject); // Destroy duck
+            }
+            else
+            {
+                Score.Subtract(20);
             }
         }
 	}

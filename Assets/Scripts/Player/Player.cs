@@ -6,6 +6,14 @@ namespace Assets.Scripts.Player
 {
     public class Player : MonoBehaviour
     {
+        public static GameObject Grabber;
+
+        [UsedImplicitly]
+        private void Start()
+        {
+            Grabber = GameObject.Find("Grabber");
+        }
+
         [UsedImplicitly]
 	    private void Update()
         {

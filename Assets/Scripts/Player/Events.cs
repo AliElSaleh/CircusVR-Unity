@@ -12,7 +12,6 @@ namespace Assets.Scripts.Player
         public static UnityAction<OVRInput.Controller, GameObject> OnControllerSource;
 
         public GameObject RightAnchor;
-        public GameObject Grabber;
 
         public static Vector3 PickupLocation;
         public static Vector3 ReleaseLocation;
@@ -22,7 +21,7 @@ namespace Assets.Scripts.Player
         private Dictionary<OVRInput.Controller, GameObject> ControllerSets;
         private OVRInput.Controller InputSource = OVRInput.Controller.None;
         private OVRInput.Controller Controller = OVRInput.Controller.None;
-        private bool InputActive = true;
+        private static bool InputActive = true;
 
         [UsedImplicitly]
         private void Awake()
@@ -69,7 +68,7 @@ namespace Assets.Scripts.Player
         {
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             {
-                PickupLocation = Grabber.transform.position;
+                PickupLocation = Player.Grabber.transform.position;
 
                 if (OnTriggerDown != null)
                 {
@@ -79,7 +78,7 @@ namespace Assets.Scripts.Player
 
             if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
             {
-                ReleaseLocation = Grabber.transform.position;
+                ReleaseLocation = Player.Grabber.transform.position;
 
                 if (OnTriggerUp != null)
                 {
@@ -135,6 +134,16 @@ namespace Assets.Scripts.Player
             };
 
             return NewSets;
+        }
+
+        public static void DisableInput()
+        {
+            InputActive = false;
+        }
+
+        public static void EnableInput()
+        {
+            InputActive = true;
         }
     }
 }

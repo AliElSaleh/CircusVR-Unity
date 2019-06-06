@@ -21,7 +21,9 @@ namespace Assets.Scripts
 
             Vector3 ThrowVector = (GameObject.transform.position - Events.PickupLocation);
 
-            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * 10.0f, ForceMode.VelocityChange);
+            Vector3 Direction = Camera.main.transform.forward;
+
+            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Direction * 15.0f, ForceMode.VelocityChange);
         }
     }
 }

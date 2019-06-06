@@ -8,7 +8,7 @@ namespace Assets.Scripts.Player
     public class Pointer : MonoBehaviour
     {
         public float Distance = 10.0f;
-        public LineRenderer LineRenderer = null;
+        public static LineRenderer LineRenderer;
         public LayerMask EverythingLayerMask;
         public LayerMask InteractableMask = 0;
         public UnityAction<Vector3, GameObject> OnPointerUpdate = null;
@@ -23,6 +23,8 @@ namespace Assets.Scripts.Player
         private GameObject CachedObject;
 
         private OVRInput.Controller Controller;
+
+        private static bool bHeld = false;
 
         [UsedImplicitly]
         private void Awake()
@@ -43,6 +45,8 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void Start()
         {
+            LineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
+
             SetLineColor();
         }
 
@@ -124,9 +128,10 @@ namespace Assets.Scripts.Player
             Interactable.PickupLocation = GrabTransform.position;
             Interactable.Pressed(CurrentObject);
             CachedObject = CurrentObject;
+            bHeld = true;
 
             HideReticule();
-            LineRenderer.enabled = false;
+            HideLine();
         }
 
         private void ProcessTriggerUp()
@@ -139,18 +144,32 @@ namespace Assets.Scripts.Player
             CachedObject = null;
             CurrentObject = null;
 
+            bHeld = false;
+
             ShowReticule();
-            LineRenderer.enabled = true;
+            ShowLine();
         }
 
-        private static void HideReticule()
+        public static void HideLine()
+        {
+            LineRenderer.enabled = false;
+        }
+
+        public static void ShowLine()
+        {
+            if (!bHeld)
+                LineRenderer.enabled = true;
+        }
+
+        public static void HideReticule()
         {
             Reticule.CircleRenderer.enabled = false;
         }
 
-        private static void ShowReticule()
+        public static void ShowReticule()
         {
-            Reticule.CircleRenderer.enabled = true;
+            if (!bHeld)
+                Reticule.CircleRenderer.enabled = true;
         }
     }
 }

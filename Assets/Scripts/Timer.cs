@@ -10,9 +10,10 @@ namespace Assets.Scripts
         [Range(1, 60)]
         public int TimeInSeconds = 60;
 
-        private float TimeLeft;
+        [Range(1, 30)]
+        public int WaitingTimeInSeconds = 2;
 
-        private bool bTimerEnded;
+        private float TimeLeft;
 
         private TextMeshProUGUI TextMeshProUGUIComponent;
 
@@ -26,7 +27,7 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            if (Application.isPlaying && !bTimerEnded)
+            if (Application.isPlaying)
                 Countdown();
         }
 
@@ -39,13 +40,32 @@ namespace Assets.Scripts
 
         private void Countdown()
         {
+            // Decrement the time left
             TimeLeft -= Time.deltaTime;
 
-            int TimeLeftInt = (int) TimeLeft;
-            TextMeshProUGUIComponent.text = TimeLeftInt.ToString();
-
+            // Game over
             if (TimeLeft < 0.0f)
-                bTimerEnded = true;
+            {
+                Player.Events.DisableInput();
+                Player.Pointer.HideLine();
+                Player.Pointer.HideReticule();
+            }
+            // Set UI text
+            else
+            {
+                int TimeLeftInt = (int)TimeLeft;
+                TextMeshProUGUIComponent.text = TimeLeftInt.ToString();
+            }
+
+            // Restart game
+            if (TimeLeft < -WaitingTimeInSeconds)
+            {
+                TimeLeft = TimeInSeconds;
+
+                Player.Events.EnableInput();
+                Player.Pointer.ShowLine();
+                Player.Pointer.ShowReticule();
+            }
         }
     }
 }

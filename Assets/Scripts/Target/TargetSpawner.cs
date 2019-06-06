@@ -18,7 +18,7 @@ namespace Assets.Scripts
 
         public bool Clockwise = true;
 
-        public GameObject ObjectToSpawn = null;
+        public Target ObjectToSpawn = null;
 
         private List<GameObject> ChildObjects = new List<GameObject>();
         private float Angle;
@@ -59,9 +59,10 @@ namespace Assets.Scripts
 	            SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 
 				// Spawn the target on the spawn point and initialize its variables
-	            GameObject Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
                 Target.transform.parent = gameObject.transform;
 	            Target.name = ObjectToSpawn.name + "_" + i;
+                Target.SetTier(Target.Tier.LVL_2);
 
                 // Increase the angle for next iteration
 	            Angle += Spacing;
