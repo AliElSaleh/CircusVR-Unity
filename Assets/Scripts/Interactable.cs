@@ -5,14 +5,12 @@ namespace Assets.Scripts
 {
     public class Interactable : MonoBehaviour
     {
-        public static OVRInput.Controller Controller;
-
         public Vector3 PickupLocation;
 
         public void Pressed(GameObject GameObject)
         {
             GameObject.GetComponent<Rigidbody>().isKinematic = true;
-            GameObject.transform.position = PickupLocation;
+            GameObject.transform.position = Events.PickupLocation;
             GameObject.transform.parent = Events.Parent;
         }
 
@@ -21,8 +19,10 @@ namespace Assets.Scripts
             GameObject.GetComponent<Rigidbody>().isKinematic = false;
             GameObject.transform.parent = null;
 
-            Vector3 ThrowVector = GameObject.transform.position - Events.PickupLocation;
-            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * 10.0f, ForceMode.VelocityChange);
+            Vector3 ThrowVector = (GameObject.transform.position - Events.PickupLocation);
+            float Scalar = Vector3.Distance(Events.PickupLocation, Events.ReleaseLocation);
+
+            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * Scalar, ForceMode.VelocityChange);
         }
     }
 }

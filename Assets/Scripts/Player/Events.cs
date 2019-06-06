@@ -12,8 +12,10 @@ namespace Assets.Scripts.Player
         public static UnityAction<OVRInput.Controller, GameObject> OnControllerSource;
 
         public GameObject RightAnchor;
+        public GameObject Grabber;
 
         public static Vector3 PickupLocation;
+        public static Vector3 ReleaseLocation;
 
         public static Transform Parent;
 
@@ -42,7 +44,6 @@ namespace Assets.Scripts.Player
         private void Start()
         {
             Parent = RightAnchor.transform;
-            PickupLocation = RightAnchor.transform.position;
         }
 	
         [UsedImplicitly]
@@ -57,21 +58,19 @@ namespace Assets.Scripts.Player
             CheckInputSource();
 
             Input();
-
-            PickupLocation = RightAnchor.transform.position;
         }
 
         private void CheckInputSource()
         {
             InputSource = UpdateSource(OVRInput.GetActiveController(), InputSource);
-
-            //Interactable.Controller = OVRInput.GetActiveController();
         }
 
         private void Input()
         {
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             {
+                PickupLocation = Grabber.transform.position;
+
                 if (OnTriggerDown != null)
                 {
                     OnTriggerDown();
@@ -80,6 +79,8 @@ namespace Assets.Scripts.Player
 
             if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
             {
+                ReleaseLocation = Grabber.transform.position;
+
                 if (OnTriggerUp != null)
                 {
                     OnTriggerUp();

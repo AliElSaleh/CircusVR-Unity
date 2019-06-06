@@ -15,6 +15,10 @@ namespace Assets.Scripts.Player
 
         public Transform LineOrigin = null;
         public Transform GrabTransform = null;
+
+        public static Vector3 LineStart;
+        public static Vector3 LineEnd;
+
         private GameObject CurrentObject;
         private GameObject CachedObject;
 
@@ -59,17 +63,17 @@ namespace Assets.Scripts.Player
             RaycastHit Hit = CreateRaycast(EverythingLayerMask);
 
             // Line end
-            Vector3 EndLocation = LineOrigin.position + (LineOrigin.forward * Distance);
+            LineEnd = LineOrigin.position + (LineOrigin.forward * Distance);
 
             // Check hit
             if (Hit.collider != null)
-                EndLocation = Hit.point;
+                LineEnd = Hit.point;
 
             // Set position
             LineRenderer.SetPosition(0, LineOrigin.position);
-            LineRenderer.SetPosition(1, EndLocation);
+            LineRenderer.SetPosition(1, LineEnd);
 
-            return EndLocation;
+            return LineEnd;
         }
 
         private RaycastHit CreateRaycast(int Layer)
@@ -94,6 +98,8 @@ namespace Assets.Scripts.Player
 
         private void UpdateOrigin(OVRInput.Controller InController, GameObject ControllerObject)
         {
+            LineStart = LineOrigin.position;
+
             // Is the laser visible?
             LineRenderer.enabled = Controller != OVRInput.Controller.Touchpad;
 
@@ -115,7 +121,6 @@ namespace Assets.Scripts.Player
                 return;
 
             Interactable Interactable = CurrentObject.GetComponent<Interactable>();
-            Interactable.Controller = Controller;
             Interactable.PickupLocation = GrabTransform.position;
             Interactable.Pressed(CurrentObject);
             CachedObject = CurrentObject;
