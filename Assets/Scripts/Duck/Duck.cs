@@ -1,5 +1,5 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts.Duck
 {
@@ -21,23 +21,12 @@ namespace Assets.Scripts.Duck
 			Rigidbody.AddForce(Vector3.up * Force);
 		}
 
-		[UsedImplicitly]
-		private void Update()
-		{
-		
-		}
-
-		public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)
+        public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)
 		{
 			GetComponent<SphereCollider>().material = NewPhysicMaterial;
 		}
 
-        public void Throw()
-        {
-			Rigidbody = GetComponent<Rigidbody>();
-            Rigidbody.AddForce(Direction * Force);
-        }
-
+        [UsedImplicitly]
         private void OnCollisionEnter(Collision Collision)
         {
             if (Collision.transform.gameObject.tag == "Target")

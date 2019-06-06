@@ -24,20 +24,8 @@ namespace Assets.Scripts.Duck
 		public Duck ObjectToSpawn = null;
 
 		private List<GameObject> ChildObjects = new List<GameObject>();
-		
-		[UsedImplicitly]
-		private void Start()
-		{
 
-		}
-	
-		[UsedImplicitly]
-		private void Update()
-		{
-
-		}
-
-		[UsedImplicitly]
+        [UsedImplicitly]
 		private void OnDrawGizmos()
 		{
 			#if UNITY_EDITOR

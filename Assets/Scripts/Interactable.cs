@@ -1,30 +1,28 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using UnityEngine;
+using Assets.Scripts.Player;
 
-public class Interactable : MonoBehaviour
+namespace Assets.Scripts
 {
-    public static OVRInput.Controller Controller;
-
-    public Vector3 PickupLocation;
-
-    public void Pressed(GameObject GameObject)
+    public class Interactable : MonoBehaviour
     {
-        GameObject.GetComponent<Rigidbody>().isKinematic = true;
-        GameObject.transform.position = PickupLocation;
-        GameObject.transform.parent = Events.Parent;
+        public static OVRInput.Controller Controller;
 
-        //MeshRenderer Renderer = GetComponent<MeshRenderer>();
-        //bool bFlip = !Renderer.enabled;
-        //
-        //Renderer.enabled = bFlip;
-    }
+        public Vector3 PickupLocation;
 
-    public void Released(GameObject GameObject)
-    {
-        GameObject.GetComponent<Rigidbody>().isKinematic = false;
-        GameObject.transform.parent = null;
+        public void Pressed(GameObject GameObject)
+        {
+            GameObject.GetComponent<Rigidbody>().isKinematic = true;
+            GameObject.transform.position = PickupLocation;
+            GameObject.transform.parent = Events.Parent;
+        }
 
-        Vector3 ThrowVector = GameObject.transform.position - Events.PickupLocation;
-        GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * 10.0f, ForceMode.VelocityChange);
+        public void Released(GameObject GameObject)
+        {
+            GameObject.GetComponent<Rigidbody>().isKinematic = false;
+            GameObject.transform.parent = null;
+
+            Vector3 ThrowVector = GameObject.transform.position - Events.PickupLocation;
+            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * 10.0f, ForceMode.VelocityChange);
+        }
     }
 }

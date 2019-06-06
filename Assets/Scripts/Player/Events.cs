@@ -17,11 +17,12 @@ namespace Assets.Scripts.Player
 
         public static Transform Parent;
 
-        private Dictionary<OVRInput.Controller, GameObject> ControllerSets = null;
+        private Dictionary<OVRInput.Controller, GameObject> ControllerSets;
         private OVRInput.Controller InputSource = OVRInput.Controller.None;
         private OVRInput.Controller Controller = OVRInput.Controller.None;
         private bool InputActive = true;
 
+        [UsedImplicitly]
         private void Awake()
         {
             OVRManager.HMDMounted += PlayerFound;
@@ -30,6 +31,7 @@ namespace Assets.Scripts.Player
             ControllerSets = CreateControllerSets();
         }
 
+        [UsedImplicitly]
         private void OnDestroy()
         {
             OVRManager.HMDMounted -= PlayerFound;

@@ -1,6 +1,6 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts.Duck
 {

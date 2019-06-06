@@ -1,6 +1,6 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using JetBrains.Annotations;
 
 namespace Assets.Scripts.Player
 {
@@ -15,11 +15,12 @@ namespace Assets.Scripts.Player
 
         public Transform LineOrigin = null;
         public Transform GrabTransform = null;
-        private GameObject CurrentObject = null;
-        private GameObject CachedObject = null;
+        private GameObject CurrentObject;
+        private GameObject CachedObject;
 
         private OVRInput.Controller Controller;
 
+        [UsedImplicitly]
         private void Awake()
         {
             Events.OnControllerSource += UpdateOrigin;
@@ -27,6 +28,7 @@ namespace Assets.Scripts.Player
             Events.OnTriggerUp += ProcessTriggerUp;
         }
 
+        [UsedImplicitly]
         private void OnDestroy()
         {
             Events.OnControllerSource -= UpdateOrigin;
@@ -34,11 +36,13 @@ namespace Assets.Scripts.Player
             Events.OnTriggerUp -= ProcessTriggerUp;
         }
 
+        [UsedImplicitly]
         private void Start()
         {
             SetLineColor();
         }
 
+        [UsedImplicitly]
         private void Update()
         {
             Vector3 HitPoint = UpdateLine();
@@ -88,22 +92,12 @@ namespace Assets.Scripts.Player
             LineRenderer.endColor = EndColor;
         }
 
-        private void UpdateOrigin(OVRInput.Controller Controller, GameObject ControllerObject)
+        private void UpdateOrigin(OVRInput.Controller InController, GameObject ControllerObject)
         {
-            // Set origin of pointer
-            //CurrentOrigin = ControllerObject.transform;
-
             // Is the laser visible?
-            if (Controller == OVRInput.Controller.Touchpad)
-            {
-                LineRenderer.enabled = false;
-            }
-            else
-            {
-                LineRenderer.enabled = true;
-            }
+            LineRenderer.enabled = Controller != OVRInput.Controller.Touchpad;
 
-            this.Controller = Controller;
+            Controller = InController;
         }
 
         private GameObject UpdatePointerStatus()
@@ -111,14 +105,8 @@ namespace Assets.Scripts.Player
             // Create the ray
             RaycastHit Hit = CreateRaycast(InteractableMask);
 
-            // Check hit
-            if (Hit.collider)
-            {
-                return Hit.collider.gameObject;
-            }
-
-            // Return nothing
-            return null;
+            // Return the hit result
+            return Hit.collider ? Hit.collider.gameObject : null;
         }
 
         private void ProcessTriggerDown()
@@ -131,6 +119,9 @@ namespace Assets.Scripts.Player
             Interactable.PickupLocation = GrabTransform.position;
             Interactable.Pressed(CurrentObject);
             CachedObject = CurrentObject;
+
+            HideReticule();
+            LineRenderer.enabled = false;
         }
 
         private void ProcessTriggerUp()
@@ -142,6 +133,19 @@ namespace Assets.Scripts.Player
             Interactable.Released(CachedObject);
             CachedObject = null;
             CurrentObject = null;
+
+            ShowReticule();
+            LineRenderer.enabled = true;
+        }
+
+        private static void HideReticule()
+        {
+            Reticule.CircleRenderer.enabled = false;
+        }
+
+        private static void ShowReticule()
+        {
+            Reticule.CircleRenderer.enabled = true;
         }
     }
 }
