@@ -65,6 +65,8 @@ namespace Assets.Scripts
                 Player.Events.EnableInput();
                 Player.Pointer.ShowLine();
                 Player.Pointer.ShowReticule();
+
+                ScoreManager.ResetScore();
             }
         }
     }

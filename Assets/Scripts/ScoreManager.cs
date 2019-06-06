@@ -4,7 +4,7 @@ using TMPro;
 
 namespace Assets.Scripts
 {
-    public class Score : MonoBehaviour
+    public class ScoreManager : MonoBehaviour
     {
         private static int ScoreValue;
 
@@ -39,9 +39,16 @@ namespace Assets.Scripts
             UpdateUI();
         }
 
-        public static void Reset(int Value)
+        public static void ResetScore()
         {
             ScoreValue = 0;
+
+            UpdateUI();
+        }
+
+        public static void SetScore(int Value)
+        {
+            ScoreValue = Value;
 
             UpdateUI();
         }

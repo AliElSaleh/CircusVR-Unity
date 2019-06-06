@@ -28,14 +28,16 @@ namespace Assets.Scripts.Duck
         {
             if (Collision.transform.gameObject.tag == "Target")
             {
-                Score.Add(20);
+                ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Reward);
 
                 Destroy(Collision.gameObject); // Destroy target
                 Destroy(gameObject); // Destroy duck
             }
-            else
+            else if (Collision.transform.gameObject.tag == "Wall")
             {
-                Score.Subtract(20);
+                ScoreManager.Subtract(20);
+
+                Destroy(gameObject); // Destroy duck
             }
         }
 	}
