@@ -20,9 +20,8 @@ namespace Assets.Scripts
             GameObject.transform.parent = null;
 
             Vector3 ThrowVector = (GameObject.transform.position - Events.PickupLocation);
-            float Scalar = Vector3.Distance(Events.PickupLocation, Events.ReleaseLocation);
 
-            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * Scalar, ForceMode.VelocityChange);
+            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Camera.main.transform.forward * 10.0f, ForceMode.VelocityChange);
         }
     }
 }
