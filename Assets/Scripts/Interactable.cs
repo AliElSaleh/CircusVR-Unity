@@ -8,7 +8,7 @@ namespace Assets.Scripts
         public Vector3 PickupLocation;
         public AudioClip audioClip;
 
-        private AudioSource musicSource;
+        public AudioSource musicSource;
         
 
         private void Start()
