@@ -33,7 +33,7 @@ namespace Assets.Scripts
         private void OnDrawGizmos()
         {
             #if UNITY_EDITOR
-			// Draw the radius
+			// Draw the spawn radius
 			Handles.DrawWireDisc(transform.position, transform.right, Radius);	
 
 			Gizmos.color = Color.white;
@@ -81,7 +81,6 @@ namespace Assets.Scripts
             Angle = 0.0f;
         }
 
-		
         private List<GameObject> GetAllChildObjects()
         {
 	        List<GameObject> Children = new List<GameObject>();

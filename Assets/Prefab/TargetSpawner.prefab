@@ -134,6 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4308387194955742}
   - component: {fileID: 114355868303142246}
+  - component: {fileID: 114390576566490960}
   m_Layer: 0
   m_Name: TargetSpawner
   m_TagString: Untagged
@@ -501,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 10
 --- !u!114 &114300571298424192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,6 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 10
 --- !u!114 &114342930408710716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,6 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 10
 --- !u!114 &114347299731199874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -534,6 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 10
 --- !u!114 &114355868303142246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,6 +555,20 @@ MonoBehaviour:
   RotationSpeed: 30
   Clockwise: 1
   ObjectToSpawn: {fileID: 0}
+--- !u!114 &114390576566490960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1887561572122730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7ef008b6111874481668bf34ba52cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSpeed: 10
+  Radius: 2
+  Clockwise: 1
 --- !u!114 &114428500964360472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -561,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 10
 --- !u!114 &114473486467791242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -572,6 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315d4559126cbce4ca8a7f009408e2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 10
 --- !u!136 &136251256933501010
 CapsuleCollider:
   m_ObjectHideFlags: 1
