@@ -125,7 +125,6 @@ namespace Assets.Scripts.Player
                 return;
 
             Interactable Interactable = CurrentObject.GetComponent<Interactable>();
-            Interactable.PickupLocation = GrabTransform.position;
             Interactable.Pressed(CurrentObject);
             CachedObject = CurrentObject;
             bHeld = true;
