@@ -50,7 +50,7 @@ namespace Assets.Scripts
                 transform.position.z + Radius * Mathf.Sin(Angle * Mathf.Deg2Rad));
 
             transform.RotateAround(transform.position, transform.right, 0.0f);
-            //transform.position = PointOnCircle;
+            transform.position = PointOnCircle;
 
             Angle = 0;
         }
