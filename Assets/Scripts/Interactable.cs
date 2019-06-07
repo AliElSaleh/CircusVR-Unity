@@ -5,12 +5,13 @@ namespace Assets.Scripts
 {
     public class Interactable : MonoBehaviour
     {
-        public AudioClip AudioClip;
+        public AudioClip[] audioClip;
         public AudioSource MusicSource;
 
         private void Start()
         {
-            MusicSource.clip = AudioClip;
+            int i = Random.Range(0, audioClip.Length);
+            MusicSource.clip = audioClip[i];
         }
 
         public void Pressed(GameObject GameObject)
