@@ -112,7 +112,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickupLocation: {x: 0, y: 0, z: 0}
   audioClip: {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
+  musicSource: {fileID: 82296282501994612}
 --- !u!135 &135285891724392112
 SphereCollider:
   m_ObjectHideFlags: 1
