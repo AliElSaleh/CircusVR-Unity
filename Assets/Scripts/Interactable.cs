@@ -5,15 +5,12 @@ namespace Assets.Scripts
 {
     public class Interactable : MonoBehaviour
     {
-        public Vector3 PickupLocation;
-        public AudioClip audioClip;
-
-        public AudioSource musicSource;
-        
+        public AudioClip AudioClip;
+        public AudioSource MusicSource;
 
         private void Start()
         {
-            musicSource.clip = audioClip;
+            MusicSource.clip = AudioClip;
         }
 
         public void Pressed(GameObject GameObject)
@@ -22,7 +19,7 @@ namespace Assets.Scripts
             GameObject.transform.position = Events.PickupLocation;
             GameObject.transform.parent = Events.Parent;
 
-            musicSource.Play();
+            MusicSource.Play();
         }
 
         public void Released(GameObject GameObject)
