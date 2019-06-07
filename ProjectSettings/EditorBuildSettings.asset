@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 937570782a86db840a5a48f10dcd58fa
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: a8307b0abffe2ce46a3e7785496d48f1
+  - enabled: 0
+    path: Assets/Oculus/VR/Scenes/UI.unity
+    guid: 1f4d3ae64a10d434db219de8b14348e1
   m_configObjects: {}
