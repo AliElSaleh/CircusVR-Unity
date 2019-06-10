@@ -11,11 +11,17 @@ namespace Assets.Scripts.Duck
 		public float Force = 300.0f;
 
         [UsedImplicitly]
-		private void Start()
+		private void OnEnable()
 		{
 			Rigidbody = GetComponent<Rigidbody>();
 
 			Rigidbody.AddForce(Vector3.up * Force);
+		}
+
+        [UsedImplicitly]
+		private void Start()
+		{
+			gameObject.SetActive(false);
 		}
 
         public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)

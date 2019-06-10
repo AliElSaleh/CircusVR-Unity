@@ -19,11 +19,34 @@ namespace Assets.Scripts.Duck
 		[Range(500, 1000)]
 		public float ForceMax = 500.0f;
 
+		[Range(0.5f, 60.0f)]
+		public float SpawnDelay = 1.0f;
+
 		public PhysicMaterial PhysicMaterial = null;
 
 		public Duck ObjectToSpawn = null;
 
 		private List<GameObject> ChildObjects = new List<GameObject>();
+
+		private float TimeInSeconds;
+
+        [UsedImplicitly]
+		private void Update()
+		{
+			TimeInSeconds += Time.deltaTime;
+
+			if (TimeInSeconds > SpawnDelay)
+			{
+				ChildObjects = GetAllChildObjects();
+
+				int Index = Random.Range(0, ChildObjects.Count);
+				while (!ChildObjects[Index].activeSelf)
+				{
+					ChildObjects[Index].SetActive(true);
+					TimeInSeconds = 0.0f;
+				}
+			}
+		}
 
         [UsedImplicitly]
 		private void OnDrawGizmos()
