@@ -6,28 +6,35 @@ namespace Assets.Scripts
 {
     public class TargetMover : MonoBehaviour
     {
-        [Range(10.0f, 50.0f)]
+        [Range(10.0f, 100.0f)]
         public float RotationSpeed = 10.0f;
 
         [Range(1.0f, 20.0f)]
         public float Radius = 2.0f;
 
-        private Transform Target;
-        private float Angle;
+        public Transform TargetSpawner = null;
+
+        private float PositionAngle;
+        private float RotationAngle;
         public bool Clockwise = true;
 
         [UsedImplicitly]
         private void Start()
         {
-            Target = transform;
+	        TargetSpawner.parent = transform;
+
+	        Vector3 PointOnCircle = new Vector3(transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		        transform.position.y,
+		        transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+
+	        TargetSpawner.position = PointOnCircle;
         }
 
         [UsedImplicitly]
         private void Update()
         {
-		    transform.LookAt(Target);
-
-            RotateAroundTarget();
+            MoveAroundCenter();
+            Rotate();
         }
 
         private void OnDrawGizmos()
@@ -35,24 +42,35 @@ namespace Assets.Scripts
             #if UNITY_EDITOR
             // Draw the movement radius
             Handles.DrawWireDisc(transform.position, transform.up, Radius);
+
+			Gizmos.color = Color.white;
+			Gizmos.DrawSphere(transform.position, 0.1f);
             #endif
         }
 
-        private void RotateAroundTarget()
+        private void MoveAroundCenter()
         {
             if (Clockwise)
-                Angle += RotationSpeed * Time.deltaTime;
+                PositionAngle += RotationSpeed * Time.deltaTime;
             else
-                Angle -= RotationSpeed * Time.deltaTime;
+                PositionAngle -= RotationSpeed * Time.deltaTime;
 
-            Vector3 PointOnCircle = new Vector3(transform.position.x + Radius * Mathf.Cos(Angle * Mathf.Deg2Rad),
-                transform.position.y,
-                transform.position.z + Radius * Mathf.Sin(Angle * Mathf.Deg2Rad));
+            Vector3 PointOnCircle = new Vector3(
+	            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+	            transform.position.y,
+	            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
 
-            transform.RotateAround(transform.position, transform.right, 0.0f);
-            transform.position = PointOnCircle;
+            TargetSpawner.position = PointOnCircle;
 
-            Angle = 0;
+			if (PositionAngle > 360.0f)
+				PositionAngle = 0.0f;
+        }
+
+        private void Rotate()
+        {
+	        RotationAngle -= RotationSpeed * Time.deltaTime;
+			transform.Rotate(Vector3.up, RotationAngle);
+			RotationAngle = 0;
         }
     }
 }
