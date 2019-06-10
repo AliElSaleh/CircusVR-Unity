@@ -32,19 +32,29 @@ namespace Assets.Scripts.Duck
         [UsedImplicitly]
         private void OnCollisionEnter(Collision Collision)
         {
-            if (Collision.transform.gameObject.tag == "Target")
-            {
-                ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Reward);
+	        switch (Collision.transform.gameObject.tag)
+	        {
+		        case "Target":
+			        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Reward);
 
-                Destroy(Collision.gameObject); // Destroy target
-                Destroy(gameObject); // Destroy duck
-            }
-            else if (Collision.transform.gameObject.tag == "Wall")
-            {
-                ScoreManager.Subtract(20);
+			        Destroy(Collision.gameObject); // Destroy target
+			        Destroy(gameObject); // Destroy duck
+				break;
 
-                Destroy(gameObject); // Destroy duck
-            }
+				case "Wall":
+					ScoreManager.Subtract(20);
+
+					Destroy(gameObject); // Destroy duck
+				break;
+
+				case "Water":
+					Destroy(gameObject); // Destroy duck
+				break;
+
+				default:
+					Debug.Log("Hit " + Collision.transform.gameObject.tag);
+				break;
+	        }
         }
 	}
 }
