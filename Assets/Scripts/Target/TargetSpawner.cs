@@ -62,7 +62,6 @@ namespace Assets.Scripts
 	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
                 Target.transform.parent = gameObject.transform;
 	            Target.name = ObjectToSpawn.name + "_" + i;
-                Target.SetTier(Target.Tier.LVL_2);
 
                 // Increase the angle for next iteration
 	            Angle += Spacing;

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23892826645609754}
   - component: {fileID: 65257461751884712}
   m_Layer: 0
-  m_Name: Floor (1)
+  m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

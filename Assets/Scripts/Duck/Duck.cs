@@ -35,7 +35,20 @@ namespace Assets.Scripts.Duck
 	        switch (Collision.transform.gameObject.tag)
 	        {
 		        case "Target":
-			        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Reward);
+			        float Distance = Vector3.Distance(Collision.gameObject.transform.position, Collision.contacts[0].point);
+
+			        if (Distance < 0.3f)
+			        {
+						ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier3);
+			        }
+					else if (Distance > 0.3f && Distance < 0.5f)
+			        {
+				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier2);
+			        }
+			        else
+			        {
+				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1);
+			        }
 
 			        Destroy(Collision.gameObject); // Destroy target
 			        Destroy(gameObject); // Destroy duck
