@@ -16,7 +16,7 @@ namespace Assets.Scripts
 
         private float TimeLeft;
 
-        private bool Finished;
+        public static bool Finished;
 
         private TextMeshProUGUI TextMeshProUGUIComponent;
 

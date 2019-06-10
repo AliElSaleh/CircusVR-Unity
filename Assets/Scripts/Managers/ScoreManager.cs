@@ -18,7 +18,7 @@ namespace Assets.Scripts
 
         public static void Add(int Value)
         {
-            ScoreValue += Value;
+			ScoreValue += Value;
 
             UpdateUI();
         }

@@ -35,6 +35,9 @@ namespace Assets.Scripts.Duck
 	        switch (Collision.transform.gameObject.tag)
 	        {
 		        case "Target":
+			        if (Timer.Finished)
+				        return;
+
 			        float Distance = Vector3.Distance(Collision.gameObject.transform.position, Collision.contacts[0].point);
 
 			        if (Distance < 0.3f)
@@ -50,11 +53,14 @@ namespace Assets.Scripts.Duck
 				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1);
 			        }
 
-			        Destroy(Collision.gameObject); // Destroy target
-			        Destroy(gameObject); // Destroy duck
+					Destroy(Collision.gameObject); // Destroy target
+					Destroy(gameObject); // Destroy duck
 				break;
 
 				case "Wall":
+					if (Timer.Finished)
+						return;
+
 					ScoreManager.Subtract(20);
 
 					Destroy(gameObject); // Destroy duck
@@ -65,7 +71,6 @@ namespace Assets.Scripts.Duck
 				break;
 
 				default:
-					Debug.Log("Hit " + Collision.transform.gameObject.tag);
 				break;
 	        }
         }
