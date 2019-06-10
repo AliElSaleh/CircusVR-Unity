@@ -30,7 +30,7 @@ namespace Assets.Scripts.Duck
 
 		private float TimeInSeconds;
 
-        [UsedImplicitly]
+		[UsedImplicitly]
 		private void Update()
 		{
 			TimeInSeconds += Time.deltaTime;
@@ -38,6 +38,9 @@ namespace Assets.Scripts.Duck
 			if (TimeInSeconds > SpawnDelay)
 			{
 				ChildObjects = GetAllChildObjects();
+
+				if (ChildObjects.Count == 0)
+					return;
 
 				int Index = Random.Range(0, ChildObjects.Count);
 				while (!ChildObjects[Index].activeSelf)
