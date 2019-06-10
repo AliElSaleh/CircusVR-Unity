@@ -15,12 +15,6 @@ namespace Assets.Scripts
         {
             TextMeshProUGUIComponent = transform.GetChild(1).GetComponent<TextMeshPro>();
         }
-	
-        [UsedImplicitly]
-        private void Update()
-        {
-		
-        }
 
         public static void Add(int Value)
         {
@@ -41,9 +35,7 @@ namespace Assets.Scripts
 
         public static void ResetScore()
         {
-            ScoreValue = 0;
-
-            UpdateUI();
+            SetScore(0);;
         }
 
         public static void SetScore(int Value)
@@ -58,9 +50,9 @@ namespace Assets.Scripts
             TextMeshProUGUIComponent.text = ScoreValue.ToString();
         }
 
-        public static void SetText(string Text)
+        public static int GetScore()
         {
-            TextMeshProUGUIComponent.text = Text;
+	        return ScoreValue;
         }
     }
 }
