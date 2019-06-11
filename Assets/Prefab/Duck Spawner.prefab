@@ -3071,13 +3071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82025662544685020}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114201364446747288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3101,13 +3096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82005319662905188}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114215417429498680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3131,13 +3121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82359161230248178}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114234925690807072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3149,13 +3134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82544262648276102}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114338168600533316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3179,13 +3159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82991453539562760}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114365430185986294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3233,13 +3208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82043707536103136}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114416579755618120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3251,13 +3221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82719744876021284}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114492883152907318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3281,13 +3246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82721996762045320}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114545612380366478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3300,14 +3260,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Radius: 3.13
-  NumberOfObjects: 16
   ForceMin: 500
   ForceMax: 902
   SpawnDelay: 0.5
-  PhysicMaterial: {fileID: 13400000, guid: 52487b59594da684f9167a04cdf10bc7, type: 2}
+  PhysicsMaterial: {fileID: 13400000, guid: 52487b59594da684f9167a04cdf10bc7, type: 2}
   DuckToSpawn: {fileID: 114297817237164550, guid: fbc4261b1be224149bdc9f355d3301d4,
     type: 2}
   SuperDuckToSpawn: {fileID: 114641594721272066, guid: 9ea1421fc8b9bbb42b254b879eb73dcb,
+    type: 2}
+  DPDuckToSpawn: {fileID: 114611740120393286, guid: 871fd4ffa80457744a23a47d3f682d09,
     type: 2}
 --- !u!114 &114548978702228696
 MonoBehaviour:
@@ -3320,13 +3281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82530655700171474}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114592759354465564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3338,13 +3294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82446040978300240}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114592945120402726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3380,13 +3331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82099356385845412}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114697628430997316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3398,13 +3344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82911739437334904}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114781935099490904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3416,13 +3357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82705615953280670}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114791145977141030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3446,13 +3382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82059752955329380}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114805960592761344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3500,13 +3431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82717967912107392}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!114 &114904899781397054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3542,13 +3468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 8300000, guid: 59ef69ca78ff8bb4996d5498a86336c6, type: 3}
-  - {fileID: 8300000, guid: 460a8ccf468fa5843bc3a9ab102238eb, type: 3}
-  - {fileID: 8300000, guid: deb9e9693d77b234886e3789928d12f0, type: 3}
-  - {fileID: 8300000, guid: 1281d97b5cfc7a341aaba4f28b512e1f, type: 3}
-  - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
-  MusicSource: {fileID: 82943699795588388}
+  AudioClip: []
+  AudioSource: {fileID: 0}
 --- !u!135 &135024647291644000
 SphereCollider:
   m_ObjectHideFlags: 1

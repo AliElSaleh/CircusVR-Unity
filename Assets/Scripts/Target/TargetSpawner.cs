@@ -27,6 +27,9 @@ namespace Assets.Scripts
         private void Update()
         {
             Rotate();
+
+			if (GetAllChildObjects().Count == 0)
+				Destroy(gameObject);
         }
 
         [UsedImplicitly]

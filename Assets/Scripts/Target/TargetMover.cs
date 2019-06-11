@@ -33,6 +33,12 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
+	        if (!TargetSpawner)
+	        {
+				Destroy(gameObject);
+				return;
+	        }
+
             MoveAroundCenter();
             Rotate();
         }

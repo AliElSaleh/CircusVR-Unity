@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Water
   - Super Duck
+  - Double Points Duck
   layers:
   - Default
   - TransparentFX

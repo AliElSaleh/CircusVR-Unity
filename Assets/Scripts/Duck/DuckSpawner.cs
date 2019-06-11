@@ -1,20 +1,18 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 using JetBrains.Annotations;
 
 namespace Assets.Scripts.Duck
 {
+	public enum DuckType
+	{
+		Duck, SuperDuck, DoublePointsDuck
+	}
+
 	public class DuckSpawner : MonoBehaviour
 	{
 		[Range(1.0f, 20.0f)]
 		public float Radius = 1.0f;
-
-		[Range(2, 50)]
-		public int NumberOfDucks = 2;
-
-		[Range(1, 10)]
-		public int NumberOfSuperDucks = 2;
 
 		[Range(10, 500)]
 		public float ForceMin = 300.0f;
@@ -22,16 +20,17 @@ namespace Assets.Scripts.Duck
 		[Range(500, 1000)]
 		public float ForceMax = 500.0f;
 
-		[Range(0.5f, 60.0f)]
+		[Range(0.1f, 10.0f)]
 		public float SpawnDelay = 1.0f;
 
-		public PhysicMaterial PhysicMaterial = null;
+		public PhysicMaterial PhysicsMaterial = null;
 
-		public Duck DuckToSpawn = null;
-		public SuperDuck SuperDuckToSpawn = null;
+		public Duck DuckPrefab = null;
+		public SuperDuck SuperDuckPrefab = null;
+		public DoublePointsDuck DPDuckPrefab = null;
 
-		private List<GameObject> ChildObjects = new List<GameObject>();
-
+		private int DucksSpawned;
+		private int DPDucksSpawned;
 		private float TimeInSeconds;
 
 		[UsedImplicitly]
@@ -41,17 +40,25 @@ namespace Assets.Scripts.Duck
 
 			if (TimeInSeconds > SpawnDelay)
 			{
-				ChildObjects = GetAllChildObjects();
-
-				if (ChildObjects.Count == 0)
-					return;
-
-				int Index = Random.Range(0, ChildObjects.Count);
-				while (!ChildObjects[Index].activeSelf)
+				// Spawn double points
+				if (DucksSpawned > Random.Range(10, 15))
 				{
-					ChildObjects[Index].SetActive(true);
-					TimeInSeconds = 0.0f;
+					SpawnDuck(DuckType.DoublePointsDuck);
+					DucksSpawned = 0;
 				}
+				// Spawn super duck
+				else if (DPDucksSpawned > Random.Range(2, 4))
+				{
+					SpawnDuck(DuckType.SuperDuck);
+					DPDucksSpawned = 0;
+				}
+				// Spawn normal duck
+				else
+				{
+					SpawnDuck(DuckType.Duck);
+				}
+
+				TimeInSeconds = 0.0f;
 			}
 		}
 
@@ -67,68 +74,55 @@ namespace Assets.Scripts.Duck
 			#endif
 		}
 
-		public void Generate()
+		private void SpawnDuck(DuckType Type)
 		{
-			ChildObjects = GetAllChildObjects();
-
-			DestroyAllChildren();
-
-			// Spawn new targets in a shape of a circle
 			Vector3 SpawnPoint = Vector3.zero;
-			float Spacing = (360.0f / NumberOfDucks);
-			float Angle = 0.0f;
-			
-			for (int i = 0; i < NumberOfDucks - NumberOfSuperDucks; i++)
+			float Angle = Random.Range(0.0f, 360.0f);
+
+			// The point on circumference of circle
+			SpawnPoint.x = transform.position.x + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
+			SpawnPoint.y = transform.position.y;
+			SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
+
+			switch (Type)
 			{
-				// The Point on circumference of circle
-				SpawnPoint.x = transform.position.x + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
-				SpawnPoint.y = transform.position.y;
-				SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
-			
-				// Spawn the target on the spawn point and initialize its variables
-				Duck Object = Instantiate(DuckToSpawn, SpawnPoint, DuckToSpawn.transform.rotation);
-				Object.transform.parent = gameObject.transform;
-				Object.name = DuckToSpawn.name + "_" + i;
-				Object.Force = Random.Range(ForceMin, ForceMax);
-				Object.SetPhysicalMaterial(PhysicMaterial);
-			
-				// Increase the angle for next iteration
-				Angle += Spacing;
-			}
+				case DuckType.Duck:
+				{
+					// Spawn the duck on the spawn point and initialize its variables
+					Duck Object = Instantiate(DuckPrefab, SpawnPoint, DuckPrefab.transform.rotation);
+					Object.transform.parent = gameObject.transform;
+					Object.name = DuckPrefab.name;
+					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.SetPhysicalMaterial(PhysicsMaterial);
 
-			for (int i = 0; i < NumberOfSuperDucks; i++)
-			{
-				// The Point on circumference of circle
-				SpawnPoint.x = transform.position.x + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
-				SpawnPoint.y = transform.position.y;
-				SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
-			
-				// Spawn the target on the spawn point and initialize its variables
-				SuperDuck Object = Instantiate(SuperDuckToSpawn, SpawnPoint, DuckToSpawn.transform.rotation);
-				Object.transform.parent = gameObject.transform;
-				Object.name = SuperDuckToSpawn.name + "_" + i;
-				Object.Force = Random.Range(ForceMin, ForceMax);
-				Object.SetPhysicalMaterial(PhysicMaterial);
-			
-				// Increase the angle for next iteration
-				Angle += Spacing;
-			}
-		}
+					DucksSpawned++;
+				}
+				break;
 
-		private List<GameObject> GetAllChildObjects()
-		{
-			List<GameObject> Children = new List<GameObject>();
+				case DuckType.SuperDuck:
+				{
+					// Spawn the super duck on the spawn point and initialize its variables
+					SuperDuck Object = Instantiate(SuperDuckPrefab, SpawnPoint, SuperDuckPrefab.transform.rotation);
+					Object.transform.parent = gameObject.transform;
+					Object.name = SuperDuckPrefab.name;
+					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.SetPhysicalMaterial(PhysicsMaterial);
+				}
+				break;
 
-			for (int i = 0; i < transform.childCount; i++)
-				Children.Add(transform.GetChild(i).gameObject);
+				case DuckType.DoublePointsDuck:
+				{
+					// Spawn the double points duck on the spawn point and initialize its variables
+					DoublePointsDuck Object = Instantiate(DPDuckPrefab, SpawnPoint, DPDuckPrefab.transform.rotation);
+					Object.transform.parent = gameObject.transform;
+					Object.name = DPDuckPrefab.name;
+					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.SetPhysicalMaterial(PhysicsMaterial);
 
-			return Children;
-		}
-
-		private void DestroyAllChildren()
-		{
-			foreach (GameObject Child in ChildObjects)
-				DestroyImmediate(Child.gameObject);
+					DPDucksSpawned++;
+				}
+				break;
+			}			
 		}
 	}
 }

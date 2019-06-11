@@ -11,17 +11,11 @@ namespace Assets.Scripts.Duck
 		public float Force = 300.0f;
 
         [UsedImplicitly]
-		private void OnEnable()
+		private void Start()
 		{
 			Rigidbody = GetComponent<Rigidbody>();
 
 			Rigidbody.AddForce(Vector3.up * Force);
-		}
-
-        [UsedImplicitly]
-		private void Start()
-		{
-			gameObject.SetActive(false);
 		}
 
         public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)
@@ -68,9 +62,6 @@ namespace Assets.Scripts.Duck
 
 				case "Water":
 					Destroy(gameObject); // Destroy duck
-				break;
-
-				default:
 				break;
 	        }
         }
