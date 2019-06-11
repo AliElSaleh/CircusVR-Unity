@@ -8,6 +8,7 @@ TagManager:
   - Duck
   - Wall
   - Water
+  - Super Duck
   layers:
   - Default
   - TransparentFX

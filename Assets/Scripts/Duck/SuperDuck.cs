@@ -1,7 +1,9 @@
-﻿namespace Assets.Scripts.Duck
+﻿using UnityEngine;
+
+namespace Assets.Scripts.Duck
 {
 	public class SuperDuck : Duck
 	{
-	
+
 	}
 }
