@@ -19,11 +19,15 @@ namespace Assets.Scripts.Duck
 
 			if (transform.parent == Events.Parent)
 			{
+				Events.DisableInput();
+
 				DestroyDelay += Time.deltaTime;
 
 				if (DestroyDelay > 1.0f)
 				{
 					ScoreManager.Subtract(ScoreLoss);
+
+					Events.EnableInput();
 
 					Destroy(gameObject);
 				}
