@@ -9,16 +9,19 @@ namespace Assets.Scripts.Duck
 		[Range(10, 100)]
 		public int ScoreLoss = 100;
 
-		private float Timer;
+		private float DestroyDelay;
 
 		[UsedImplicitly]
 		private void Update()
 		{
+			if (Timer.Finished)
+				return;
+
 			if (transform.parent == Events.Parent)
 			{
-				Timer += Time.deltaTime;
+				DestroyDelay += Time.deltaTime;
 
-				if (Timer > 1.0f)
+				if (DestroyDelay > 1.0f)
 				{
 					ScoreManager.Subtract(ScoreLoss);
 
