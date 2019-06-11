@@ -14,7 +14,7 @@ namespace Assets.Scripts.Duck
 
 			DuckSpawner Spawner = (DuckSpawner)target;
 
-			if (GUILayout.Button("Spawn " + Spawner.NumberOfObjects + " " + Spawner.ObjectToSpawn.name + "s"))
+			if (GUILayout.Button("Spawn " + (Spawner.NumberOfDucks + Spawner.NumberOfSuperDucks) + " " + Spawner.DuckToSpawn.name + "s"))
 			{
 				Spawner.Generate();
 			}

@@ -11,7 +11,10 @@ namespace Assets.Scripts.Duck
 		public float Radius = 1.0f;
 
 		[Range(2, 50)]
-		public int NumberOfObjects = 2;
+		public int NumberOfDucks = 2;
+
+		[Range(1, 10)]
+		public int NumberOfSuperDucks = 2;
 
 		[Range(10, 500)]
 		public float ForceMin = 300.0f;
@@ -24,7 +27,8 @@ namespace Assets.Scripts.Duck
 
 		public PhysicMaterial PhysicMaterial = null;
 
-		public Duck ObjectToSpawn = null;
+		public Duck DuckToSpawn = null;
+		public SuperDuck SuperDuckToSpawn = null;
 
 		private List<GameObject> ChildObjects = new List<GameObject>();
 
@@ -71,10 +75,10 @@ namespace Assets.Scripts.Duck
 
 			// Spawn new targets in a shape of a circle
 			Vector3 SpawnPoint = Vector3.zero;
-			float Spacing = (360.0f / NumberOfObjects);
+			float Spacing = (360.0f / NumberOfDucks);
 			float Angle = 0.0f;
 			
-			for (int i = 0; i < NumberOfObjects; i++)
+			for (int i = 0; i < NumberOfDucks - NumberOfSuperDucks; i++)
 			{
 				// The Point on circumference of circle
 				SpawnPoint.x = transform.position.x + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
@@ -82,9 +86,27 @@ namespace Assets.Scripts.Duck
 				SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 			
 				// Spawn the target on the spawn point and initialize its variables
-				Duck Object = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
+				Duck Object = Instantiate(DuckToSpawn, SpawnPoint, DuckToSpawn.transform.rotation);
 				Object.transform.parent = gameObject.transform;
-				Object.name = ObjectToSpawn.name + "_" + i;
+				Object.name = DuckToSpawn.name + "_" + i;
+				Object.Force = Random.Range(ForceMin, ForceMax);
+				Object.SetPhysicalMaterial(PhysicMaterial);
+			
+				// Increase the angle for next iteration
+				Angle += Spacing;
+			}
+
+			for (int i = 0; i < NumberOfSuperDucks; i++)
+			{
+				// The Point on circumference of circle
+				SpawnPoint.x = transform.position.x + Radius * Mathf.Cos(Angle*Mathf.Deg2Rad);
+				SpawnPoint.y = transform.position.y;
+				SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
+			
+				// Spawn the target on the spawn point and initialize its variables
+				SuperDuck Object = Instantiate(SuperDuckToSpawn, SpawnPoint, DuckToSpawn.transform.rotation);
+				Object.transform.parent = gameObject.transform;
+				Object.name = SuperDuckToSpawn.name + "_" + i;
 				Object.Force = Random.Range(ForceMin, ForceMax);
 				Object.SetPhysicalMaterial(PhysicMaterial);
 			
