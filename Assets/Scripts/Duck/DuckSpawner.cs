@@ -6,7 +6,7 @@ namespace Assets.Scripts.Duck
 {
 	public enum DuckType
 	{
-		Duck, SuperDuck, DoublePointsDuck
+		Duck, Super, DoublePoints, Infected
 	}
 
 	public class DuckSpawner : MonoBehaviour
@@ -28,10 +28,19 @@ namespace Assets.Scripts.Duck
 		public Duck DuckPrefab = null;
 		public SuperDuck SuperDuckPrefab = null;
 		public DoublePointsDuck DPDuckPrefab = null;
+		public InfectedDuck InfectedDuckPrefab = null;
 
 		private int DucksSpawned;
 		private int DPDucksSpawned;
+		private int InfectedDuckID;
+
 		private float TimeInSeconds;
+
+		[UsedImplicitly]
+		private void Start()
+		{
+			InfectedDuckID = Random.Range(0, 10);
+		}
 
 		[UsedImplicitly]
 		private void Update()
@@ -43,19 +52,22 @@ namespace Assets.Scripts.Duck
 				// Spawn double points
 				if (DucksSpawned > Random.Range(10, 15))
 				{
-					SpawnDuck(DuckType.DoublePointsDuck);
+					SpawnDuck(DuckType.DoublePoints);
 					DucksSpawned = 0;
 				}
 				// Spawn super duck
 				else if (DPDucksSpawned > Random.Range(2, 4))
 				{
-					SpawnDuck(DuckType.SuperDuck);
+					SpawnDuck(DuckType.Super);
 					DPDucksSpawned = 0;
 				}
 				// Spawn normal duck
 				else
 				{
 					SpawnDuck(DuckType.Duck);
+
+					if (Random.Range(0, 10) == InfectedDuckID)
+						SpawnDuck(DuckType.Infected);
 				}
 
 				TimeInSeconds = 0.0f;
@@ -99,7 +111,7 @@ namespace Assets.Scripts.Duck
 				}
 				break;
 
-				case DuckType.SuperDuck:
+				case DuckType.Super:
 				{
 					// Spawn the super duck on the spawn point and initialize its variables
 					SuperDuck Object = Instantiate(SuperDuckPrefab, SpawnPoint, SuperDuckPrefab.transform.rotation);
@@ -110,7 +122,7 @@ namespace Assets.Scripts.Duck
 				}
 				break;
 
-				case DuckType.DoublePointsDuck:
+				case DuckType.DoublePoints:
 				{
 					// Spawn the double points duck on the spawn point and initialize its variables
 					DoublePointsDuck Object = Instantiate(DPDuckPrefab, SpawnPoint, DPDuckPrefab.transform.rotation);
@@ -120,6 +132,17 @@ namespace Assets.Scripts.Duck
 					Object.SetPhysicalMaterial(PhysicsMaterial);
 
 					DPDucksSpawned++;
+				}
+				break;
+
+				case DuckType.Infected:
+				{
+					// Spawn the double points duck on the spawn point and initialize its variables
+					InfectedDuck Object = Instantiate(InfectedDuckPrefab, SpawnPoint, InfectedDuckPrefab.transform.rotation);
+					Object.transform.parent = gameObject.transform;
+					Object.name = InfectedDuckPrefab.name;
+					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.SetPhysicalMaterial(PhysicsMaterial);
 				}
 				break;
 			}			
