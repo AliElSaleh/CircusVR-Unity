@@ -6,6 +6,7 @@ namespace Assets.Scripts.Player
     public class Interactable : MonoBehaviour
     {
         public AudioClip[] AudioClip = null;
+        public AudioClip AirbornDuck;
         public AudioSource AudioSource = null;
 
 		[UsedImplicitly]
@@ -29,6 +30,8 @@ namespace Assets.Scripts.Player
 
         public void Released(GameObject GameObject)
         {
+            AudioSource.clip = AirbornDuck;
+
             GameObject.GetComponent<Rigidbody>().isKinematic = false;
             GameObject.transform.parent = null;
 

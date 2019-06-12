@@ -310,11 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &55068561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,12 +605,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Radius: 4.66
-  NumberOfObjects: 8
   ForceMin: 300
   ForceMax: 500
-  PhysicMaterial: {fileID: 13400000, guid: 52487b59594da684f9167a04cdf10bc7, type: 2}
-  ObjectToSpawn: {fileID: 114297817237164550, guid: fbc4261b1be224149bdc9f355d3301d4,
-    type: 2}
+  SpawnDelay: 1
+  PhysicsMaterial: {fileID: 0}
+  DuckPrefab: {fileID: 0}
+  SuperDuckPrefab: {fileID: 0}
+  DPDuckPrefab: {fileID: 0}
+  InfectedDuckPrefab: {fileID: 0}
 --- !u!4 &102172671
 Transform:
   m_ObjectHideFlags: 0
@@ -959,11 +959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &201450352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,11 +1247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &400370859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,6 +1708,7 @@ GameObject:
   - component: {fileID: 599996117}
   - component: {fileID: 599996116}
   - component: {fileID: 599996115}
+  - component: {fileID: 599996119}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -1788,6 +1785,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &599996119
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599996114}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 16e776893844503459c3f33cd771a076, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &617898161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,11 +2328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &776624607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2526,11 +2616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &866369938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,11 +3058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &1113327292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,11 +3523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &1393101270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3664,11 +3748,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83380ece9645f41b8b26016148702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSource: {fileID: 0}
+  AudioClip: []
+  AirbornDuck: {fileID: 0}
+  AudioSource: {fileID: 0}
 --- !u!114 &1458075138
 MonoBehaviour:
   m_ObjectHideFlags: 0
