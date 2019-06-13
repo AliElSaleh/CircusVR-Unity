@@ -229,7 +229,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7bc4bf1a0e7e6c245b5e8d3467f5d948, type: 3}
   - {fileID: 8300000, guid: c2ede5dc6631dfd4382c778cfed2f267, type: 3}
   AirbornDuck: {fileID: 8300000, guid: 90c4dfb995b112741ae82a27e4b9b2ca, type: 3}
-  AudioSource: {fileID: 82296282501994612}
+  AudioSource: {fileID: 0}
 --- !u!135 &135285891724392112
 SphereCollider:
   m_ObjectHideFlags: 1

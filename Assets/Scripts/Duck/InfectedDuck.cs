@@ -1,6 +1,6 @@
-﻿using Assets.Scripts.Player;
+﻿using UnityEngine;
+using Assets.Scripts.Player;
 using JetBrains.Annotations;
-using UnityEngine;
 
 namespace Assets.Scripts.Duck
 {
@@ -11,7 +11,7 @@ namespace Assets.Scripts.Duck
 
 		private float DestroyDelay;
 
-		[UsedImplicitly]
+        [UsedImplicitly]
 		private void Update()
 		{
 			if (Timer.Finished)
@@ -19,17 +19,22 @@ namespace Assets.Scripts.Duck
 
 			if (transform.parent == Events.Parent)
 			{
-				Events.DisableInput();
+                Events.DisableInput();
+                Pointer.HideLine();
+                Pointer.HideReticule();
 
-				DestroyDelay += Time.deltaTime;
+                DestroyDelay += Time.deltaTime;
 
 				if (DestroyDelay > 1.0f)
 				{
 					ScoreManager.Subtract(ScoreLoss);
 
-					Events.EnableInput();
+                    Pointer.bHeld = false;
+                    Events.EnableInput();
+                    Pointer.ShowLine();
+                    Pointer.ShowReticule();
 
-					Destroy(gameObject);
+                    Destroy(gameObject);
 				}
 			}
 		}

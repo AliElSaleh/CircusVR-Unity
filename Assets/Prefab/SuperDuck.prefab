@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114641594721272066}
   - component: {fileID: 114511961338197660}
   - component: {fileID: 82228263775046918}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SuperDuck
   m_TagString: Super Duck
   m_Icon: {fileID: 0}

@@ -6,19 +6,20 @@ namespace Assets.Scripts.Player
     public class Interactable : MonoBehaviour
     {
         public AudioClip[] AudioClip = null;
-        public AudioClip AirbornDuck = null;
-        public AudioSource[] AudioSource = null;
+        public AudioSource AudioSource;
 
 		[UsedImplicitly]
         private void Start()
         {
+            AudioSource = GetComponent<AudioSource>();
+
 	        if (AudioClip.Length > 0)
 	        {
 	            int i = Random.Range(0, AudioClip.Length);
-	            AudioSource[1].clip = AudioClip[i];
+	            AudioSource.clip = AudioClip[i];
 	        }
 
-            AudioSource[2].clip = AirbornDuck;
+            //AudioSource[2].clip = AirbornDuck;
         }
 
         public void Pressed(GameObject GameObject)
@@ -27,12 +28,12 @@ namespace Assets.Scripts.Player
             GameObject.transform.position = Events.PickupLocation;
             GameObject.transform.parent = Events.Parent;
 
-            AudioSource[1].Play();
+            AudioSource.Play();
         }
 
         public void Released(GameObject GameObject)
         {
-            AudioSource[2].Play();
+            //AudioSource.Play();
 
             GameObject.GetComponent<Rigidbody>().isKinematic = false;
             GameObject.transform.parent = null;

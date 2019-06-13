@@ -24,7 +24,7 @@ namespace Assets.Scripts.Player
 
         private OVRInput.Controller Controller;
 
-        private static bool bHeld = false;
+        public static bool bHeld;
 
         [UsedImplicitly]
         private void Awake()
