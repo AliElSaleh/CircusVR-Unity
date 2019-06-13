@@ -45,6 +45,11 @@ namespace Assets.Scripts
             UpdateUI();
         }
 
+        public static void SetText(string NewText)
+        {
+            TextMeshProUGUIComponent.text = NewText;
+        }
+
         private static void UpdateUI()
         {
             TextMeshProUGUIComponent.text = ScoreValue.ToString();

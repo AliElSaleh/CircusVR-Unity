@@ -28,12 +28,15 @@ namespace Assets.Scripts.Player
             GameObject.transform.position = Events.PickupLocation;
             GameObject.transform.parent = Events.Parent;
 
+            ScoreManager.SetText("Pressed");
+
             AudioSource.Play();
         }
 
         public void Released(GameObject GameObject)
         {
             //AudioSource.Play();
+            ScoreManager.SetText("Released");
 
             GameObject.GetComponent<Rigidbody>().isKinematic = false;
             GameObject.transform.parent = null;

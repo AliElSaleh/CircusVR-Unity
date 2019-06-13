@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using JetBrains.Annotations;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Managers
 {
@@ -21,6 +22,16 @@ namespace Assets.Scripts.Managers
         private void Update()
         {
 		
+        }
+
+        public void StartGame()
+        {
+            GameObject.Find("Start").GetComponent<Image>().enabled = false;
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
         }
 
         public void ResetLevel()

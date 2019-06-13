@@ -122,7 +122,12 @@ namespace Assets.Scripts.Player
         private void ProcessTriggerDown()
         {
             if (!CurrentObject)
+            {
+                ScoreManager.SetText("Object is null");
                 return;
+            }
+
+            ScoreManager.SetText(CurrentObject.name);
 
             Interactable Interactable = CurrentObject.GetComponent<Interactable>();
             Interactable.Pressed(CurrentObject);
