@@ -75,6 +75,7 @@ namespace Assets.Scripts
                 Player.Pointer.ShowReticule();
 
                 ScoreManager.ResetScore();
+                //GameObject.Find("LevelManager").GetComponent<LevelManager>().ResetLevel();
             }
         }
     }

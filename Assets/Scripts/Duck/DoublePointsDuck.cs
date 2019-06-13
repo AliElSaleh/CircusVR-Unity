@@ -30,7 +30,6 @@ namespace Assets.Scripts.Duck
 					}
 
 					Destroy(Collision.gameObject); // Destroy target
-					Destroy(gameObject); // Destroy duck
 					break;
 
 				case "Wall":

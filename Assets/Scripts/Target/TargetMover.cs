@@ -21,13 +21,19 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Start()
         {
-	        TargetSpawner.parent = transform;
+            TargetSpawner.parent = transform;
 
-	        Vector3 PointOnCircle = new Vector3(transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
-		        transform.position.y,
-		        transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            ResetPosition();
+        }
 
-	        TargetSpawner.position = PointOnCircle;
+        public void ResetPosition()
+        {
+            Vector3 PointOnCircle = new Vector3(
+                transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+                transform.position.y,
+                transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+
+            TargetSpawner.transform.position = PointOnCircle;
         }
 
         [UsedImplicitly]
@@ -38,6 +44,9 @@ namespace Assets.Scripts
 				Destroy(gameObject);
 				return;
 	        }
+
+            if (TargetSpawner.GetComponent<TargetSpawner>().bGenerating)
+                return;
 
             MoveAroundCenter();
             Rotate();
@@ -75,7 +84,7 @@ namespace Assets.Scripts
         private void Rotate()
         {
 	        RotationAngle -= RotationSpeed * Time.deltaTime;
-			transform.Rotate(Vector3.up, RotationAngle);
+			transform.Rotate(transform.up, RotationAngle);
 			RotationAngle = 0;
         }
     }

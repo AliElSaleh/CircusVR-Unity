@@ -47,8 +47,7 @@ namespace Assets.Scripts.Duck
 				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1);
 			        }
 
-					Destroy(Collision.gameObject); // Destroy target
-					Destroy(gameObject); // Destroy duck
+					//Destroy(Collision.gameObject); // Destroy target
 				break;
 
 				case "Wall":

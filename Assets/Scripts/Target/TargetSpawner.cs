@@ -18,14 +18,27 @@ namespace Assets.Scripts
 
         public bool Clockwise = true;
 
-        public Target ObjectToSpawn = null;
+        public Target TargetPrefab = null;
 
+        public Transform OriginalTransform;
         private List<GameObject> ChildObjects = new List<GameObject>();
         private float Angle;
+        public bool bGenerating;
+
+        [UsedImplicitly]
+        private void Start()
+        {
+            OriginalTransform = transform;
+
+            ChildObjects = GetAllChildObjects();
+        }
 
         [UsedImplicitly]
         private void Update()
         {
+            if (bGenerating)
+                return;
+
             Rotate();
 
 			if (GetAllChildObjects().Count == 0)
@@ -46,8 +59,10 @@ namespace Assets.Scripts
 
         public void Generate()
         {
-	        ChildObjects = GetAllChildObjects();
+            bGenerating = true;
 
+	        //ChildObjects = GetAllChildObjects();
+            
 	        DestroyAllChildren();
 
             // Spawn new targets in a shape of a circle
@@ -62,25 +77,32 @@ namespace Assets.Scripts
 	            SpawnPoint.z = transform.position.z + Radius * Mathf.Sin(Angle*Mathf.Deg2Rad);
 
 				// Spawn the target on the spawn point and initialize its variables
-	            Target Target = Instantiate(ObjectToSpawn, SpawnPoint, ObjectToSpawn.transform.rotation);
-                Target.transform.parent = gameObject.transform;
-	            Target.name = ObjectToSpawn.name + "_" + i;
+	            Target Target = Instantiate(TargetPrefab, SpawnPoint, TargetPrefab.transform.rotation);
+                Target.transform.parent = transform;
+	            Target.name = TargetPrefab.name + "_" + i;
 
                 // Increase the angle for next iteration
 	            Angle += Spacing;
             }
+
+            bGenerating = false;
         }
 
         private void Rotate()
         {
-            if (Clockwise)
-                Angle += RotationSpeed * Time.deltaTime;
-            else
-                Angle -= RotationSpeed * Time.deltaTime;
+           if (Clockwise)
+               Angle += RotationSpeed * Time.deltaTime;
+           else
+               Angle -= RotationSpeed * Time.deltaTime;
+           
+           transform.Rotate(Vector3.right, Angle);
+           
+           Angle = 0.0f;
+        }
 
-            transform.Rotate(Vector3.right, Angle);
-
-            Angle = 0.0f;
+        public void ResetTargets()
+        {
+            Generate();
         }
 
         private List<GameObject> GetAllChildObjects()
@@ -93,10 +115,20 @@ namespace Assets.Scripts
 	        return Children;
         }
 
-        private void DestroyAllChildren()
+        public void DestroyAllChildren()
         {
-	        foreach (GameObject Child in ChildObjects)
+            ChildObjects = GetAllChildObjects();
+
+            #if UNITY_EDITOR
+            foreach (GameObject Child in ChildObjects)
 		        DestroyImmediate(Child.gameObject);
+            #else
+            
+            foreach (GameObject Child in ChildObjects)
+		        Destroy(Child.gameObject);
+
+            #endif
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Assets.Scripts
 
             TargetSpawner TargetSpawnerScript = (TargetSpawner)target;
 
-            if (GUILayout.Button("Spawn " + TargetSpawnerScript.NumberOfObjects + " " + TargetSpawnerScript.ObjectToSpawn.name + "s"))
+            if (GUILayout.Button("Spawn " + TargetSpawnerScript.NumberOfObjects + " " + TargetSpawnerScript.TargetPrefab.name + "s"))
             {
                 TargetSpawnerScript.Generate();
             }

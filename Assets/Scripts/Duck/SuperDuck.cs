@@ -28,9 +28,7 @@ namespace Assets.Scripts.Duck
 						if (Hit.transform.gameObject.tag == "Target")
 							Destroy(Hit.transform.gameObject); // Destroy target
 					}
-
-					Destroy(gameObject); // Destroy duck
-				break;
+                    break;
 
 				case "Wall":
 					if (Timer.Finished)
