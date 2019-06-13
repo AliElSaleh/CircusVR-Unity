@@ -5,13 +5,13 @@ namespace Assets.Scripts.Duck
 {
 	public class Duck : MonoBehaviour
 	{
-		private Rigidbody Rigidbody;
+		protected Rigidbody Rigidbody;
 
 		[HideInInspector]
 		public float Force = 300.0f;
 
         [UsedImplicitly]
-		private void Start()
+		protected void Start()
 		{
 			Rigidbody = GetComponent<Rigidbody>();
 

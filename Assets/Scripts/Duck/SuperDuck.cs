@@ -5,7 +5,7 @@ namespace Assets.Scripts.Duck
 {
 	public class SuperDuck : Duck
 	{
-		private const float DetectionRadius = 1.0f;
+		private const float DetectionRadius = 1.5f;
 
 		[UsedImplicitly]
 		private void OnCollisionEnter(Collision Collision)
