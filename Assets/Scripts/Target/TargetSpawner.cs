@@ -10,7 +10,7 @@ namespace Assets.Scripts
         [Range(1.0f, 20.0f)]
         public float Radius = 1.0f;
 
-        [Range(2, 50)]
+        [Range(1, 50)]
         public int NumberOfObjects = 2;
 
         [Range(30.0f, 100.0f)]
