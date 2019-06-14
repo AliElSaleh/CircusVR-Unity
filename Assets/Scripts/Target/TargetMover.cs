@@ -12,6 +12,9 @@ namespace Assets.Scripts
         [Range(1.0f, 200.0f)]
         public float Radius = 2.0f;
 
+        [Range(0.0f, 360.0f)]
+        public float Offset;
+
         public Transform TargetSpawner = null;
 
         private float PositionAngle;
@@ -28,6 +31,8 @@ namespace Assets.Scripts
 
         public void ResetPosition()
         {
+            PositionAngle = Offset;
+
             Vector3 PointOnCircle = new Vector3(
                 transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
                 transform.position.y,

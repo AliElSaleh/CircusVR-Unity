@@ -80,7 +80,8 @@ namespace Assets.Scripts.Player
             if (Hit.collider != null)
                 LineEnd = Hit.point;
 
-            Dot.transform.position = LineEnd;
+            if (Dot)
+                Dot.transform.position = LineEnd;
 
             // Set position
             LineRenderer.SetPosition(0, LineOrigin.position);

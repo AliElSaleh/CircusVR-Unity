@@ -20,10 +20,14 @@ namespace Assets.Scripts
 
         public Target TargetPrefab = null;
 
+        [HideInInspector]
         public Transform OriginalTransform;
+
+        [HideInInspector]
+        public bool Generating;
+
         private List<GameObject> ChildObjects = new List<GameObject>();
         private float Angle;
-        public bool Generating;
 
         [UsedImplicitly]
         private void Start()
