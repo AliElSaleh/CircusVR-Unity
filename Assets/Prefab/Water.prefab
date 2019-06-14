@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33768887328723110}
   - component: {fileID: 23892826645609754}
   - component: {fileID: 65257461751884712}
+  - component: {fileID: 114827860535004762}
+  - component: {fileID: 114321723209426912}
   m_Layer: 0
   m_Name: Water
   m_TagString: Water
@@ -96,3 +98,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.026415825, z: 10}
   m_Center: {x: 0, y: -0.85087776, z: 0}
+--- !u!114 &114321723209426912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109674218815530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624cb40a0c936af4fafc3afd7aa4726f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Power: 1.5
+  Scale: 0.46
+  TimeScale: 0.5
+--- !u!114 &114827860535004762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109674218815530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2902b77db90944c91e1d6817726d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 128
+  GridSize: 128
