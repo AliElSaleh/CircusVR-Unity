@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using JetBrains.Annotations;
+using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,26 +21,52 @@ namespace Assets.Scripts.Input
         public Color32 HoverColor = Color.grey;
         public Color32 DownColor = Color.white;
 
-        private Image Image;
+        public Canvas FadeCanvas = null;
 
+        private Image ButtonImage;
+
+        private float AlphaFadeValue;
+
+        private bool StartPressed;
+
+        [UsedImplicitly]
         private void Awake()
         {
-            Image = GetComponent<Image>();
+            ButtonImage = GetComponent<Image>();
+        }
+
+        [UsedImplicitly]
+        private void Update()
+        {
+            if (StartPressed)
+            {
+                // Fade out
+                AlphaFadeValue += Time.deltaTime;
+
+                FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
+
+                if (AlphaFadeValue > 255.0f)
+                {
+                    AlphaFadeValue = 255.0f;
+                    StartPressed = false;
+                    SceneManager.LoadScene("Game");
+                }
+            }
         }
 
         public void OnPointerEnter(PointerEventData EventData)
         {
-            Image.color = HoverColor;
+            ButtonImage.color = HoverColor;
         }
 
         public void OnPointerExit(PointerEventData EventData)
         {
-            Image.color = NormalColor;
+            ButtonImage.color = NormalColor;
         }
 
         public void OnPointerDown(PointerEventData EventData)
         {
-            Image.color = DownColor;
+            ButtonImage.color = DownColor;
         }
 
         public void OnPointerUp(PointerEventData EventData)
@@ -46,16 +75,16 @@ namespace Assets.Scripts.Input
 
         public void OnPointerClick(PointerEventData EventData)
         {
-            Image.color = HoverColor;
+            ButtonImage.color = HoverColor;
 
             switch (Type)
             {
                 case ButtonType.Start:
-                    SceneManager.LoadScene("Game");
+                    StartPressed = true;
                 break;
 
                 case ButtonType.Options:
-
+                    transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "You lost";
                 break;
 
                 case ButtonType.Exit:
