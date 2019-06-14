@@ -14,38 +14,77 @@ namespace Assets.Scripts.Managers
         public Canvas FadeCanvas = null;
 
         private float AlphaFadeValue = 1.0f;
-        private bool FinishedFade = false;
+        private bool FinishedFade;
+
+        public static bool IsPaused;
 
         [UsedImplicitly]
         private void Start()
         {
-
+            gameObject.SetActive(false);
         }
 
         [UsedImplicitly]
         private void Update()
         {
             if (FinishedFade)
-                return;
+            {
+                if (IsPaused)
+                {
+                    gameObject.SetActive(true);
 
+                    FadeOut(0.5f);
+                }
+
+                gameObject.SetActive(false);
+
+                return;
+            }
+
+            FadeIn(0.0f);
+        }
+
+        public static void Pause()
+        {
+            Time.timeScale = 0.0f;
+            IsPaused = true;
+        }
+
+        public static void Resume()
+        {
+            Time.timeScale = 1.0f;
+            IsPaused = false;
+        }
+
+        public void FadeIn(float TargetAlpha)
+        {
             // Fade in
             AlphaFadeValue -= Time.deltaTime;
 
             FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
 
-            if (AlphaFadeValue < 0.0f)
+            if (AlphaFadeValue < TargetAlpha)
             {
                 FinishedFade = true;
-                AlphaFadeValue = 0.0f;
+                AlphaFadeValue = TargetAlpha;
             }
         }
 
-        public void StartGame()
+        public void FadeOut(float TargetAlpha)
         {
-            GameObject.Find("Start").GetComponent<Image>().enabled = false;
+            // Fade in
+            AlphaFadeValue += Time.deltaTime;
+
+            FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
+
+            if (AlphaFadeValue > TargetAlpha)
+            {
+                FinishedFade = true;
+                AlphaFadeValue = TargetAlpha;
+            }
         }
 
-        public void Quit()
+        public static void Quit()
         {
             Application.Quit();
         }

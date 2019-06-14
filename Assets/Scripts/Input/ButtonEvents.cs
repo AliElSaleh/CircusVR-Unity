@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Assets.Scripts.Managers;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
@@ -10,7 +10,7 @@ namespace Assets.Scripts.Input
 {
     public enum ButtonType
     {
-        Start, Options, Exit
+        Start, Options, Menu, Resume, Exit
     }
 
     public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
@@ -24,6 +24,8 @@ namespace Assets.Scripts.Input
         public Canvas FadeCanvas = null;
 
         private Image ButtonImage;
+
+        private int SceneIndex = 0;
 
         private float AlphaFadeValue;
 
@@ -49,7 +51,7 @@ namespace Assets.Scripts.Input
                 {
                     AlphaFadeValue = 1.0f;
                     StartPressed = false;
-                    SceneManager.LoadScene(1, LoadSceneMode.Single);
+                    SceneManager.LoadScene(SceneIndex, LoadSceneMode.Single);
                 }
             }
         }
@@ -87,8 +89,17 @@ namespace Assets.Scripts.Input
                     transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "You lost";
                 break;
 
+                case ButtonType.Menu:
+                    SceneIndex = 1;
+                    SceneManager.LoadScene(SceneIndex, LoadSceneMode.Single);
+                break;
+
+                case ButtonType.Resume:
+                    LevelManager.Resume();
+                break;
+
                 case ButtonType.Exit:
-                    Application.Quit();
+                    LevelManager.Quit();
                 break;
             }
         }

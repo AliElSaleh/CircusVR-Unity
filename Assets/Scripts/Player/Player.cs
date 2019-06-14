@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using Assets.Scripts.Managers;
+using UnityEngine;
 using JetBrains.Annotations;
 
 namespace Assets.Scripts.Player
@@ -8,10 +8,30 @@ namespace Assets.Scripts.Player
     {
         public static GameObject Grabber;
 
+        public Pointer Pointer = null;
+
         [UsedImplicitly]
         private void Start()
         {
             Grabber = GameObject.Find("Grabber");
+        }
+
+        [UsedImplicitly]
+        private void Update()
+        {
+            if (OVRInput.GetDown(OVRInput.Button.One))
+            {
+                if (!LevelManager.IsPaused)
+                {
+                    Pointer.InteractableMask = LayerMask.NameToLayer("UI");
+                    LevelManager.Pause();
+                }
+                else
+                {
+                    Pointer.InteractableMask = LayerMask.NameToLayer("Interactable");
+                    LevelManager.Resume();
+                }
+            }
         }
 
         [UsedImplicitly]
