@@ -17,7 +17,6 @@ namespace Assets.Scripts.Player
         public UnityAction<Vector3, GameObject> OnPointerUpdate = null;
 
         public Transform LineOrigin = null;
-        public Transform GrabTransform = null;
 
         public static Vector3 LineStart;
         public static Vector3 LineEnd;
@@ -26,6 +25,8 @@ namespace Assets.Scripts.Player
         private GameObject CachedObject;
 
         private OVRInput.Controller Controller;
+
+        private float Length;
 
         public static bool bHeld;
 
@@ -48,6 +49,8 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void Start()
         {
+            Length = Distance;
+
             LineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
 
             SetLineColor();
@@ -70,7 +73,7 @@ namespace Assets.Scripts.Player
             RaycastHit Hit = CreateRaycast(EverythingLayerMask);
 
             // Line end
-            LineEnd = LineOrigin.position + (LineOrigin.forward * Distance);
+            LineEnd = LineOrigin.position + (LineOrigin.forward * Length);
 
             // Check hit
             if (Hit.collider != null)
@@ -87,7 +90,7 @@ namespace Assets.Scripts.Player
         {
             PointerEventData Data = InputModule.GetData();
 
-            float Length = Data.pointerCurrentRaycast.distance == 0.0f ? Distance : Data.pointerCurrentRaycast.distance;
+            Length = Data.pointerCurrentRaycast.distance <= 0.0f ? Distance : Data.pointerCurrentRaycast.distance;
 
             RaycastHit Hit;
             Ray Ray = new Ray(LineOrigin.position, LineOrigin.forward);

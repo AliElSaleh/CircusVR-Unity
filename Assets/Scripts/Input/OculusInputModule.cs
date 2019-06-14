@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Assets.Scripts.Input
+﻿namespace Assets.Scripts.Input
 {
     public class OculusInputModule : VRInputModule
     {
