@@ -26,7 +26,6 @@ namespace Assets.Scripts.Managers
         [UsedImplicitly]
         private void Update()
         {
-
             if (FinishedFade)
                 return;
 
