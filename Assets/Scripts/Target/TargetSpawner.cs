@@ -23,7 +23,7 @@ namespace Assets.Scripts
         public Transform OriginalTransform;
         private List<GameObject> ChildObjects = new List<GameObject>();
         private float Angle;
-        public bool bGenerating;
+        public bool Generating;
 
         [UsedImplicitly]
         private void Start()
@@ -36,7 +36,7 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            if (bGenerating)
+            if (Generating)
                 return;
 
             Rotate();
@@ -59,7 +59,7 @@ namespace Assets.Scripts
 
         public void Generate()
         {
-            bGenerating = true;
+            Generating = true;
 
 	        //ChildObjects = GetAllChildObjects();
             
@@ -85,7 +85,7 @@ namespace Assets.Scripts
 	            Angle += Spacing;
             }
 
-            bGenerating = false;
+            Generating = false;
         }
 
         private void Rotate()

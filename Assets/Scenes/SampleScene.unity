@@ -1526,7 +1526,7 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: d352212e2d6745e438164441130bb38f,
     type: 2}
   OriginalTransform: {fileID: 356413279}
-  bGenerating: 0
+  Generating: 0
 --- !u!4 &356413279
 Transform:
   m_ObjectHideFlags: 0
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: d352212e2d6745e438164441130bb38f,
     type: 2}
   OriginalTransform: {fileID: 0}
-  bGenerating: 0
+  Generating: 0
 --- !u!4 &358503097
 Transform:
   m_ObjectHideFlags: 0
@@ -1848,7 +1848,7 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: d352212e2d6745e438164441130bb38f,
     type: 2}
   OriginalTransform: {fileID: 0}
-  bGenerating: 0
+  Generating: 0
 --- !u!4 &422146208
 Transform:
   m_ObjectHideFlags: 0
@@ -2694,7 +2694,7 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: d352212e2d6745e438164441130bb38f,
     type: 2}
   OriginalTransform: {fileID: 0}
-  bGenerating: 0
+  Generating: 0
 --- !u!4 &824719580
 Transform:
   m_ObjectHideFlags: 0
@@ -7129,7 +7129,7 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: d352212e2d6745e438164441130bb38f,
     type: 2}
   OriginalTransform: {fileID: 0}
-  bGenerating: 0
+  Generating: 0
 --- !u!4 &1940725760
 Transform:
   m_ObjectHideFlags: 0
@@ -7200,6 +7200,11 @@ Prefab:
       propertyPath: GrabTransform
       value: 
       objectReference: {fileID: 1028757920}
+    - target: {fileID: 114727485252773936, guid: 34ead23009facca4aaaed810b5102036,
+        type: 2}
+      propertyPath: InteractableMask.m_Bits
+      value: 544
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ead23009facca4aaaed810b5102036, type: 2}
   m_IsPrefabAsset: 0

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Input;
+using UnityEngine;
 using UnityEngine.Events;
 using JetBrains.Annotations;
 
@@ -9,6 +10,7 @@ namespace Assets.Scripts.Player
     {
         public float Distance = 10.0f;
         public static LineRenderer LineRenderer;
+        public VRInputModule InputModule;
         public LayerMask EverythingLayerMask;
         public LayerMask InteractableMask = 0;
         public UnityAction<Vector3, GameObject> OnPointerUpdate = null;
@@ -122,12 +124,7 @@ namespace Assets.Scripts.Player
         private void ProcessTriggerDown()
         {
             if (!CurrentObject)
-            {
-                ScoreManager.SetText("Object is null");
                 return;
-            }
-
-            ScoreManager.SetText(CurrentObject.name);
 
             Interactable Interactable = CurrentObject.GetComponent<Interactable>();
             Interactable.Pressed(CurrentObject);

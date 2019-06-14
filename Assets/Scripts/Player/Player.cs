@@ -15,33 +15,12 @@ namespace Assets.Scripts.Player
         }
 
         [UsedImplicitly]
-	    private void Update()
-        {
-            CheckForApplicationQuit();
-        }
-
-        [UsedImplicitly]
         private void OnDrawGizmos()
         {
             #if UNITY_EDITOR
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(transform.position, 0.3f);
             #endif
-        }
-
-        private static void CheckForApplicationQuit()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                #if UNITY_EDITOR
-                    if (EditorApplication.isPlaying)
-                        EditorApplication.isPlaying = false;
-                #else
-
-                Application.Quit();
-
-                #endif
-            }
         }
     }
 }

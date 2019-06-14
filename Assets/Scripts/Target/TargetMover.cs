@@ -45,7 +45,7 @@ namespace Assets.Scripts
 				return;
 	        }
 
-            if (TargetSpawner.GetComponent<TargetSpawner>().bGenerating)
+            if (TargetSpawner.GetComponent<TargetSpawner>().Generating)
                 return;
 
             MoveAroundCenter();
