@@ -716,6 +716,11 @@ Prefab:
       propertyPath: FadeCanvas
       value: 
       objectReference: {fileID: 2061097359}
+    - target: {fileID: 114361857963138546, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: Type
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcfe0468e141fa04897551e28ad67362, type: 2}
   m_IsPrefabAsset: 0
@@ -759,7 +764,7 @@ Prefab:
     - target: {fileID: 224837527074283222, guid: da6164959a035854b8edbc35a8c808c4,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -11.56
+      value: -11.2
       objectReference: {fileID: 0}
     - target: {fileID: 224837527074283222, guid: da6164959a035854b8edbc35a8c808c4,
         type: 2}
@@ -854,6 +859,14 @@ Prefab:
     - target: {fileID: 114621493507903352, guid: da6164959a035854b8edbc35a8c808c4,
         type: 2}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046987451290698, guid: da6164959a035854b8edbc35a8c808c4, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688914148510478, guid: da6164959a035854b8edbc35a8c808c4, type: 2}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

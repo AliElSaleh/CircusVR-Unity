@@ -51,7 +51,7 @@ namespace Assets.Scripts.Input
                 {
                     AlphaFadeValue = 1.0f;
                     StartPressed = false;
-                    SceneManager.LoadScene(SceneIndex, LoadSceneMode.Single);
+                    SceneManager.LoadScene(1);
                 }
             }
         }

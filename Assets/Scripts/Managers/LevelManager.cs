@@ -29,14 +29,14 @@ namespace Assets.Scripts.Managers
         {
             if (FinishedFade)
             {
-                if (IsPaused)
-                {
-                    gameObject.SetActive(true);
-
-                    FadeOut(0.5f);
-                }
-
-                gameObject.SetActive(false);
+                //if (IsPaused)
+                //{
+                //    gameObject.SetActive(true);
+                //
+                //    FadeOut(0.5f);
+                //}
+                //
+                //gameObject.SetActive(false);
 
                 return;
             }
