@@ -44,12 +44,12 @@ namespace Assets.Scripts.Input
                 AlphaFadeValue += Time.deltaTime;
 
                 FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
-
-                if (AlphaFadeValue > 255.0f)
+                
+                if (AlphaFadeValue >= 1.0f)
                 {
-                    AlphaFadeValue = 255.0f;
+                    AlphaFadeValue = 1.0f;
                     StartPressed = false;
-                    SceneManager.LoadScene("Game");
+                    SceneManager.LoadScene(1, LoadSceneMode.Single);
                 }
             }
         }
