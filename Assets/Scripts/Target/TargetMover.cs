@@ -9,7 +9,7 @@ namespace Assets.Scripts
         [Range(10.0f, 100.0f)]
         public float RotationSpeed = 10.0f;
 
-        [Range(1.0f, 20.0f)]
+        [Range(1.0f, 200.0f)]
         public float Radius = 2.0f;
 
         public Transform TargetSpawner = null;
