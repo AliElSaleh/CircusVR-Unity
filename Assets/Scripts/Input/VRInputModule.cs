@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Input
@@ -7,11 +6,9 @@ namespace Assets.Scripts.Input
     public class VRInputModule : BaseInputModule
     {
         public Camera Camera;
-        public OVRInput.Controller TargetSource;
-        public UnityAction<bool> ClickAction;
 
         private GameObject CurrentObject;
-        private PointerEventData Data = null;
+        protected PointerEventData Data;
 
         protected override void Awake()
         {
@@ -36,14 +33,6 @@ namespace Assets.Scripts.Input
 
             // Hover
             HandlePointerExitAndEnter(Data, CurrentObject);
-
-            // Press
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
-                ProcessPress(Data);
-
-            // Release
-            if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
-                ProcessRelease(Data);
         }
 
         public PointerEventData GetData()
@@ -51,14 +40,47 @@ namespace Assets.Scripts.Input
             return Data;
         }
 
-        private void ProcessPress(PointerEventData InData)
+        protected void ProcessPress(PointerEventData InData)
         {
+            // Set raycast
+            Data.pointerPressRaycast = Data.pointerCurrentRaycast;
 
+            // Check for object hit, get the down handler, call
+            GameObject NewPointerPress = ExecuteEvents.ExecuteHierarchy(CurrentObject, Data, ExecuteEvents.pointerDownHandler);
+
+            // If no handler, try and get click handler
+            if (NewPointerPress == null)
+            {
+                NewPointerPress = ExecuteEvents.GetEventHandler<IPointerClickHandler>(CurrentObject);
+            }
+
+            // Set the data
+            Data.pressPosition = Data.position;
+            Data.pointerPress = NewPointerPress;
+            Data.rawPointerPress = CurrentObject;
         }
 
-        private void ProcessRelease(PointerEventData InData)
+        protected void ProcessRelease(PointerEventData InData)
         {
+            // Execute pointer up
+            ExecuteEvents.Execute(Data.pointerPress, Data, ExecuteEvents.pointerUpHandler);
 
+            // Check for a click handler
+            GameObject PointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(CurrentObject);
+
+            // Check if actual
+            if (Data.pointerPress == PointerUpHandler)
+            {
+                ExecuteEvents.Execute(Data.pointerPress, Data, ExecuteEvents.pointerClickHandler);
+            }
+
+            // Clear selected gameobject
+            eventSystem.SetSelectedGameObject(null);
+
+            // Reset data
+            Data.pressPosition = Vector2.zero;
+            Data.pointerPress = null;
+            Data.rawPointerPress = null;
         }
     }
 }

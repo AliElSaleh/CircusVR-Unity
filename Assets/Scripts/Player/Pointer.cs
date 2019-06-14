@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using JetBrains.Annotations;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Player
 {
@@ -84,9 +85,13 @@ namespace Assets.Scripts.Player
 
         private RaycastHit CreateRaycast(int Layer)
         {
+            PointerEventData Data = InputModule.GetData();
+
+            float Length = Data.pointerCurrentRaycast.distance == 0.0f ? Distance : Data.pointerCurrentRaycast.distance;
+
             RaycastHit Hit;
             Ray Ray = new Ray(LineOrigin.position, LineOrigin.forward);
-            Physics.Raycast(Ray, out Hit, Distance, Layer);
+            Physics.Raycast(Ray, out Hit, Length, Layer);
 
             return Hit;
         }
