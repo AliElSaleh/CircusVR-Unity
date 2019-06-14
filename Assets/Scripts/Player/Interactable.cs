@@ -38,7 +38,8 @@ namespace Assets.Scripts.Player
 
             Vector3 Direction = Camera.main.transform.forward;
 
-            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Direction * 15.0f, ForceMode.VelocityChange);
+            float Force = GameObject.GetComponent<Duck.Duck>().Force;
+            GameObject.GetComponent<Rigidbody>().AddForce(ThrowVector + Direction * Force, ForceMode.VelocityChange);
         }
     }
 }

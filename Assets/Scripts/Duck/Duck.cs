@@ -7,8 +7,8 @@ namespace Assets.Scripts.Duck
 	{
 		protected Rigidbody Rigidbody;
 
-		[HideInInspector]
-		public float Force = 300.0f;
+        [Range(1, 200)]
+		public float Force = 30.0f;
 
         [UsedImplicitly]
 		protected void Start()
