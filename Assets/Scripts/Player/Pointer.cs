@@ -10,6 +10,7 @@ namespace Assets.Scripts.Player
     public class Pointer : MonoBehaviour
     {
         public float Distance = 10.0f;
+        public GameObject Dot;
         public static LineRenderer LineRenderer;
         public VRInputModule InputModule;
         public LayerMask EverythingLayerMask;
@@ -78,6 +79,8 @@ namespace Assets.Scripts.Player
             // Check hit
             if (Hit.collider != null)
                 LineEnd = Hit.point;
+
+            Dot.transform.position = LineEnd;
 
             // Set position
             LineRenderer.SetPosition(0, LineOrigin.position);

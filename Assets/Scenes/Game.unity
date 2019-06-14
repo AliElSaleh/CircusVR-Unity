@@ -2750,6 +2750,12 @@ Prefab:
       propertyPath: InputModule
       value: 
       objectReference: {fileID: 1952615739}
+    - target: {fileID: 114727485252773936, guid: 34ead23009facca4aaaed810b5102036,
+        type: 2}
+      propertyPath: Dot
+      value: 
+      objectReference: {fileID: 1706164445557774, guid: 8debfe7ebe634764e92aedbb66b867bb,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ead23009facca4aaaed810b5102036, type: 2}
   m_IsPrefabAsset: 0
