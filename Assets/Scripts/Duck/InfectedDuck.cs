@@ -27,7 +27,8 @@ namespace Assets.Scripts.Duck
 
 				if (DestroyDelay > 1.0f)
 				{
-					ScoreManager.Subtract(ScoreLoss);
+                    if (ScoreManager.TextMeshProUGUIComponent)
+					    ScoreManager.Subtract(ScoreLoss);
 
                     Pointer.bHeld = false;
                     Events.EnableInput();

@@ -20,7 +20,10 @@ namespace Assets.Scripts.Duck
 		[Range(500, 1000)]
 		public float ForceMax = 500.0f;
 
-		[Range(0.1f, 10.0f)]
+        [Range(1, 100)]
+        public float DuckThrowForce = 10.0f;
+
+        [Range(0.1f, 10.0f)]
 		public float SpawnDelay = 1.0f;
 
 		public PhysicMaterial PhysicsMaterial = null;
@@ -104,10 +107,11 @@ namespace Assets.Scripts.Duck
 					Duck Object = Instantiate(DuckPrefab, SpawnPoint, DuckPrefab.transform.rotation);
 					Object.transform.parent = gameObject.transform;
 					Object.name = DuckPrefab.name;
-					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
+                    Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
 
-					DucksSpawned++;
+                    DucksSpawned++;
 				}
 				break;
 
@@ -117,9 +121,10 @@ namespace Assets.Scripts.Duck
 					SuperDuck Object = Instantiate(SuperDuckPrefab, SpawnPoint, SuperDuckPrefab.transform.rotation);
 					Object.transform.parent = gameObject.transform;
 					Object.name = SuperDuckPrefab.name;
-					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
+                    Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
-				}
+                }
 				break;
 
 				case DuckType.DoublePoints:
@@ -128,10 +133,11 @@ namespace Assets.Scripts.Duck
 					DoublePointsDuck Object = Instantiate(DPDuckPrefab, SpawnPoint, DPDuckPrefab.transform.rotation);
 					Object.transform.parent = gameObject.transform;
 					Object.name = DPDuckPrefab.name;
-					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
+                    Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
 
-					DPDucksSpawned++;
+                    DPDucksSpawned++;
 				}
 				break;
 
@@ -141,7 +147,8 @@ namespace Assets.Scripts.Duck
 					InfectedDuck Object = Instantiate(InfectedDuckPrefab, SpawnPoint, InfectedDuckPrefab.transform.rotation);
 					Object.transform.parent = gameObject.transform;
 					Object.name = InfectedDuckPrefab.name;
-					Object.Force = Random.Range(ForceMin, ForceMax);
+					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
+                    Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
 				}
 				break;

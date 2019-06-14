@@ -7,15 +7,18 @@ namespace Assets.Scripts.Duck
 	{
 		protected Rigidbody Rigidbody;
 
-        [Range(1, 200)]
-		public float Force = 30.0f;
+        [Range(1, 1000)] [HideInInspector]
+		public float LaunchForce = 300.0f;
+
+        [Range(1, 200)] [HideInInspector]
+        public float ThrowForce = 30.0f;
 
         [UsedImplicitly]
 		protected void Start()
 		{
 			Rigidbody = GetComponent<Rigidbody>();
 
-			Rigidbody.AddForce(Vector3.up * Force);
+			Rigidbody.AddForce(Vector3.up * LaunchForce);
 		}
 
         public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)

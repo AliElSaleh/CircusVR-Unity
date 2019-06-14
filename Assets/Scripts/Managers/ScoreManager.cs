@@ -8,7 +8,7 @@ namespace Assets.Scripts
     {
         private static int ScoreValue;
 
-        private static TextMeshPro TextMeshProUGUIComponent;
+        public static TextMeshPro TextMeshProUGUIComponent;
 
         [UsedImplicitly]
         private void Start()
