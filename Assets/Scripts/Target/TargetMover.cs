@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using JetBrains.Annotations;
 using UnityEditor;
 
@@ -13,7 +14,9 @@ namespace Assets.Scripts
         public float Radius = 2.0f;
 
         [Range(0.0f, 360.0f)]
-        public float Offset;
+        public float Offset = 0.0f;
+
+		public Vector3 Normal = Vector3.up;
 
         public Transform TargetSpawner = null;
 
@@ -25,6 +28,20 @@ namespace Assets.Scripts
         private void Start()
         {
             TargetSpawner.parent = transform;
+            Vector3 Temp = Normal;
+            Normal = transform.up;
+            if (Temp.x >= 1.0f)
+            {
+	            Normal = transform.right;
+            }
+			else if (Temp.y >= 1.0f)
+            {
+	            Normal = transform.up;
+            }
+            else if (Temp.z >= 1.0f)
+            {
+	            Normal = transform.forward;
+            }
 
             ResetPosition();
         }
@@ -33,10 +50,29 @@ namespace Assets.Scripts
         {
             PositionAngle = Offset;
 
-            Vector3 PointOnCircle = new Vector3(
-                transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
-                transform.position.y,
-                transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            Vector3 PointOnCircle = Vector3.zero;
+
+            if (Normal.x >= 1.0f)
+            {
+	            PointOnCircle = new Vector3(
+		            transform.position.x,
+		            transform.position.y + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            }
+			else if (Normal.y >= 1.0f)
+            {
+	            PointOnCircle = new Vector3(
+		            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.y,
+		            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            }
+            else if (Normal.z >= 1.0f)
+            {
+	            PointOnCircle = new Vector3(
+		            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.y + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.z);
+            }
 
             TargetSpawner.transform.position = PointOnCircle;
         }
@@ -57,11 +93,12 @@ namespace Assets.Scripts
             Rotate();
         }
 
+        [UsedImplicitly]
         private void OnDrawGizmos()
         {
             #if UNITY_EDITOR
             // Draw the movement radius
-            Handles.DrawWireDisc(transform.position, transform.up, Radius);
+            Handles.DrawWireDisc(transform.position, Normal, Radius);
 
 			Gizmos.color = Color.white;
 			Gizmos.DrawSphere(transform.position, 0.1f);
@@ -75,10 +112,29 @@ namespace Assets.Scripts
             else
                 PositionAngle -= RotationSpeed * Time.deltaTime;
 
-            Vector3 PointOnCircle = new Vector3(
-	            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
-	            transform.position.y,
-	            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            Vector3 PointOnCircle = Vector3.zero;
+
+            if (Normal.x >= 1.0f)
+            {
+	            PointOnCircle = new Vector3(
+		            transform.position.x,
+		            transform.position.y + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            }
+            else if (Normal.y >= 1.0f)
+            {
+	            PointOnCircle = new Vector3(
+		            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.y,
+		            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
+            }
+            else if (Normal.z >= 1.0f)
+            {
+	            PointOnCircle = new Vector3(
+		            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.y + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad),
+		            transform.position.z);
+            }
 
             TargetSpawner.position = PointOnCircle;
 
@@ -88,8 +144,16 @@ namespace Assets.Scripts
 
         private void Rotate()
         {
-	        RotationAngle -= RotationSpeed * Time.deltaTime;
-			transform.Rotate(transform.up, RotationAngle);
+	        if (Normal.x >= 1.0f)
+		        RotationAngle += RotationSpeed * Time.deltaTime;
+			else if (Normal.y >= 1.0f)
+		        RotationAngle -= RotationSpeed * Time.deltaTime;
+	        else if (Normal.z >= 1.0f)
+		        RotationAngle += RotationSpeed * Time.deltaTime;
+			else
+		        RotationAngle -= RotationSpeed * Time.deltaTime;
+
+	        transform.Rotate(Normal, RotationAngle);
 			RotationAngle = 0;
         }
     }
