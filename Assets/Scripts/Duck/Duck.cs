@@ -13,12 +13,16 @@ namespace Assets.Scripts.Duck
         [Range(1, 200)] [HideInInspector]
         public float ThrowForce = 30.0f;
 
+		public ParticleSystem hit;
+
         [UsedImplicitly]
 		protected void Start()
 		{
 			Rigidbody = GetComponent<Rigidbody>();
 
 			Rigidbody.AddForce(Vector3.up * LaunchForce);
+
+			//hit = GetComponent<ParticleSystem>();
 		}
 
         public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)
@@ -32,7 +36,7 @@ namespace Assets.Scripts.Duck
 	        switch (Collision.transform.gameObject.tag)
 	        {
 		        case "Target":
-                    // Add particle
+					//hit.Play();
 
 			        if (Timer.Finished)
 				        return;
@@ -57,6 +61,7 @@ namespace Assets.Scripts.Duck
 
                 case "Water":
 					Destroy(gameObject); // Destroy duck
+					//This dosen't work...
 				break;
 	        }
         }

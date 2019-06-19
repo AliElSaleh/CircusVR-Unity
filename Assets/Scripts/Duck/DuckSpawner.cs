@@ -33,6 +33,8 @@ namespace Assets.Scripts.Duck
 		public DoublePointsDuck DPDuckPrefab = null;
 		public InfectedDuck InfectedDuckPrefab = null;
 
+		public ParticleSystem splash;
+
 		private int DucksSpawned;
 		private int DPDucksSpawned;
 		private int InfectedDuckID;
@@ -43,6 +45,7 @@ namespace Assets.Scripts.Duck
 		private void Start()
 		{
 			InfectedDuckID = Random.Range(0, 10);
+			splash = GetComponent<ParticleSystem>();
 		}
 
 		[UsedImplicitly]
@@ -154,7 +157,10 @@ namespace Assets.Scripts.Duck
 				break;
 			}	
             
-            // Add particle (splash)
+			////////// Breaks the game!
+			// var emission = splash.emission;
+			// emission.enabled = false;
 		}
 	}
 }
+
