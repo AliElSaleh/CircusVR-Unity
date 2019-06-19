@@ -30,6 +30,8 @@ namespace Assets.Scripts.Duck
                     if (ScoreManager.TextMeshProUGUIComponent)
 					    ScoreManager.Subtract(ScoreLoss);
 
+                    // Add particle
+
                     Pointer.bHeld = false;
                     Events.EnableInput();
                     Pointer.ShowLine();

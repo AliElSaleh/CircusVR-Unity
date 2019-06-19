@@ -13,6 +13,8 @@ namespace Assets.Scripts.Duck
 			switch (Collision.transform.gameObject.tag)
 			{
 				case "Target":
+                    // Add particle
+
 					if (Timer.Finished)
 						return;
 
@@ -25,27 +27,21 @@ namespace Assets.Scripts.Duck
 					{
 						ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier2);
 
-						if (Hit.transform.gameObject.tag == "Target")
-							Destroy(Hit.transform.gameObject); // Destroy target
+                        if (Hit.transform.gameObject.tag == "Target")
+                        {
+                            Hit.transform.GetComponent<Target>().Hit = true;
+                            Hit.transform.GetComponent<Target>().Hide();
+                        }
 					}
                     break;
 
-				case "Wall":
-					if (Timer.Finished)
-						return;
-
-					ScoreManager.Subtract(250);
-
-					Destroy(gameObject); // Destroy duck
-				break;
-
-				case "Water":
+                case "Water":
 					Destroy(gameObject); // Destroy duck
 				break;
 			}
 		}
 
-		[UsedImplicitly]
+        [UsedImplicitly]
 		private void OnDrawGizmos()
 		{
 			#if UNITY_EDITOR
