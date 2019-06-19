@@ -37,7 +37,6 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-
             Rotate();
         }
 
@@ -104,15 +103,8 @@ namespace Assets.Scripts
         {
             ChildObjects = GetAllChildObjects();
 
-            #if UNITY_EDITOR
-            foreach (GameObject Child in ChildObjects)
-		        DestroyImmediate(Child.gameObject);
-            #else
-            
             foreach (GameObject Child in ChildObjects)
 		        Destroy(Child.gameObject);
-
-            #endif
         }
     }
 }

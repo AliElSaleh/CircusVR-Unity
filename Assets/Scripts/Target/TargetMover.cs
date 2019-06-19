@@ -43,38 +43,7 @@ namespace Assets.Scripts
 	            Normal = transform.forward;
             }
 
-            ResetPosition();
-        }
-
-        public void ResetPosition()
-        {
             PositionAngle = Offset;
-
-            Vector3 PointOnCircle = Vector3.zero;
-
-            if (Normal.x >= 1.0f)
-            {
-	            PointOnCircle = new Vector3(
-		            transform.position.x,
-		            transform.position.y + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
-		            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
-            }
-			else if (Normal.y >= 1.0f)
-            {
-	            PointOnCircle = new Vector3(
-		            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
-		            transform.position.y,
-		            transform.position.z + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad));
-            }
-            else if (Normal.z >= 1.0f)
-            {
-	            PointOnCircle = new Vector3(
-		            transform.position.x + Radius * Mathf.Cos(PositionAngle * Mathf.Deg2Rad),
-		            transform.position.y + Radius * Mathf.Sin(PositionAngle * Mathf.Deg2Rad),
-		            transform.position.z);
-            }
-
-            TargetSpawner.transform.position = PointOnCircle;
         }
 
         [UsedImplicitly]

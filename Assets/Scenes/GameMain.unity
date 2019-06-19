@@ -5678,6 +5678,26 @@ Prefab:
       value: 
       objectReference: {fileID: 1706164445557774, guid: 8debfe7ebe634764e92aedbb66b867bb,
         type: 2}
+    - target: {fileID: 120446596564924848, guid: 34ead23009facca4aaaed810b5102036,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120446596564924848, guid: 34ead23009facca4aaaed810b5102036,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120446596564924848, guid: 34ead23009facca4aaaed810b5102036,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120446596564924848, guid: 34ead23009facca4aaaed810b5102036,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 7976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ead23009facca4aaaed810b5102036, type: 2}
   m_IsPrefabAsset: 0
