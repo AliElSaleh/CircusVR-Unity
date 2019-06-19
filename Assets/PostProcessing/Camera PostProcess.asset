@@ -14,6 +14,56 @@ MonoBehaviour:
   settings:
   - {fileID: 114238782884582196}
   - {fileID: 114551833522243550}
+  - {fileID: 114878384114013452}
+  - {fileID: 114130550914013750}
+  - {fileID: 114434742655953558}
+  - {fileID: 114402026269427234}
+--- !u!114 &114130550914013750
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.5
+  threshold:
+    overrideState: 0
+    value: 1
+  softKnee:
+    overrideState: 1
+    value: 1
+  clamp:
+    overrideState: 0
+    value: 65314.95
+  diffusion:
+    overrideState: 1
+    value: 10
+  anamorphicRatio:
+    overrideState: 1
+    value: 1
+  color:
+    overrideState: 1
+    value: {r: 1, g: 0.7177697, b: 0.5896226, a: 1}
+  fastMode:
+    overrideState: 1
+    value: 1
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
 --- !u!114 &114238782884582196
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55,6 +105,54 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   opacity:
+    overrideState: 0
+    value: 1
+--- !u!114 &114402026269427234
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  shutterAngle:
+    overrideState: 1
+    value: 270
+  sampleCount:
+    overrideState: 1
+    value: 10
+--- !u!114 &114434742655953558
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 10
+  aperture:
+    overrideState: 0
+    value: 5.6
+  focalLength:
+    overrideState: 0
+    value: 50
+  kernelSize:
     overrideState: 0
     value: 1
 --- !u!114 &114551833522243550
@@ -111,7 +209,7 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   tint:
-    overrideState: 0
+    overrideState: 1
     value: 0
   colorFilter:
     overrideState: 0
@@ -121,16 +219,16 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 15
+    value: 75
   brightness:
     overrideState: 1
-    value: 3
+    value: 1
   postExposure:
     overrideState: 0
     value: 0
   contrast:
     overrideState: 1
-    value: 5
+    value: 1
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -163,7 +261,7 @@ MonoBehaviour:
     value: {x: 0.9516205, y: 0.9664295, z: 1, w: 0}
   gamma:
     overrideState: 0
-    value: {x: 0.9609561, y: 0.89883685, z: 1, w: 0}
+    value: {x: 0.92827225, y: 0.8079339, z: 1, w: 0}
   gain:
     overrideState: 0
     value: {x: 0.9145831, y: 1, z: 0.94136715, w: 0}
@@ -1367,3 +1465,51 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &114878384114013452
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 0
+    value: 0.5
+  color:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 0
+    value: 1
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2

@@ -87,7 +87,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156301332864536}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300010, guid: e3691b01c7fcbff48a4119a89d9e00df, type: 3}
 --- !u!54 &54561871149837142
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -209,7 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcea3f267d8bde4ea3b605f24b6194b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 5
+  LaunchForce: 300
+  ThrowForce: 30
 --- !u!114 &114661664148815266
 MonoBehaviour:
   m_ObjectHideFlags: 1
