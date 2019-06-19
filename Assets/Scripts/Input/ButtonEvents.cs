@@ -21,34 +21,16 @@ namespace Assets.Scripts.Input
         public Color32 HoverColor = Color.grey;
         public Color32 DownColor = Color.white;
 
-        public Canvas FadeCanvas = null;
-
+        private Canvas FadeCanvas;
         private Image ButtonImage;
 
         private float AlphaFadeValue;
-
-        private bool StartPressed;
 
         [UsedImplicitly]
         private void Awake()
         {
             ButtonImage = GetComponent<Image>();
             FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
-        }
-
-        [UsedImplicitly]
-        private void Update()
-        {
-            if (StartPressed)
-            {
-                // Fade out
-                AlphaFadeValue += Time.deltaTime;
-
-                StartPressed = false;
-                SceneManager.LoadScene(1);
-                LevelManager.IsInGame = true;
-                LevelManager.Resume();
-            }
         }
 
         public void OnPointerEnter(PointerEventData EventData)
@@ -77,7 +59,9 @@ namespace Assets.Scripts.Input
             switch (Type)
             {
                 case ButtonType.Start:
-                    StartPressed = true;
+                    SceneManager.LoadScene(1);
+                    LevelManager.IsInGame = true;
+                    LevelManager.Resume();
                 break;
 
                 case ButtonType.Options:
@@ -85,8 +69,6 @@ namespace Assets.Scripts.Input
                 break;
 
                 case ButtonType.Menu:
-                    FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
-
                     ResetMenu();
                     SceneManager.LoadScene(0);
                 break;
@@ -108,7 +90,6 @@ namespace Assets.Scripts.Input
 
         public void ResetMenu()
         {
-            StartPressed = false;
             LevelManager.IsInGame = false;
             AlphaFadeValue = 0.0f;
             FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);

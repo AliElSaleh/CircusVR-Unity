@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000038, guid: 713645f6e5b8e4d488f7c5995a346013,
+  m_LightingDataAsset: {fileID: 112000038, guid: bcf2d61424cb12d449503c72a797c891,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -433,6 +433,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &111224798
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -682,6 +684,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &189163524
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -943,6 +947,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &282316037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1050,6 +1056,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &341382175
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1215,6 +1223,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &355797116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1378,7 +1388,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &394595685
 Transform:
   m_ObjectHideFlags: 0
@@ -1476,6 +1485,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &418595415
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1877,6 +1888,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &569602892
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1979,6 +1992,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &580204322
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2081,6 +2096,8 @@ MonoBehaviour:
   Tier1: 5
   Tier2: 10
   Tier3: 10
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &585722468
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2183,6 +2200,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &649828383
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2818,7 +2837,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 4a156ac31c198ff4c91cc3e9aca2c218,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &816174386
 Transform:
   m_ObjectHideFlags: 0
@@ -2874,7 +2892,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: ee162d49d707a404fb6078ebedfda013,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &816391306
 Transform:
   m_ObjectHideFlags: 0
@@ -2999,6 +3016,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &881150127
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3219,6 +3238,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &991248365
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3321,6 +3342,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &991538531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3505,6 +3528,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1014129194
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3697,6 +3722,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1059012829
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3804,6 +3831,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1061598056
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3906,6 +3935,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1075215076
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4108,6 +4139,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1108201094
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4210,6 +4243,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1126230288
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4430,6 +4465,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1199714337
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4532,6 +4569,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1200066971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4643,7 +4682,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!1 &1229000060
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,6 +4728,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1229000063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4792,6 +4832,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1229092227
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5053,6 +5095,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1288039831
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5155,6 +5199,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1290097099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5378,6 +5424,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1409041026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5489,7 +5537,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!1 &1487649091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5621,6 +5668,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1490244262
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5723,6 +5772,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1521506886
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6185,7 +6236,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &1643978133
 Transform:
   m_ObjectHideFlags: 0
@@ -6251,6 +6301,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1709292940
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6372,6 +6424,16 @@ Prefab:
         type: 2}
       propertyPath: Tier3
       value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 64903260968059084, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23276808906192284, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed5ab548ea8fa944b3ee92702cd4847, type: 2}
@@ -6524,6 +6586,8 @@ MonoBehaviour:
   Tier1: 5
   Tier2: 10
   Tier3: 10
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1779517515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6695,7 +6759,7 @@ Prefab:
     - target: {fileID: 224837527074283222, guid: da6164959a035854b8edbc35a8c808c4,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -2.78
+      value: -5.83
       objectReference: {fileID: 0}
     - target: {fileID: 224837527074283222, guid: da6164959a035854b8edbc35a8c808c4,
         type: 2}
@@ -7148,6 +7212,11 @@ Prefab:
       propertyPath: Pointer
       value: 
       objectReference: {fileID: 1012974173}
+    - target: {fileID: 20854333514422690, guid: 65dfb7ed902017a45864c05b1b6a8a14,
+        type: 2}
+      propertyPath: far clip plane
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114084295962320210, guid: 65dfb7ed902017a45864c05b1b6a8a14, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 65dfb7ed902017a45864c05b1b6a8a14, type: 2}
@@ -7272,6 +7341,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1930670509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7380,6 +7451,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 10
+  Hit: 0
 --- !u!64 &1955247447
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7472,7 +7545,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: ee162d49d707a404fb6078ebedfda013,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &1962781988
 Transform:
   m_ObjectHideFlags: 0
@@ -7968,7 +8040,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 4a156ac31c198ff4c91cc3e9aca2c218,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &2129302202
 Transform:
   m_ObjectHideFlags: 0

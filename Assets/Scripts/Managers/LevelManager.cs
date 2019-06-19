@@ -115,18 +115,5 @@ namespace Assets.Scripts.Managers
         {
             PauseMenu.SetActive(true);
         }
-
-        public void ResetLevel()
-        {
-            SpawnTargets();
-        }
-
-        public void SpawnTargets()
-        {
-            foreach (var Spawner in TargetSpawners)
-            {
-                Spawner.ResetTargets();
-            }
-        }
     }
 }

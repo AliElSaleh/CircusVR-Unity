@@ -80,15 +80,6 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-	        if (!TargetSpawner)
-	        {
-				Destroy(gameObject);
-				return;
-	        }
-
-            if (TargetSpawner.GetComponent<TargetSpawner>().Generating)
-                return;
-
             MoveAroundCenter();
             Rotate();
         }

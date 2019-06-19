@@ -22,7 +22,7 @@ namespace Assets.Scripts.Player
             if (!LevelManager.IsInGame)
                 return;
 
-            if (OVRInput.GetDown(OVRInput.Button.One) /*|| UnityEngine.Input.GetMouseButtonDown(1)*/)
+            if (OVRInput.GetDown(OVRInput.Button.One))
             {
                 if (!LevelManager.IsPaused)
                 {

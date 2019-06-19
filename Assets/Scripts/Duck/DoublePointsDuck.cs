@@ -29,21 +29,12 @@ namespace Assets.Scripts.Duck
 						ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1*2);
 					}
 
-					Destroy(Collision.gameObject); // Destroy target
-					break;
+                    Destroy(gameObject);
+				break;
 
-				case "Wall":
-					if (Timer.Finished)
-						return;
-
-					ScoreManager.Subtract(40);
-
+                case "Water":
 					Destroy(gameObject); // Destroy duck
-					break;
-
-				case "Water":
-					Destroy(gameObject); // Destroy duck
-					break;
+				break;
 			}
 		}
 	}

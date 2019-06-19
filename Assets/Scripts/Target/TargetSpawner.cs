@@ -23,9 +23,6 @@ namespace Assets.Scripts
         [HideInInspector]
         public Transform OriginalTransform;
 
-        [HideInInspector]
-        public bool Generating;
-
         private List<GameObject> ChildObjects = new List<GameObject>();
         private float Angle;
 
@@ -40,13 +37,8 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            if (Generating)
-                return;
 
             Rotate();
-
-			if (GetAllChildObjects().Count == 0)
-				Destroy(gameObject);
         }
 
         [UsedImplicitly]
@@ -63,10 +55,6 @@ namespace Assets.Scripts
 
         public void Generate()
         {
-            Generating = true;
-
-	        //ChildObjects = GetAllChildObjects();
-            
 	        DestroyAllChildren();
 
             // Spawn new targets in a shape of a circle
@@ -88,8 +76,6 @@ namespace Assets.Scripts
                 // Increase the angle for next iteration
 	            Angle += Spacing;
             }
-
-            Generating = false;
         }
 
         private void Rotate()
@@ -104,14 +90,9 @@ namespace Assets.Scripts
            Angle = 0.0f;
         }
 
-        public void ResetTargets()
-        {
-            Generate();
-        }
-
         private List<GameObject> GetAllChildObjects()
         {
-	        List<GameObject> Children = new List<GameObject>();
+	        var Children = new List<GameObject>();
 
 	        for (int i = 0; i < transform.childCount; i++)
 		        Children.Add(transform.GetChild(i).gameObject);
@@ -132,7 +113,6 @@ namespace Assets.Scripts
 		        Destroy(Child.gameObject);
 
             #endif
-
         }
     }
 }

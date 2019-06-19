@@ -67,7 +67,7 @@ namespace Assets.Scripts.Duck
 				// Spawn normal duck
 				else
 				{
-					SpawnDuck(DuckType.Duck);
+					SpawnDuck(DuckType.Super);
 
 					if (Random.Range(0, 10) == InfectedDuckID)
 						SpawnDuck(DuckType.Infected);

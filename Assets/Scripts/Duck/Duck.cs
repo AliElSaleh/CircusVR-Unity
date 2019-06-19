@@ -50,19 +50,10 @@ namespace Assets.Scripts.Duck
 				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1);
 			        }
 
-					//Destroy(Collision.gameObject); // Destroy target
+					//Collision.gameObject.SetActive(false); // Destroy target
 				break;
 
-				case "Wall":
-					if (Timer.Finished)
-						return;
-
-					ScoreManager.Subtract(20);
-
-					Destroy(gameObject); // Destroy duck
-				break;
-
-				case "Water":
+                case "Water":
 					Destroy(gameObject); // Destroy duck
 				break;
 	        }

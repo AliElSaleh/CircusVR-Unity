@@ -10,11 +10,11 @@
             base.Process();
 
             // Press
-            if (OVRInput.GetDown(Click, Source) /*|| UnityEngine.Input.GetMouseButtonDown(0)*/)
+            if (OVRInput.GetDown(Click, Source))
                 ProcessPress(Data);
 
             // Release
-            if (OVRInput.GetUp(Click, Source) /*|| UnityEngine.Input.GetMouseButtonUp(0)*/)
+            if (OVRInput.GetUp(Click, Source))
                 ProcessRelease(Data);
         }
     }
