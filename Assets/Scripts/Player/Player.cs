@@ -19,16 +19,17 @@ namespace Assets.Scripts.Player
         [UsedImplicitly]
         private void Update()
         {
-            if (OVRInput.GetDown(OVRInput.Button.One))
+            if (!LevelManager.IsInGame)
+                return;
+
+            if (OVRInput.GetDown(OVRInput.Button.One) /*|| UnityEngine.Input.GetMouseButtonDown(1)*/)
             {
                 if (!LevelManager.IsPaused)
                 {
-                    Pointer.InteractableMask = LayerMask.NameToLayer("UI");
                     LevelManager.Pause();
                 }
                 else
                 {
-                    Pointer.InteractableMask = LayerMask.NameToLayer("Interactable");
                     LevelManager.Resume();
                 }
             }

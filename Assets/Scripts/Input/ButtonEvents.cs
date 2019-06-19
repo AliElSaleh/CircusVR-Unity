@@ -10,7 +10,7 @@ namespace Assets.Scripts.Input
 {
     public enum ButtonType
     {
-        Start, Options, Menu, Resume, Exit
+        Start, Options, Menu, Resume, Restart, Exit
     }
 
     public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
@@ -25,8 +25,6 @@ namespace Assets.Scripts.Input
 
         private Image ButtonImage;
 
-        private int SceneIndex = 0;
-
         private float AlphaFadeValue;
 
         private bool StartPressed;
@@ -35,6 +33,13 @@ namespace Assets.Scripts.Input
         private void Awake()
         {
             ButtonImage = GetComponent<Image>();
+            FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
+        }
+
+        [UsedImplicitly]
+        private void Start()
+        {
+            FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
         }
 
         [UsedImplicitly]
@@ -52,6 +57,7 @@ namespace Assets.Scripts.Input
                     AlphaFadeValue = 1.0f;
                     StartPressed = false;
                     SceneManager.LoadScene(1);
+                    LevelManager.IsInGame = true;
                 }
             }
         }
@@ -90,8 +96,8 @@ namespace Assets.Scripts.Input
                 break;
 
                 case ButtonType.Menu:
-                    SceneIndex = 1;
-                    SceneManager.LoadScene(SceneIndex, LoadSceneMode.Single);
+                    ResetMenu();
+                    SceneManager.LoadScene(0);
                 break;
 
                 case ButtonType.Resume:
@@ -102,6 +108,14 @@ namespace Assets.Scripts.Input
                     LevelManager.Quit();
                 break;
             }
+        }
+
+        public void ResetMenu()
+        {
+            StartPressed = false;
+            LevelManager.IsInGame = false;
+            AlphaFadeValue = 0.0f;
+            FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
         }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Super Duck
   - Double Points Duck
   - Infected Duck
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
