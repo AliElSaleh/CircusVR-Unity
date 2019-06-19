@@ -1,23 +1,23 @@
 fileFormatVersion: 2
-guid: e9d94a740b8e154498ccb9f8e66158ea
+guid: 4b31943a2a9c2754cafe0fb175e222ae
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: flag01_geo
-    100002: flag02_geo
-    100004: flag03_geo
-    100006: flag04_geo
-    100008: flag05_geo
-    100010: flags_geo
-    100012: //RootNode
+    100000: eFlags_geo
+    100002: //RootNode
+    100004: flag01_geo
+    100006: flag02_geo
+    100008: flag03_geo
+    100010: flag04_geo
+    100012: flag05_geo
     100014: string_geo
-    400000: flag01_geo
-    400002: flag02_geo
-    400004: flag03_geo
-    400006: flag04_geo
-    400008: flag05_geo
-    400010: flags_geo
-    400012: //RootNode
+    400000: eFlags_geo
+    400002: //RootNode
+    400004: flag01_geo
+    400006: flag02_geo
+    400008: flag03_geo
+    400010: flag04_geo
+    400012: flag05_geo
     400014: string_geo
     2100000: red_lam
     2100002: yellow_lam
