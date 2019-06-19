@@ -1,45 +1,14 @@
 fileFormatVersion: 2
-guid: e3691b01c7fcbff48a4119a89d9e00df
+guid: 5275bdad67033394db07a5755a444243
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: SM_Duck
-    100004: SM_Hand
-    100006: SM_Lights
-    100008: SM_Sign
-    100010: SM_Target
-    100012: SM_Tent
     400000: //RootNode
-    400002: SM_Duck
-    400004: SM_Hand
-    400006: SM_Lights
-    400008: SM_Sign
-    400010: SM_Target
-    400012: SM_Tent
-    2100000: lambert2
-    2100002: lambert3
-    2100004: lambert1
-    2100006: lambert4
-    2100008: lambert5
-    2300000: SM_Duck
-    2300002: SM_Hand
-    2300004: SM_Lights
-    2300006: SM_Sign
-    2300008: SM_Target
-    2300010: SM_Tent
-    3300000: SM_Duck
-    3300002: SM_Hand
-    3300004: SM_Lights
-    3300006: SM_Sign
-    3300008: SM_Target
-    3300010: SM_Tent
-    4300000: SM_Sign
-    4300002: SM_Hand
-    4300004: SM_Lights
-    4300006: SM_Target
-    4300008: SM_Tent
-    4300010: SM_Duck
+    2100000: lambert5
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: SM_Target
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -71,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
