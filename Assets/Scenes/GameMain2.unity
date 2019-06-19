@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.34020114, g: 0.39975676, b: 0.5188679, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientIntensity: 0.8
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 617d9be015db68348a623b01ea51a8c5, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 77715b8b6b248994891d3ccad1ad330b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3773116, g: 0.42026377, b: 0.48784077, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.39951816, g: 0.6831448, b: 0.7651692, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -53,7 +53,7 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000038, guid: 713645f6e5b8e4d488f7c5995a346013,
+  m_LightingDataAsset: {fileID: 112000002, guid: 713645f6e5b8e4d488f7c5995a346013,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -552,6 +552,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &111224798
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -633,7 +635,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.944407, b: 0.7877358, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -656,7 +658,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 2.5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -918,6 +920,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &189163524
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1025,6 +1029,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &282316037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1086,6 +1092,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4622480335282926, guid: 353df7c20f2306b4a8787a1c71b0a90c,
     type: 2}
   m_PrefabInternal: {fileID: 357811357}
+--- !u!1001 &334635170
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193615778858080, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37b9778e3d57f7e4993b2e31cb766e35, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &341382172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1180,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &341382175
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1297,6 +1347,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &355797116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1465,7 +1517,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &394595685
 Transform:
   m_ObjectHideFlags: 0
@@ -1498,7 +1549,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &409149414
 Transform:
@@ -1563,6 +1614,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &418595415
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1635,7 +1688,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &495439032
 BoxCollider:
@@ -1849,7 +1902,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &538140939
 BoxCollider:
@@ -1964,6 +2017,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &569602892
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2243,6 +2298,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &580204322
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2345,6 +2402,8 @@ MonoBehaviour:
   Tier1: 5
   Tier2: 10
   Tier3: 10
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &585722468
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2496,6 +2555,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &649828383
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3026,7 +3087,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &769389858
 BoxCollider:
@@ -3131,7 +3192,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 4a156ac31c198ff4c91cc3e9aca2c218,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &816174386
 Transform:
   m_ObjectHideFlags: 0
@@ -3187,7 +3247,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: ee162d49d707a404fb6078ebedfda013,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &816391306
 Transform:
   m_ObjectHideFlags: 0
@@ -3312,6 +3371,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &881150127
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3479,7 +3540,7 @@ Transform:
   - {fileID: 394595685}
   - {fileID: 1784935420}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &991248362
 GameObject:
@@ -3527,6 +3588,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &991248365
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3629,6 +3692,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &991538531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3737,6 +3802,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1014129194
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3844,6 +3911,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1059012829
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3951,6 +4020,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1061598056
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4053,6 +4124,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1075215076
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4391,6 +4464,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1108201094
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4493,6 +4568,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1126230288
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4718,6 +4795,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1199714337
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4820,6 +4899,8 @@ MonoBehaviour:
   Tier1: 10
   Tier2: 15
   Tier3: 20
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1200066971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4931,7 +5012,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!1 &1207237151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,6 +5188,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1229000063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5210,6 +5292,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1229092227
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5373,7 +5457,7 @@ Transform:
   - {fileID: 230659654}
   - {fileID: 2090243825}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1276348421
 Prefab:
@@ -5476,6 +5560,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1288039831
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5578,6 +5664,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1290097099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5806,6 +5894,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1409041026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5993,7 +6083,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!1 &1487649091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6010,7 +6099,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1487649092
 BoxCollider:
@@ -6125,6 +6214,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1490244262
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6303,6 +6394,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1521506886
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6608,7 +6701,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!23 &1608654219
 MeshRenderer:
@@ -6666,7 +6759,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
 --- !u!4 &1618147116 stripped
 Transform:
@@ -6709,7 +6802,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 0ed5ab548ea8fa944b3ee92702cd4847,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &1643978133
 Transform:
   m_ObjectHideFlags: 0
@@ -6821,7 +6913,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!23 &1671769949
 MeshRenderer:
@@ -6879,7 +6971,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &1709292937
 GameObject:
@@ -6927,6 +7019,8 @@ MonoBehaviour:
   Tier1: 50
   Tier2: 70
   Tier3: 90
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1709292940
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7142,7 +7236,7 @@ Transform:
   - {fileID: 732338361}
   - {fileID: 1477718058}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779517512
 GameObject:
@@ -7190,6 +7284,8 @@ MonoBehaviour:
   Tier1: 5
   Tier2: 10
   Tier3: 10
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1779517515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7448,7 +7544,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!82 &1897957037
 AudioSource:
@@ -7697,9 +7793,83 @@ Prefab:
       propertyPath: InputModule
       value: 
       objectReference: {fileID: 1952615739}
+    - target: {fileID: 20854333514422690, guid: 65dfb7ed902017a45864c05b1b6a8a14,
+        type: 2}
+      propertyPath: m_ForceIntoRT
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65dfb7ed902017a45864c05b1b6a8a14, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1919795909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1914778972525348, guid: 65dfb7ed902017a45864c05b1b6a8a14,
+    type: 2}
+  m_PrefabInternal: {fileID: 1900569627}
+--- !u!4 &1919795910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4780039412731578, guid: 65dfb7ed902017a45864c05b1b6a8a14,
+    type: 2}
+  m_PrefabInternal: {fileID: 1900569627}
+--- !u!114 &1919795913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919795909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1919795910}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 768
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1922579665
 Prefab:
   m_ObjectHideFlags: 0
@@ -7815,6 +7985,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1930670509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7923,6 +8095,8 @@ MonoBehaviour:
   Tier1: 200
   Tier2: 300
   Tier3: 400
+  RespawnDelay: 5
+  Hit: 0
 --- !u!64 &1955247447
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8015,7 +8189,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: ee162d49d707a404fb6078ebedfda013,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &1962781988
 Transform:
   m_ObjectHideFlags: 0
@@ -8238,7 +8411,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &2070735384
 MeshCollider:
@@ -8447,7 +8620,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2118896130
 Transform:
@@ -8516,7 +8689,6 @@ MonoBehaviour:
   TargetPrefab: {fileID: 114786248841936552, guid: 4a156ac31c198ff4c91cc3e9aca2c218,
     type: 2}
   OriginalTransform: {fileID: 0}
-  Generating: 0
 --- !u!4 &2129302202
 Transform:
   m_ObjectHideFlags: 0
