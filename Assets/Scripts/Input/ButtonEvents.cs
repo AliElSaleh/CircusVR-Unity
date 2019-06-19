@@ -37,12 +37,6 @@ namespace Assets.Scripts.Input
         }
 
         [UsedImplicitly]
-        private void Start()
-        {
-            FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
-        }
-
-        [UsedImplicitly]
         private void Update()
         {
             if (StartPressed)
@@ -50,15 +44,10 @@ namespace Assets.Scripts.Input
                 // Fade out
                 AlphaFadeValue += Time.deltaTime;
 
-                FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
-                
-                if (AlphaFadeValue >= 1.0f)
-                {
-                    AlphaFadeValue = 1.0f;
-                    StartPressed = false;
-                    SceneManager.LoadScene(1);
-                    LevelManager.IsInGame = true;
-                }
+                StartPressed = false;
+                SceneManager.LoadScene(1);
+                LevelManager.IsInGame = true;
+                LevelManager.Resume();
             }
         }
 
@@ -96,9 +85,16 @@ namespace Assets.Scripts.Input
                 break;
 
                 case ButtonType.Menu:
+                    FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
+
                     ResetMenu();
                     SceneManager.LoadScene(0);
                 break;
+
+                case ButtonType.Restart:
+                    SceneManager.LoadScene(1);
+                    LevelManager.IsInGame = true;
+                    break;
 
                 case ButtonType.Resume:
                     LevelManager.Resume();

@@ -571,160 +571,55 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 223908252347819270, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1995357714}
-    - target: {fileID: 114520779890300558, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114520779890300558, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114215089678118042, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114215089678118042, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_text
-      value: You laugh, you lose
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.characterCount
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.spaceCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.wordCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.lineCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.materialCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867185401046510, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867185401046510, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 173.57996
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867185401046510, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 310
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_text
-      value: I laughed
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673913237741700, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673913237741700, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114355576567823632, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: FadeTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: baabc0d722e84e8458aabba45a341b5b, type: 2}
-    - target: {fileID: 114891315087182868, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: FadeTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: baabc0d722e84e8458aabba45a341b5b, type: 2}
-    - target: {fileID: 114361857963138546, guid: bcfe0468e141fa04897551e28ad67362,
-        type: 2}
-      propertyPath: FadeTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: baabc0d722e84e8458aabba45a341b5b, type: 2}
     - target: {fileID: 114355576567823632, guid: bcfe0468e141fa04897551e28ad67362,
         type: 2}
       propertyPath: FadeCanvas
       value: 
       objectReference: {fileID: 2061097359}
-    - target: {fileID: 114361857963138546, guid: bcfe0468e141fa04897551e28ad67362,
+    - target: {fileID: 223908252347819270, guid: bcfe0468e141fa04897551e28ad67362,
         type: 2}
-      propertyPath: Type
-      value: 4
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1995357714}
+    - target: {fileID: 114215089678118042, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114673913237741700, guid: bcfe0468e141fa04897551e28ad67362,
+    - target: {fileID: 114215089678118042, guid: bcfe0468e141fa04897551e28ad67362,
         type: 2}
-      propertyPath: m_padding
-      value: 0
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520779890300558, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520779890300558, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114880849821860304, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208294177131846, guid: bcfe0468e141fa04897551e28ad67362,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcfe0468e141fa04897551e28ad67362, type: 2}
