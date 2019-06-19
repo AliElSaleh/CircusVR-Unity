@@ -11,7 +11,9 @@ namespace Assets.Scripts.Duck
 			switch (Collision.transform.gameObject.tag)
 			{
 				case "Target":
-					if (Timer.Finished)
+                    // Add particle
+
+                    if (Timer.Finished)
 						return;
 
 					float Distance = Vector3.Distance(Collision.gameObject.transform.position, Collision.contacts[0].point);

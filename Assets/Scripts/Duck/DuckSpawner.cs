@@ -152,7 +152,9 @@ namespace Assets.Scripts.Duck
 					Object.SetPhysicalMaterial(PhysicsMaterial);
 				}
 				break;
-			}			
+			}	
+            
+            // Add particle (splash)
 		}
 	}
 }

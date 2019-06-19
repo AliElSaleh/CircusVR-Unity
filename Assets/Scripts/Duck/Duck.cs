@@ -32,6 +32,8 @@ namespace Assets.Scripts.Duck
 	        switch (Collision.transform.gameObject.tag)
 	        {
 		        case "Target":
+                    // Add particle
+
 			        if (Timer.Finished)
 				        return;
 
