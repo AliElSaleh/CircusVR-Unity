@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using Assets.Scripts.Duck;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -8,6 +9,7 @@ namespace Assets.Scripts
         [Range(10.0f, 1000.0f)]
         public float LaunchForce = 500.0f;
 
+        public DuckSpawner DuckSpawner;
         private Rigidbody Rigidbody;
 
         [UsedImplicitly]
@@ -33,9 +35,23 @@ namespace Assets.Scripts
                 default:
                     if (Collision.gameObject.GetComponent<Duck.Duck>())
                     {
-                        // Spawn power-ups
-                    }
+                        int ID = Random.Range(0, 5);
 
+                        // Spawn power-ups
+                        for (int i = 0; i < 5; i++)
+                        {
+                            if (ID == 3) // Arbitrary number
+                            {
+                                DuckSpawner.SpawnDuck(DuckType.Super);
+                            }
+                            else
+                            {
+                                DuckSpawner.SpawnDuck(DuckType.DoublePoints);
+                            }
+                        }
+
+                        Destroy(gameObject);
+                    }
                 break;
             }
         }
