@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000038, guid: bcf2d61424cb12d449503c72a797c891,
+  m_LightingDataAsset: {fileID: 112000002, guid: 713645f6e5b8e4d488f7c5995a346013,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -4248,6 +4248,7 @@ MonoBehaviour:
     type: 2}
   InfectedDuckPrefab: {fileID: 114277852643396412, guid: 3fce2a03a54420b4abcf084bf1e55d86,
     type: 2}
+  SplashParticle: {fileID: 0}
 --- !u!4 &708635207
 Transform:
   m_ObjectHideFlags: 0
