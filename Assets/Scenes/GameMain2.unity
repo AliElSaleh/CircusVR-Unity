@@ -6713,6 +6713,24 @@ Prefab:
       propertyPath: m_ForceIntoRT
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1474439615252464, guid: 65dfb7ed902017a45864c05b1b6a8a14, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33555245791845130, guid: 65dfb7ed902017a45864c05b1b6a8a14,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: ff8fcd7e87bbf38448460eb7f28d66b1, type: 3}
+    - target: {fileID: 33781334820380686, guid: 65dfb7ed902017a45864c05b1b6a8a14,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: c13c9d66d2a909e4c957c7c511e5bffa, type: 3}
+    - target: {fileID: 1644478068241938, guid: 65dfb7ed902017a45864c05b1b6a8a14, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65dfb7ed902017a45864c05b1b6a8a14, type: 2}
   m_IsPrefabAsset: 0
