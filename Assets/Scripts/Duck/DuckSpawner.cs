@@ -97,7 +97,7 @@ namespace Assets.Scripts.Duck
 			#endif
 		}
 
-		private void SpawnDuck(DuckType Type)
+		public void SpawnDuck(DuckType Type)
 		{
 			Vector3 SpawnPoint = Vector3.zero;
 			float Angle = Random.Range(0.0f, 360.0f);
