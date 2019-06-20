@@ -7508,6 +7508,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.888
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 371089901f4278a498be40deff53d471, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 371089901f4278a498be40deff53d471, type: 3}
   m_IsPrefabAsset: 0
@@ -12404,6 +12408,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23892826645609754, guid: 61db59edfe813284fb41569330945c07,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4fa96212e8da1a94ab4345d930445fd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61db59edfe813284fb41569330945c07, type: 2}
   m_IsPrefabAsset: 0
