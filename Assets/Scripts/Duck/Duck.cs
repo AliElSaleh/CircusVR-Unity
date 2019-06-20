@@ -3,65 +3,65 @@ using JetBrains.Annotations;
 
 namespace Assets.Scripts.Duck
 {
-	public class Duck : MonoBehaviour
-	{
-		protected Rigidbody Rigidbody;
+    public class Duck : MonoBehaviour
+    {
+        protected Rigidbody Rigidbody;
 
-        [Range(1, 1000)] [HideInInspector]
-		public float LaunchForce = 300.0f;
+        [Range(1, 1000)] [HideInInspector] public float LaunchForce = 300.0f;
 
-        [Range(1, 200)] [HideInInspector]
-        public float ThrowForce = 30.0f;
+        [Range(1, 200)] [HideInInspector] public float ThrowForce = 30.0f;
+
+        public GameObject ParticleHitPrefab;
 
         [UsedImplicitly]
-		protected void Start()
-		{
-			Rigidbody = GetComponent<Rigidbody>();
+        protected void Start()
+        {
+            Rigidbody = GetComponent<Rigidbody>();
 
-			Rigidbody.AddForce(Vector3.up * LaunchForce);
-
-			//hit = GetComponent<ParticleSystem>();
-		}
+            Rigidbody.AddForce(Vector3.up * LaunchForce);
+        }
 
         public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)
-		{
-			GetComponent<SphereCollider>().material = NewPhysicMaterial;
-		}
+        {
+            GetComponent<SphereCollider>().material = NewPhysicMaterial;
+        }
 
         [UsedImplicitly]
         private void OnCollisionEnter(Collision Collision)
         {
-	        switch (Collision.transform.gameObject.tag)
-	        {
-		        case "Target":
-					//hit.Play();
+            switch (Collision.transform.gameObject.tag)
+            {
+                case "Target":
 
-			        if (Timer.Finished)
-				        return;
+                    ParticleHitPrefab = Instantiate(ParticleHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                    ParticleHitPrefab.GetComponent<ParticleSystem>().Play();
 
-			        float Distance = Vector3.Distance(Collision.gameObject.transform.position, Collision.contacts[0].point);
+                    if (Timer.Finished)
+                        return;
 
-			        if (Distance < 0.3f)
-			        {
-						ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier3);
-			        }
-					else if (Distance > 0.3f && Distance < 0.5f)
-			        {
-				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier2);
-			        }
-			        else
-			        {
-				        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1);
-			        }
+                    float Distance = Vector3.Distance(Collision.gameObject.transform.position,
+                        Collision.contacts[0].point);
 
-					//Collision.gameObject.SetActive(false); // Destroy target
-				break;
+                    if (Distance < 0.3f)
+                    {
+                        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier3);
+                    }
+                    else if (Distance > 0.3f && Distance < 0.5f)
+                    {
+                        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier2);
+                    }
+                    else
+                    {
+                        ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier1);
+                    }
+
+                    //Collision.gameObject.SetActive(false); // Destroy target
+                    break;
 
                 case "Water":
-					Destroy(gameObject); // Destroy duck
-					//This dosen't work...
-				break;
-	        }
+                    Destroy(gameObject); // Destroy duck
+                    break;
+            }
         }
-	}
+    }
 }

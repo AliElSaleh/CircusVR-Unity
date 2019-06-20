@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchForce: 300
   ThrowForce: 30
+  ParticleHitPrefab: {fileID: 100000, guid: 3156817f64ec68948ad6bb26569b9ef5, type: 2}
 --- !u!114 &114978868600309386
 MonoBehaviour:
   m_ObjectHideFlags: 1

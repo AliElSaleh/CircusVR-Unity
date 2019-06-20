@@ -13,9 +13,10 @@ namespace Assets.Scripts.Duck
 			switch (Collision.transform.gameObject.tag)
 			{
 				case "Target":
-                    // Add particle
+                    ParticleHitPrefab = Instantiate(ParticleHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                    ParticleHitPrefab.GetComponent<ParticleSystem>().Play();
 
-					if (Timer.Finished)
+                    if (Timer.Finished)
 						return;
 
 					// Sphere cast
