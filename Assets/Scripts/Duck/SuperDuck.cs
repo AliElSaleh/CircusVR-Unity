@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using JetBrains.Annotations;
+using TMPro;
 
 namespace Assets.Scripts.Duck
 {
@@ -23,11 +24,20 @@ namespace Assets.Scripts.Duck
 					RaycastHit[] OutHit;
 					OutHit = Physics.SphereCastAll(transform.position, DetectionRadius, transform.forward);
 
-					// Destroy every target if the sphere cast has hit it
-					foreach (RaycastHit Hit in OutHit)
-					{
-						ScoreManager.Add(Collision.gameObject.GetComponent<Target>().Tier2);
+                    // Spawn the score hit UI element (for feedback)
+                    int ScoreToAdd = Collision.gameObject.GetComponent<Target>().Tier2;
+                    ScoreManager.Add(ScoreToAdd);
 
+                    ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                    ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.blue;
+                    ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize *= 2;
+                    ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + ScoreToAdd;
+                    ScoreHitPrefab.transform.LookAt(new Vector3(0.0f, 0.0f, 0.0f));
+                    ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
+
+					// Destroy every target in the sphere's reach
+					foreach (RaycastHit Hit in OutHit)
+                    {
                         if (Hit.transform.gameObject.tag == "Target")
                         {
                             Hit.transform.GetComponent<Target>().Hit = true;

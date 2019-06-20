@@ -523,7 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &111224798
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &189163524
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &341382175
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &418595415
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &569602892
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 5
   Tier2: 10
-  Tier3: 10
+  Tier3: 50
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &585722468
@@ -2752,7 +2752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &881150127
@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &991248365
@@ -3073,7 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &991538531
@@ -3183,7 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1014129194
@@ -3396,7 +3396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1061598056
@@ -3700,7 +3700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1108201094
@@ -3804,7 +3804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1126230288
@@ -4031,7 +4031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1199714337
@@ -4135,7 +4135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 10
   Tier2: 15
-  Tier3: 20
+  Tier3: 30
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1200066971
@@ -4398,7 +4398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1229092227
@@ -4666,7 +4666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1288039831
@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1409041026
@@ -5159,7 +5159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1490244262
@@ -5263,7 +5263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1521506886
@@ -5732,7 +5732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 50
   Tier2: 70
-  Tier3: 90
+  Tier3: 100
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1709292940
@@ -6059,7 +6059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1: 5
   Tier2: 10
-  Tier3: 10
+  Tier3: 50
   RespawnDelay: 5
   Hit: 0
 --- !u!64 &1779517515
@@ -7210,6 +7210,11 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.z
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 223731181699026052, guid: 84fdc962379d6ae47bb82cc0d45975a8,
+        type: 2}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84fdc962379d6ae47bb82cc0d45975a8, type: 2}
