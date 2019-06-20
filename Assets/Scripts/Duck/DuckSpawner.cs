@@ -33,7 +33,7 @@ namespace Assets.Scripts.Duck
 		public DoublePointsDuck DPDuckPrefab = null;
 		public InfectedDuck InfectedDuckPrefab = null;
 
-		public ParticleSystem splash;
+        public GameObject SplashParticle = null;
 
 		private int DucksSpawned;
 		private int DPDucksSpawned;
@@ -45,7 +45,6 @@ namespace Assets.Scripts.Duck
 		private void Start()
 		{
 			InfectedDuckID = Random.Range(0, 10);
-			splash = GetComponent<ParticleSystem>();
 		}
 
 		[UsedImplicitly]
@@ -114,9 +113,11 @@ namespace Assets.Scripts.Duck
                     Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
 
+                    Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
+
                     DucksSpawned++;
-				}
-				break;
+                }
+                break;
 
 				case DuckType.Super:
 				{
@@ -127,8 +128,9 @@ namespace Assets.Scripts.Duck
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
+                    Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
                 }
-				break;
+                break;
 
 				case DuckType.DoublePoints:
 				{
@@ -139,6 +141,8 @@ namespace Assets.Scripts.Duck
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
+
+                    Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
 
                     DPDucksSpawned++;
 				}
@@ -153,13 +157,12 @@ namespace Assets.Scripts.Duck
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
 					Object.SetPhysicalMaterial(PhysicsMaterial);
-				}
+
+                    Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
+                }
 				break;
 			}	
             
-			////////// Breaks the game!
-			// var emission = splash.emission;
-			// emission.enabled = false;
 		}
 	}
 }
