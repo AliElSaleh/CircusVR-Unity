@@ -49,8 +49,9 @@ namespace Assets.Scripts
                                 DuckSpawner.SpawnDuck(DuckType.DoublePoints);
                             }
                         }
-                    }
 
+                        Destroy(gameObject);
+                    }
                 break;
             }
         }

@@ -113,7 +113,6 @@ namespace Assets.Scripts.Duck
 				{
 					// Spawn the duck on the spawn point and initialize its variables
 					Duck Object = Instantiate(DuckPrefab, SpawnPoint, DuckPrefab.transform.rotation);
-					Object.transform.parent = gameObject.transform;
 					Object.name = DuckPrefab.name;
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
@@ -129,7 +128,6 @@ namespace Assets.Scripts.Duck
 				{
 					// Spawn the super duck on the spawn point and initialize its variables
 					SuperDuck Object = Instantiate(SuperDuckPrefab, SpawnPoint, SuperDuckPrefab.transform.rotation);
-					Object.transform.parent = gameObject.transform;
 					Object.name = SuperDuckPrefab.name;
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
@@ -142,7 +140,6 @@ namespace Assets.Scripts.Duck
 				{
 					// Spawn the double points duck on the spawn point and initialize its variables
 					DoublePointsDuck Object = Instantiate(DPDuckPrefab, SpawnPoint, DPDuckPrefab.transform.rotation);
-					Object.transform.parent = gameObject.transform;
 					Object.name = DPDuckPrefab.name;
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
@@ -158,7 +155,6 @@ namespace Assets.Scripts.Duck
 				{
 					// Spawn the double points duck on the spawn point and initialize its variables
 					InfectedDuck Object = Instantiate(InfectedDuckPrefab, SpawnPoint, InfectedDuckPrefab.transform.rotation);
-					Object.transform.parent = gameObject.transform;
 					Object.name = InfectedDuckPrefab.name;
 					Object.LaunchForce = Random.Range(ForceMin, ForceMax);
                     Object.ThrowForce = DuckThrowForce;
@@ -172,7 +168,6 @@ namespace Assets.Scripts.Duck
                 {
                     // Spawn the double points duck on the spawn point and initialize its variables
                     MysteryTarget Object = Instantiate(MysteryTargetPrefab, SpawnPoint, MysteryTargetPrefab.transform.rotation);
-                    Object.transform.parent = gameObject.transform;
                     Object.name = MysteryTargetPrefab.name;
                     Object.LaunchForce = Random.Range(ForceMin, ForceMax);
 

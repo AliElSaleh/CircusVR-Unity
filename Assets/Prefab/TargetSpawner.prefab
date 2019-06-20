@@ -504,6 +504,8 @@ MonoBehaviour:
   Tier1: 100
   Tier2: 250
   Tier3: 500
+  RespawnDelay: 5
+  Hit: 0
 --- !u!114 &114300571298424192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -518,6 +520,8 @@ MonoBehaviour:
   Tier1: 100
   Tier2: 250
   Tier3: 500
+  RespawnDelay: 5
+  Hit: 0
 --- !u!114 &114342930408710716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -532,6 +536,8 @@ MonoBehaviour:
   Tier1: 100
   Tier2: 250
   Tier3: 500
+  RespawnDelay: 5
+  Hit: 0
 --- !u!114 &114347299731199874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -546,6 +552,8 @@ MonoBehaviour:
   Tier1: 100
   Tier2: 250
   Tier3: 500
+  RespawnDelay: 5
+  Hit: 0
 --- !u!114 &114355868303142246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -561,9 +569,9 @@ MonoBehaviour:
   NumberOfObjects: 2
   RotationSpeed: 30
   Clockwise: 1
-  TargetPrefab: {fileID: 0}
+  TargetPrefab: {fileID: 114843899052055170, guid: c41d70a1873cac94282777e3ce413b91,
+    type: 2}
   OriginalTransform: {fileID: 0}
-  bGenerating: 0
 --- !u!114 &114428500964360472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,6 +586,8 @@ MonoBehaviour:
   Tier1: 100
   Tier2: 250
   Tier3: 500
+  RespawnDelay: 5
+  Hit: 0
 --- !u!114 &114473486467791242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -592,6 +602,8 @@ MonoBehaviour:
   Tier1: 100
   Tier2: 250
   Tier3: 500
+  RespawnDelay: 5
+  Hit: 0
 --- !u!136 &136251256933501010
 CapsuleCollider:
   m_ObjectHideFlags: 1
