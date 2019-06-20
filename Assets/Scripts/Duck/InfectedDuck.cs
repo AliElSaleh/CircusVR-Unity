@@ -48,8 +48,11 @@ namespace Assets.Scripts.Duck
                         ParticlePrefab.GetComponent<ParticleSystem>().Play();
 
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, transform);
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.black;
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "-" + ScoreLoss;
+
+                        var TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+                        TextComponent.color = Color.black;
+                        TextComponent.text = "-" + ScoreLoss;
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
                     }
                 }

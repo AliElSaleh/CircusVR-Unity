@@ -15,12 +15,17 @@ namespace Assets.Scripts.Duck
         public GameObject ParticleHitPrefab;
         public GameObject ScoreHitPrefab;
 
+        protected TextMeshProUGUI TextComponent;
+        protected float FontSize = 100.0f;
+
         [UsedImplicitly]
         protected void Start()
         {
             Rigidbody = GetComponent<Rigidbody>();
-
             Rigidbody.AddForce(Vector3.up * LaunchForce);
+
+            TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            FontSize = TextComponent.fontSize;
         }
 
         public void SetPhysicalMaterial(PhysicMaterial NewPhysicMaterial)
@@ -50,8 +55,8 @@ namespace Assets.Scripts.Duck
 
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.yellow;
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + ScoreToAdd;
+                        TextComponent.color = Color.yellow;
+                        TextComponent.text = "+" + ScoreToAdd;
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
                     }
                     else if (Distance > 0.3f && Distance < 0.5f)
@@ -61,8 +66,8 @@ namespace Assets.Scripts.Duck
 
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.yellow;
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + ScoreToAdd;
+                        TextComponent.color = Color.yellow;
+                        TextComponent.text = "+" + ScoreToAdd;
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
                     }
                     else
@@ -73,12 +78,11 @@ namespace Assets.Scripts.Duck
 
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.yellow;
-                        ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + ScoreToAdd;
+                        TextComponent.color = Color.yellow;
+                        TextComponent.text = "+" + ScoreToAdd;
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
                     }
 
-                    //Collision.gameObject.SetActive(false); // Destroy target
                     break;
 
                 case "Water":

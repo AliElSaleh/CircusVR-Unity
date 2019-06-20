@@ -12,6 +12,9 @@ namespace Assets.Scripts
         [Range(1.0f, 10.0f)]
         public float RespawnDelay = 5.0f;
 
+        private MeshRenderer MeshRenderer;
+        private MeshCollider MeshCollider;
+
         private float TimeCounter;
 
         [HideInInspector]
@@ -21,6 +24,9 @@ namespace Assets.Scripts
         private void Start()
         {
             tag = "Target";
+
+            MeshRenderer = GetComponent<MeshRenderer>();
+            MeshCollider = GetComponent<MeshCollider>();
         }
 
         [UsedImplicitly]
@@ -40,14 +46,14 @@ namespace Assets.Scripts
 
         public void Hide()
         {
-            GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<MeshCollider>().enabled = false;
+            MeshRenderer.enabled = false;
+            MeshCollider.enabled = false;
         }
 
         public void Show()
         {
-            GetComponent<MeshRenderer>().enabled = true;
-            GetComponent<MeshCollider>().enabled = true;
+            MeshRenderer.enabled = true;
+            MeshCollider.enabled = true;
         }
     }
 }

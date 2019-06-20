@@ -29,9 +29,9 @@ namespace Assets.Scripts.Duck
                     ScoreManager.Add(ScoreToAdd);
 
                     ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
-                    ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.blue;
-                    ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize *= 2;
-                    ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + ScoreToAdd;
+                    TextComponent.color = Color.blue;
+                    TextComponent.fontSize = FontSize*2;
+                    TextComponent.text = "+" + ScoreToAdd;
                     ScoreHitPrefab.transform.LookAt(new Vector3(0.0f, 0.0f, 0.0f));
                     ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
 
