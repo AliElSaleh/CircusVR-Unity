@@ -12,6 +12,8 @@ TagManager:
   - Double Points Duck
   - Infected Duck
   - PauseMenu
+  - FxTemporaire
+  - MysteryTarget
   layers:
   - Default
   - TransparentFX
