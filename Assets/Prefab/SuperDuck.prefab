@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273900201633556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2324011, y: 7.217749e-17, z: 6.7494144}
+  m_LocalPosition: {x: -6.676, y: 0.509, z: -4.466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -230,7 +230,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchForce: 300
   ThrowForce: 30
-  hit: {fileID: 0}
+  ParticleHitPrefab: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
+    type: 2}
+  ScoreHitPrefab: {fileID: 1694314925723712, guid: 8b65104c5faf64b48a7f26e991928584,
+    type: 2}
 --- !u!135 &135692630283081518
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -241,5 +244,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.75
+  m_Center: {x: 0, y: 0.44, z: 0}
