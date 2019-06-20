@@ -7,7 +7,6 @@ namespace Assets.Scripts.Player
     public class Player : MonoBehaviour
     {
         public static GameObject Grabber;
-        public static GameObject ScoreFeedback;
 
         public Pointer Pointer = null;
 
@@ -15,7 +14,6 @@ namespace Assets.Scripts.Player
         private void Start()
         {
             Grabber = GameObject.Find("Grabber");
-            ScoreFeedback = GameObject.Find("ScoreFeedback");
         }
 
         [UsedImplicitly]
