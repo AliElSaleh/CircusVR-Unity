@@ -13,8 +13,6 @@ namespace Assets.Scripts.Duck
         [Range(1, 200)] [HideInInspector]
         public float ThrowForce = 30.0f;
 
-		public ParticleSystem hit;
-
         [UsedImplicitly]
 		protected void Start()
 		{
