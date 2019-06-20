@@ -6,7 +6,7 @@ namespace Assets.Scripts.Duck
 {
 	public enum DuckType
 	{
-		Duck, Super, DoublePoints, Infected
+		Duck, Super, DoublePoints, Infected, Mystery
 	}
 
 	public class DuckSpawner : MonoBehaviour
@@ -32,12 +32,14 @@ namespace Assets.Scripts.Duck
 		public SuperDuck SuperDuckPrefab = null;
 		public DoublePointsDuck DPDuckPrefab = null;
 		public InfectedDuck InfectedDuckPrefab = null;
+		public MysteryTarget MysteryTargetPrefab = null;
 
         public GameObject SplashParticle = null;
 
 		private int DucksSpawned;
 		private int DPDucksSpawned;
 		private int InfectedDuckID;
+		private int MysteryTargetID;
 
 		private float TimeInSeconds;
 
@@ -45,6 +47,7 @@ namespace Assets.Scripts.Duck
 		private void Start()
 		{
 			InfectedDuckID = Random.Range(0, 5);
+			MysteryTargetID = Random.Range(0, 10);
 		}
 
 		[UsedImplicitly]
@@ -71,8 +74,11 @@ namespace Assets.Scripts.Duck
 				{
 					SpawnDuck(DuckType.Duck);
 
-					if (Random.Range(0, 5) == InfectedDuckID)
+                    if (Random.Range(0, 5) == InfectedDuckID)
 						SpawnDuck(DuckType.Infected);
+
+                    if (Random.Range(0, 10) == MysteryTargetID)
+                        SpawnDuck(DuckType.Mystery);
 				}
 
 				TimeInSeconds = 0.0f;
@@ -161,6 +167,18 @@ namespace Assets.Scripts.Duck
                     Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
                 }
 				break;
+
+                case DuckType.Mystery:
+                {
+                    // Spawn the double points duck on the spawn point and initialize its variables
+                    MysteryTarget Object = Instantiate(MysteryTargetPrefab, SpawnPoint, MysteryTargetPrefab.transform.rotation);
+                    Object.transform.parent = gameObject.transform;
+                    Object.name = MysteryTargetPrefab.name;
+                    Object.LaunchForce = Random.Range(ForceMin, ForceMax);
+
+                    Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
+                }
+                break;
 			}	
             
 		}
