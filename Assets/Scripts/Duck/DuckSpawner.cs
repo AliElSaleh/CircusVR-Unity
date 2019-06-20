@@ -44,7 +44,7 @@ namespace Assets.Scripts.Duck
 		[UsedImplicitly]
 		private void Start()
 		{
-			InfectedDuckID = Random.Range(0, 10);
+			InfectedDuckID = Random.Range(0, 5);
 		}
 
 		[UsedImplicitly]
@@ -71,7 +71,7 @@ namespace Assets.Scripts.Duck
 				{
 					SpawnDuck(DuckType.Duck);
 
-					if (Random.Range(0, 10) == InfectedDuckID)
+					if (Random.Range(0, 5) == InfectedDuckID)
 						SpawnDuck(DuckType.Infected);
 				}
 

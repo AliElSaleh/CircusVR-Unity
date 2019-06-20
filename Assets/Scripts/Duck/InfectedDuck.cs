@@ -8,7 +8,7 @@ namespace Assets.Scripts.Duck
 	{
 		[Range(10, 100)]
 		public int ScoreLoss = 100;
-        public ParticleSystem effect;
+
         public GameObject ParticlePrefab;
 
 		private float DestroyDelay;
@@ -32,9 +32,6 @@ namespace Assets.Scripts.Duck
                     if (ScoreManager.TextMeshProUGUIComponent)
 					    ScoreManager.Subtract(ScoreLoss);
 
-                    Instantiate(ParticlePrefab, transform);
-                    ParticlePrefab.GetComponent<ParticleSystem>().Play();
-
                     Pointer.bHeld = false;
                     Events.EnableInput();
                     Pointer.ShowLine();
@@ -42,6 +39,14 @@ namespace Assets.Scripts.Duck
 
                     Destroy(gameObject);
 				}
+                else
+                {
+                    if (!ParticlePrefab.GetComponent<ParticleSystem>().isPlaying)
+                    {
+                        ParticlePrefab = Instantiate(ParticlePrefab, transform);
+                        ParticlePrefab.GetComponent<ParticleSystem>().Play();
+                    }
+                }
 			}
 		}
 	}
