@@ -48,6 +48,7 @@ namespace Assets.Scripts.Duck
 
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, transform);
 
+                        TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                         TextComponent.color = Color.black;
                         TextComponent.text = "-" + ScoreLoss;
                         ScoreHitPrefab.transform.rotation =
@@ -72,7 +73,7 @@ namespace Assets.Scripts.Duck
                         return;
 
                     int ScoreToSubtract = Collision.gameObject.GetComponent<Target>().Tier3;
-                    ScoreManager.Add(ScoreToSubtract);
+                    ScoreManager.Subtract(ScoreToSubtract);
 
                     // Spawn the score hit UI element (for feedback)
                     ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);

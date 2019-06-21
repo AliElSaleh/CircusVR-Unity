@@ -1,0 +1,1472 @@
+commit 5d69f54b14c5c36a2e08c9af43b9d08b81415843
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 14:50:05 2019 +1000
+
+    Review entire assets folder
+    
+    Update Game scene
+
+commit 5a6268acfb2df3d75ed32b815319fb164caaf536
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 13:46:31 2019 +1000
+
+    Deleted Unused Assets
+
+commit 8000aa6342b615dac3f9de699e89c6fc8c80cdf1
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 12:58:26 2019 +1000
+
+    Fix an issue where fading was not working
+
+commit 5c32c7bf9f7d0b214c0410d6a2be3638f750564c
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 12:52:08 2019 +1000
+
+    Add end game screen
+    
+    Add confetti particle effect on game end
+    Fix input and timer bugs
+    Fix score feedback bug
+
+commit cc81eee2bde511b0ea65dec39228d2fee75d0a6f
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 12:19:16 2019 +1000
+
+    Update ArtAssets.unity
+
+commit c1b5e63dc46ad64f02bb5f13d1beb215692101fe
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 12:18:41 2019 +1000
+
+    Updated ArtAsset scene
+
+commit 376606d6f089f8e5a03ea36d547269099f69aa31
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 12:13:24 2019 +1000
+
+    Removed LevelDesign scene
+
+commit 474097aac0d92364c664dadd9e2b1572ee30f312
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 12:02:36 2019 +1000
+
+    Adding Ticking sound effect and Tutorial
+
+commit cf27fadd322431cecbcb9571b039234012d484d4
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 10:53:27 2019 +1000
+
+    Improved things...
+
+commit c935697de273a6a7061f2dba48e48e06c22b1494
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 10:42:51 2019 +1000
+
+    Update all object materials (higher quality)
+
+commit 52160df15f416d0c9047eca6b11a961b63a56c7c
+Merge: 8a1d86d c815ee3
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 10:23:00 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 8a1d86d1273da66df65d1c3617f2335663987f6f
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 10:22:55 2019 +1000
+
+    Texture for all artist asset
+
+commit c815ee324b61c0f516cea000ece602708b70edb4
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 10:19:30 2019 +1000
+
+    Make pointer reticule open when interacting with UI layers
+    
+    Update player prefab
+
+commit 6a67bd65fcfa8ec63ca71799c2cf08bf9feaefee
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 10:02:04 2019 +1000
+
+    Fix font sizing issue on target hit
+    
+    Add game over and pause object in level manager and scene
+
+commit 90b74f27badd276d4316348fdfcaf681237ca2ff
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 10:00:43 2019 +1000
+
+    Remove old scenes in build settings
+    
+    Add new tag : "GameOver"
+
+commit d53ed1e8e9647f4a80dedcf905512fc913c0a0f9
+Merge: fd2853b 5461843
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 09:44:50 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit fd2853b50ecf2936436c19036d97b0e37db73d03
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 09:43:45 2019 +1000
+
+    Adding moutains
+
+commit 5461843ff494f50f40822ce45e4bd8fb568aa64f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 09:11:23 2019 +1000
+
+    Change water tiling to 20x20
+
+commit 5faaf690ee35f5e8bd57006044995194e31c4fd0
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Fri Jun 21 00:31:34 2019 +1000
+
+    Create CartoonWaterPSD.psd.meta
+
+commit 06eb5fcb8c18e5decd2b999a90b586f777dc6961
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Fri Jun 21 00:31:07 2019 +1000
+
+    Add water PSD file
+
+commit 29c7c4bbf86bf5f4e58bb51ddeefac3868dd1996
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Fri Jun 21 00:30:27 2019 +1000
+
+    Add better water
+
+commit 8ddbf43ff7c31a1ad65db11c4318eaa779d7c352
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 20:42:49 2019 +1000
+
+    Updated GameScene2
+
+commit 3f3841fcfde27e5f97b3bd594ff426b0c99364f1
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 16:54:11 2019 +1000
+
+    Add new duck materials
+    
+    Clean up code
+    Delete unused material
+
+commit c10f1ef7889efc143d96c716d60e42da1347b521
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 16:28:03 2019 +1000
+
+    Level Design Scene made it
+    
+    Moving around assets as to not interfere with the MainGame2 scene
+
+commit 9e5a633a683d65f693a0ac173cdb41bd513f2d00
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 16:10:10 2019 +1000
+
+    Enable GPU instancing on materials
+
+commit d311de094d56f80a314cfa1421cac9367bf48083
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 16:04:39 2019 +1000
+
+    Update Circus mat
+
+commit 6eefc326fabcc67d217ebfcbbaa65546adcc3022
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:52:02 2019 +1000
+
+    Re-organise assets
+    
+    Remove disgusting water
+
+commit eaa0d8987a0ce5ab4ce44bdbad726bbd6181cf4c
+Merge: a69be99 aa4ea6b
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 15:39:08 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit a69be9989a06a16849bd0870cfb11b117e5560f5
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 15:38:33 2019 +1000
+
+    Added improved textures
+
+commit aa4ea6b1a1fbe84e8d2cebbb0e0d2251deb6154f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:35:25 2019 +1000
+
+    Delete old lighting data
+    
+    Add a profiling scene
+
+commit bb946cebab00549371c8adf39df2568e457b6f05
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:29:53 2019 +1000
+
+    Delete GameMain
+
+commit 5422b4124a09b4c9af40ab71786cb7eede964171
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:29:02 2019 +1000
+
+    Update New Terrain.asset
+
+commit dc177fc03e57bb8b52c0c228abc6f26c149f27ef
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:24:22 2019 +1000
+
+    Delete game scene
+
+commit 0a97ba4287ceaa2c051d7050d8502e7f2ab94a43
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:14:17 2019 +1000
+
+    Add "mountains"
+
+commit 5d4620e628f8e68fd90c40657b77f915dd814258
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:10:37 2019 +1000
+
+    Fix an issue where the duck mesh was missing
+
+commit bb5e981c0becfe9ffa82bb34c61b792de471dafa
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 15:03:14 2019 +1000
+
+    Delete small tree
+    
+    Add wood panel material
+
+commit 4f55b4e0defd7fa2845c88565abe55ee05104e47
+Merge: d8a0ed0 7f3bbed
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 14:58:28 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit d8a0ed024e842aa56783116be7bf347108ecf807
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 14:58:23 2019 +1000
+
+    Added Target models
+
+commit 7f3bbed89381ec06569a5ac0abd71f7ddf712ec4
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 14:56:57 2019 +1000
+
+    Fix an issue where the powerups would not spawn on mystery target hit
+
+commit beb14af94782967647cd5ab636009ebc78669dd1
+Merge: 5179fd7 00942bb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 14:26:45 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 5179fd7a01767c6a24d0eb61e64bdc2ae42c11db
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 14:26:27 2019 +1000
+
+    Implement mystery target functionality
+
+commit 00942bbbcd9a748a2c0bd24989cc36133f61816c
+Merge: 71aef2c 22deaa9
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 14:16:45 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 71aef2c4a2f00920fa71bdac2c694caac7ec0280
+Merge: cf5f758 930dbfb
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 14:16:07 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 22deaa935c19b81acfa6c1bc6d73d348041c2e41
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 14:15:59 2019 +1000
+
+    Add lighting data
+
+commit cf5f75887c4fcc43b102dfef234a06c4b9e4720e
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 14:15:30 2019 +1000
+
+    Only Edward Pull This Please
+
+commit 930dbfbb6dea60d557db46155b594c779296ba45
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 14:06:58 2019 +1000
+
+    Add mystery target
+
+commit e5a24defb833561bf06e39c3fbab47d34b31330e
+Merge: d195ed5 e499edc
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 13:47:18 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit d195ed589d4ec2a776cf3f6bee1ab8b1ad681216
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 13:46:50 2019 +1000
+
+    target assets added
+
+commit e499edc4713de3971abaf8e30e50a6b682c00fa2
+Merge: 6a5acc4 a21b479
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 13:46:44 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 6a5acc41d509377ac3d58d2d07f171b26254377a
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 13:46:20 2019 +1000
+
+    Added updated models
+
+commit a21b479630088dec14219d19fe644a731561f44e
+Merge: 1a46e93 54afa84
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 13:15:51 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 54afa84031fb503d8e3ea7ddb002e3860190f41a
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 13:14:41 2019 +1000
+
+    Updated Lighting
+
+commit 13e5c93f5d5089e7d2ab251f11c90f39105a2200
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 12:53:39 2019 +1000
+
+    Update GameMain2.unity
+
+commit fc1d94e5bb13a8ff59171876d4b32ed7d3283621
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 12:53:26 2019 +1000
+
+    Add score feedback on hit
+    
+    Fix duck collisions
+
+commit 1a46e9336581337773f427175b3161ec2b771d23
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 20 11:39:43 2019 +1000
+
+    Removed MainMenu Scene
+
+commit 2f3ebe4fc1b3a2cafd8c18ae79f49dbbc085b183
+Merge: 4334f61 9df38a6
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 11:39:15 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 4334f61daaff54b154b9277d3d802271d599cc57
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 11:39:01 2019 +1000
+
+    Add the remaining particle effects
+
+commit 9df38a675b274d135442d7b5c9a8828e022018b3
+Merge: 416b6bf bdbec10
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 11:36:17 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit bdbec10d656097b58879442ad7b8c8540193223e
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 11:13:18 2019 +1000
+
+    Improve particle spawning for infected duck
+    
+    Improve performance by a bit
+
+commit 416b6bf57439ad8e0b0c23deee096ad9712b5266
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 10:25:53 2019 +1000
+
+    Added Infected and Splash Audio and removed unused hand models
+
+commit 1abdc6f2c426fd5ab2313c685afcb23f0a4df644
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 10:18:46 2019 +1000
+
+    Implement infected duck particle spawning
+    
+    Fix an issue where the hand was not showing
+
+commit 883ea0e2fb2951f970d0d556feb48d9dcd1a432b
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 10:02:17 2019 +1000
+
+    Implement splash particle effect
+
+commit 532d9315c52af0745620192c14ae26f10341ed53
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 20 09:35:50 2019 +1000
+
+    Update SuperDuck.prefab
+
+commit 34a50bcef874420738cee991c63e059888b9a9cf
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 20 09:30:37 2019 +1000
+
+    Fixed map positioning and added one particle effect
+
+commit 2798e29de0e56728d86f5517eceedc5abb23e9da
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 21:04:59 2019 +1000
+
+    Added Improvements
+    
+    - Lighting
+    - Duck Models
+    - Improved UI positioning
+
+commit d1e2e402b7f70c49d1a1d2a2d6f93ca985205e23
+Merge: 1b54adc ed51847
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 16:36:41 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 1b54adc2dc0616d8e3b6ded4bcacdaae07011ce1
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 16:35:11 2019 +1000
+
+    Refactor
+
+commit ed5184742e7e0dc413e232dd503ca7087cb37949
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 16:32:14 2019 +1000
+
+    Change the skybox
+
+commit 6c7848cdab8ed7f765cb44bc8cd41616293c6c55
+Merge: f94d488 84a5099
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 16:29:31 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit f94d4886dd25a043e1c57815ae5347e38b2938e4
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 16:29:21 2019 +1000
+
+    Added new GameMain scene and improved lighting
+
+commit 84a5099943ea04b429748b88dfd172ff0cce0f1b
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 16:20:59 2019 +1000
+
+    Add helper comments
+
+commit 543a9071a67dc6ea6081a97f145e3f20ad79dc40
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 16:11:26 2019 +1000
+
+    Add ground material
+
+commit 7a45f8f69a948bc6c723258d0aaf674af005e7a9
+Merge: ec9de00 e6b1ec5
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 16:04:05 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit ec9de004ab3d4bfb9f7800dded9b5d199cb8bc8f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 16:04:01 2019 +1000
+
+    Add target respawning after hit
+    
+    Refactor some code
+
+commit e6b1ec59241644714d7241709287fdc9917da289
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Wed Jun 19 15:10:59 2019 +1000
+
+    Created prefabs from meshes
+
+commit e5806f013d3727d776e5499a9606f331ef2d7a49
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Wed Jun 19 14:50:04 2019 +1000
+
+    Move Material & Textures Folders to Graphics Folder
+
+commit 69d074637fe74ce03bbe05a078a92b6a19a9b2cc
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Wed Jun 19 13:38:52 2019 +1000
+
+    Split controller sprite sheet
+
+commit 43a4c30dc98d77f53baf5373de7568c8e539cf9d
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Wed Jun 19 13:36:16 2019 +1000
+
+    Cleaned up controller sprites
+
+commit 30bfb16ee663a42e23481f219b554bfb88f79873
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 12:52:32 2019 +1000
+
+    Fix an issue where the user cannot start the game after enetering menu
+
+commit b83774350ddbc1b6e752990b80d0c3fbfbee90a5
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 19 12:32:56 2019 +1000
+
+    Implement pause menu
+
+commit 2b5acca8fb73e93ca0b37fbc50479797e5022a9a
+Merge: 11008cf 0a8baa5
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 12:25:47 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 11008cf430fe935501774b68e10a11284b086b71
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 12:25:41 2019 +1000
+
+    Updated GameMain Scene and values for the targets
+
+commit 0a8baa5db7d825d5355dc0aea2947594c53222fb
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Wed Jun 19 12:18:48 2019 +1000
+
+    Flags added and updated!
+
+commit 8128f4234760db117e871f908434b71d7bf0cf3e
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Wed Jun 19 09:45:46 2019 +1000
+
+    Generated the lighting in GameMain
+
+commit e0464e015c5b7811dab6f55473e6293a2952901c
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 18 21:01:33 2019 +1000
+
+    Implement different target movement directions
+
+commit c6d1aa69988d6c088a633bd84fd5224832ab91d6
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:58:10 2019 +1000
+
+    Create controllerTutorial_spr.png.meta
+
+commit edf7dac5d735bdd6af240870d4b852e71c25a059
+Merge: 77ba25d f934ecd
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:57:37 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 77ba25d4bab0dddbf699ed837ece1e30c83a30dd
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:57:20 2019 +1000
+
+    Update GameMain.unity
+
+commit f934ecd142cc3b4f99e9f9cb0c1d11414f995b1d
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 14 16:55:32 2019 +1000
+
+    Added sprites for controller tutorial
+
+commit 964cbbe4c2552abadf0547b649fda86748a63f4f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:50:55 2019 +1000
+
+    Fix menu bugs
+
+commit 8c0eb8f85bcbbb0b1e9438e147b3d8640dde02f7
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:40:27 2019 +1000
+
+    Update Main game scene
+
+commit 00f981527b5a38793a9a6f2df67c3625be767884
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:38:20 2019 +1000
+
+    Update scene
+
+commit 18b7e00cb7afcaa0fd0cdfad4a9c8af215052d9f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 16:37:27 2019 +1000
+
+    Implement water animation
+    
+    Add pause menu
+
+commit b48b708bc0cc83471e2584839265251b8fc89338
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 14 15:54:16 2019 +1000
+
+    Edited Values of throwing and added a new main scene
+
+commit f3133934de3ad42858b5f2ed89e0cc7bc0b1c285
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 15:26:14 2019 +1000
+
+    Add leaderboard, timer and score into game scene
+
+commit 06e9f89725bb11b13c98e6ff3276cbf51d56a607
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 15:16:00 2019 +1000
+
+    Update LevelManager.cs
+
+commit b1c2c25ce954a77482e5aa8e2d637be0a149d0b8
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 15:13:44 2019 +1000
+
+    Add fade in at start of game
+
+commit f672968b4aec258232a436e84eed69338533d9be
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 15:08:17 2019 +1000
+
+    Fix start button bug
+
+commit c1453ede074e09b745dc2b0695083984f21acf90
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 14:31:29 2019 +1000
+
+    Implement Menu fade out
+
+commit 549ff0bc5cb41ca57968be655ac353bdded8594c
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 13:47:03 2019 +1000
+
+    Add offset parameter for target mover
+    
+    Add menu prefab
+
+commit 65a73f5471e1ff76f53209edbab2801dd11f9efb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 12:59:01 2019 +1000
+
+    Rename ButtonTransition class to ButtonEvents
+    
+    Fix bugs
+    Implement button functionality
+
+commit efc22298e90a68ec24141098a384d1a645401996
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 12:35:42 2019 +1000
+
+    Fix an issue where the pointer would go through the button
+
+commit abb196cc1c2581f2058bb1b99aadcdd267fc68fb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 12:07:37 2019 +1000
+
+    Fix fixing throwing bug
+
+commit b81cb3458a3afc6b42a9921029e63dc7c8637b4c
+Merge: 7d2aba3 e9d3cf0
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 14 11:50:54 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 7d2aba314f834e38002b125dd719633458217b3f
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 14 11:50:33 2019 +1000
+
+    Added another target
+
+commit e9d3cf0e4548d9f2c92e038878723802f8c03d61
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 11:49:07 2019 +1000
+
+    Update Menu.unity
+
+commit 1b170d1661859608476986801564f74ac171a80f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 11:46:49 2019 +1000
+
+    Implement UI pointer for UI elements
+
+commit f99bd942c26c4549389b429eb0b263984e4b5e27
+Merge: a77ea77 a13ab36
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 10:54:47 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit a77ea776fa439cc5e64d079b4707ca959f32d644
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 10:54:32 2019 +1000
+
+    Add force as parameter
+
+commit a13ab3671fd3db133400ecae6402f8cb7e3caa83
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 14 10:52:25 2019 +1000
+
+    Edited the main scene
+
+commit aa9926af0639030f489ba37c136414deceb7d705
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 10:51:27 2019 +1000
+
+    Update TargetSpawner.cs
+
+commit 834f1479f1ae87a7e791390be1ef48300188b555
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 10:50:24 2019 +1000
+
+    Update TargetMover.cs
+
+commit 8d6a69c79f6d0ae636e77372709f71ea60f2d77c
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 14 10:47:27 2019 +1000
+
+    Add VRInputModule for UI Interaction
+    
+    Fix grabbing isssue
+    Fix prefabs
+
+commit ba151c8671715a28d34091b8bd70a29858cf9a5a
+Merge: c359303 58ebec9
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 13 16:56:50 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit c3593039e09aef6acaaa22d7015624bae6992d48
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 13 16:55:43 2019 +1000
+
+    Add menu stuff
+
+commit 58ebec94723ba1fcb922059f1ed487d848cf9ff2
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 13 16:53:09 2019 +1000
+
+    Resized (Mid) Flags
+
+commit ab8aca2fd86c38684edb690be6b455da134f9b57
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 13 16:51:19 2019 +1000
+
+    (Mid) Flag Asset
+
+commit e4d9151db6f9b99df8184891bfac082c13a3cd5b
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 13 15:02:16 2019 +1000
+
+    Some Assets for level decoration
+    
+    Balloon + Lightbulb model
+
+commit 6e1a0cee86e7f4432a73b320640c6da610329340
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 13 14:50:39 2019 +1000
+
+    Add menu scene
+
+commit 5abff782f49540b95ddad93af73eec8b5a68eca0
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 13 14:02:58 2019 +1000
+
+    Implement a level manager
+
+commit 24c5c14d24b7b1c616185e941cdb47f949d9fcbb
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Thu Jun 13 11:46:11 2019 +1000
+
+    Models folder
+
+commit 40ec9b15c1a3a08c31e3c2b910debef1a3d41066
+Merge: 903a73b 0bcab27
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 13 11:08:33 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 903a73b404e556f5701d4844cff2c0ca59ac4580
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 13 11:08:30 2019 +1000
+
+    Adding Particle Effects
+
+commit 0bcab27bcf023f31ccb7160ee96ce131e754cfe8
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 13 10:05:47 2019 +1000
+
+    Fix an issue where the player could not grab or release certain ducks
+    
+    Increase super duck range
+
+commit 9db6b7d08ce5d2fbfa329b34f539cb8ab2aa72a3
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 13 09:14:22 2019 +1000
+
+    Updated Throwing audio
+
+commit ff732b3d9eef5e78491bb42179f04d9837400478
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Thu Jun 13 09:11:03 2019 +1000
+
+    Added in remaining Audio
+    
+    The sound that have been added are:
+    - Water
+    - Throwing
+
+commit b60e39046fe76a59a92787ee4b38da682d688fcf
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 22:51:30 2019 +1000
+
+    Update InfectedDuck.cs
+
+commit a80901b299d5013625256cbd9fa0eab3bb6407b7
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 22:49:07 2019 +1000
+
+    Implement super duck mechanic
+
+commit 006f73216c8e1878532eb47a8acab5f75a2b2a1a
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 22:12:31 2019 +1000
+
+    Include a check for the game timer
+
+commit 57a2c9e384eeccc8ddfd13ec4f454bfeaaefa75f
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 22:08:44 2019 +1000
+
+    Add infected duck
+    
+    Add Infected duck prefab
+    Implement score loss when grabbing infected duck
+    Add new tag: "Infected Duck"
+    Update SampleScene
+
+commit c6ba85bc9419a6c9effad8e640b57d2ce29720ca
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 21:45:45 2019 +1000
+
+    Implement Double Points power up
+    
+    Revamp duck spawning
+    Update prefabs
+    Add Double points duck prefab
+    Add new tag: "Double Points Duck"
+    Destroy target spawner and target mover when all targets are destroyed
+    Remove DuckSpawner editor script
+
+commit dae38fd9c056da7db1107644cf1ba02b439b383d
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 20:29:31 2019 +1000
+
+    Apply custom material for super ducks
+
+commit 0592bf8d5c940b5c243bdd4cb7c8621b89cd64cf
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 20:13:43 2019 +1000
+
+    Remove unused prefabs
+    
+    Add new tag: "Super Duck"
+    Update existing prefabs
+
+commit 4fc36d573d70132efeadfe7b36b584dbf5ee8049
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 11 20:07:08 2019 +1000
+
+    Add super duck
+    
+    Fix duck audio bugs
+
+commit 01473dd979f31e034d3e1daf66dd3e225c082d03
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 22:29:18 2019 +1000
+
+    Improve leaderboard manager system
+
+commit 4178afc22275e8c3ddfe6c3f84d7de6ca9efa893
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 20:31:37 2019 +1000
+
+    Implement Leaderboard functionality
+
+commit 39db98a408bb175c9b3eb950d90f0a1681b99330
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 18:16:22 2019 +1000
+
+    Implement tiered score system when hitting targets
+
+commit c7232c98bb0ebf31db4d7d17466d44753028fc08
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 17:52:40 2019 +1000
+
+    Fix an issue where the script was trying to access a destroyed object
+
+commit 84d1d2a9b913cf0b5fa0a2ce255a91bfc2321e88
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 17:45:49 2019 +1000
+
+    Destroy ducks when hit with water
+
+commit c8b121054887e7fa7421531ec40daecacc1f3098
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 15:14:27 2019 +1000
+
+    Update SampleScene.unity
+
+commit 29bf7ef641102faa9aa453069973d344397f2e2d
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 15:13:59 2019 +1000
+
+    Implement duck spawn delay
+
+commit fbf4de71f488a23cd3dbac22759f579ca7fe5d91
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Mon Jun 10 14:42:59 2019 +1000
+
+    Implement moveable targets
+
+commit e7451ab739e537fa274e1b53672da22a3402637f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 16:45:19 2019 +1000
+
+    Add gaze pointer
+
+commit 50a02d02e2840279651933aa18fcc24ec3fbb84b
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 16:37:05 2019 +1000
+
+    Menu Sign added to Game Scene
+
+commit 3bb5bbdd6a6c8b3d9987724e4cc56137c1fd7499
+Merge: 091703b c9100ff
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 16:30:16 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit c9100ff78eada5891638c2e02a36e20efff64219
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 16:16:34 2019 +1000
+
+    Add more duck audio
+
+commit 091703bac70db10835a55d4374ab18b36d131a20
+Merge: 8a14235 3228599
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 16:15:36 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 8a142352d413d8b30c8dfd3ff6a8e04b0ce60302
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 16:15:18 2019 +1000
+
+    Update MainMenu.unity
+
+commit 322859922b7802711ce901e8a6f93f76283b3a1e
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 15:38:22 2019 +1000
+
+    Update Pointer.cs
+
+commit 8c1978b73af30cfa49b3c60a96aec507a7c85acd
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 15:37:31 2019 +1000
+
+    Update Interactable.cs
+
+commit ec89b95c7de45d4bc6bc0801e01cc303a4c77de2
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 15:34:20 2019 +1000
+
+    Fix audio bug
+
+commit 3de7698e1f6aed36b18c5acf54dcb07d9da8bfcc
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 15:32:22 2019 +1000
+
+    Update Duck.prefab
+
+commit 6f33433885dd01026b5f8f7eddf4472ba8060bf2
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 15:29:56 2019 +1000
+
+    Update Duck.prefab
+
+commit 6663dc10b77445539e916bffd6085cadff536822
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 15:22:55 2019 +1000
+
+    Added Audio
+    
+    Added audio on:
+    - Game - Mainly music and ambient background audio
+    - Duck
+
+commit 3e0054f024b8ad0d5f5c89e68e3ae448c9a42fee
+Merge: b27f2b5 58db0cc
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 15:14:37 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit b27f2b5f040056e416da4a865d55ae9e74f8ba4f
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 15:14:11 2019 +1000
+
+    Added Audio Folder
+
+commit 58db0cc75d917ed0ba8fe39c851866adb30a82d1
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 15:05:07 2019 +1000
+
+    Add text mesh pro font asset for CoffeeTin
+
+commit 0d1420b3f6a937bc71e058c25bd9bf541e6d0d1f
+Merge: 7ca8be7 6b5db78
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 14:56:05 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 7ca8be762bc7442a4591ea21e9bc5f70bde166a8
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 14:49:03 2019 +1000
+
+    Baking Lighting for the main scene
+
+commit 6b5db780e00dffb579053b62dcb5712c7229cd12
+Merge: d0133cf 8b6a6dd
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 14:46:05 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit d0133cf29e4e14a1f2d8c7971a078568a35ec755
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 14:45:36 2019 +1000
+
+    reassigning animation again.........
+
+commit 8b6a6dde57d6d8292ba7652f6907c438dadf00cb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 14:40:34 2019 +1000
+
+    Delete Game.meta
+
+commit 61e0163a434aadfb9d25867cf6cddb3f7ed73325
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 14:30:40 2019 +1000
+
+    Create Game.meta
+
+commit 1c3b32ace631efe51d36f1cc491cf31005ebd50f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 14:29:10 2019 +1000
+
+    Delete meta files
+
+commit 9f7fa46ade1f843935b20485b64d41afef4c4970
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 14:27:03 2019 +1000
+
+    Updated project
+
+commit 2b8428e175f19762d8481b2a3cb78ea0d48025de
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 12:51:33 2019 +1000
+
+    Remove probuilder
+
+commit 1ead5acc60f257df553f7b88bd6a8786c5887212
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 12:49:39 2019 +1000
+
+    Delete interactable prefab
+
+commit 24c8a601ee0c17527d41dd47d3adad8601c09057
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 12:41:17 2019 +1000
+
+    Delete LowPolyWater pack meta files
+
+commit 86ff23db4c60bbc7aab3a3ac49e78f4b307f7b0b
+Merge: 7097360 5e2fc83
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 11:49:55 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 709736050a4c492c3b24cb0590828e96c883b5fb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 11:49:45 2019 +1000
+
+    Delete meta files
+
+commit 5e2fc8362bbc5ea2a4802e8e3b18393e12d39003
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 11:49:14 2019 +1000
+
+    Deleting ProBuilder
+
+commit 74cb56cf95f6d357859ebce3c73fe10f317b63db
+Merge: d741c47 503024d
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 11:48:36 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit d741c4743b77533749d0cdd1f6140e7bec6d9f55
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 11:48:23 2019 +1000
+
+    Update Game.unity
+
+commit 503024ded5a855b52d4135795db773aec656834f
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 11:48:01 2019 +1000
+
+    Menu Sign falls on button
+
+commit cea0bdf96ca1eadf33e12100a6268a8eb1be399b
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 11:43:50 2019 +1000
+
+    Update Game.unity
+
+commit f5d4e927ca1571501731126bde31078cd1cd1668
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 11:35:12 2019 +1000
+
+    Completed First Pass on the Main Scene
+
+commit 7c739746beefccb10177dbcc471f2893095719d2
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 11:10:08 2019 +1000
+
+    Add hand mesh to player
+
+commit eaf3c5854d0131b559668159d6274d4a50dfa3ff
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 11:09:36 2019 +1000
+
+    Re-done the main game scene
+
+commit e49729fbb06c90e2e01ed24e2faaccbf1ce2f0b5
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 10:50:10 2019 +1000
+
+    Add font meta files
+
+commit 104acb42a03aeeca9f9fb62d72636bad0d93b6d1
+Merge: 2db9bb4 821ddb4
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 10:44:40 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 2db9bb4faa74e16c30259e9751e8d3941f34c9f7
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 7 10:43:48 2019 +1000
+
+    Fix broken prefab references
+
+commit 821ddb4007390e8f266533d7d45539d3cd36abf3
+Merge: 49322fa 49dab6a
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 10:31:55 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 49322fa71a80173281bb2f83b67ff95f75945bae
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 10:31:52 2019 +1000
+
+    Added Fonts
+
+commit 49dab6a670ccb3158c57c29943d17e398aee2dcc
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 10:22:25 2019 +1000
+
+    Edit main scene
+
+commit 9a9e71731f015d218a5a9bc5caa92f781000bc3d
+Merge: fa704da 6824c3a
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 09:54:58 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit fa704da7e5b06522e264632fc912b55b067cbc42
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 09:54:54 2019 +1000
+
+    Edited MainGame Scene
+
+commit 6824c3a04e68c9a38dde6f570092e686de54643a
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 7 09:51:26 2019 +1000
+
+    Added main menu sample
+
+commit 2f1096a8c6528802269d2260651b27015310ed33
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 7 09:39:56 2019 +1000
+
+    Add Assets packs
+    
+    Assets pack that visual describes what the main scene should look like.
+
+commit ead4e0f84b020faa7dc793e296fc25f2763eded9
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 16:54:34 2019 +1000
+
+    Improve score system
+    
+    Destroy duck when wall is hit
+
+commit 92e6f63ccaf04fa00f4c1c9a330207cd60608a1f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 16:37:24 2019 +1000
+
+    Add score system
+
+commit 5762024ef9076314ee95a0da2bb8a05ca272170f
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 14:43:20 2019 +1000
+
+    Update Timer.cs
+
+commit 43caa05c1f67204613852ac805f41108807a6e95
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 14:00:49 2019 +1000
+
+    Import TextMeshPro assets
+
+commit 6be335ebcd87051ecaf838ea25e593cf5dab5314
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 13:58:45 2019 +1000
+
+    Update QualitySettings.asset
+
+commit afe98ebc752d6f063f4877b5b0b4617579f9c3b2
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 12:54:21 2019 +1000
+
+    Update SampleScene.unity
+
+commit 45040ec0c66539217d7f1a481d53865c9a716542
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 12:53:33 2019 +1000
+
+    Update Interactable.cs
+
+commit 8cee3e3cc9942b17ac7e53e0b668ba4838bb1478
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 12:43:15 2019 +1000
+
+    Improve throwing
+    
+    Remove old code
+
+commit 5e123aea8be2e4a1bf2f136ac83daed1420c8c0a
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu Jun 6 11:01:15 2019 +1000
+
+    Remove and clean old code
+
+commit fd520bc42fb5cde8ffa259ab65d41e69e291a8ae
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 5 16:46:02 2019 +1000
+
+    Implement object throwing
+
+commit 04faa8b40e1687edab102a789325be6f89741f28
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 5 12:54:30 2019 +1000
+
+    Improve grabbing of objects
+
+commit e122e5eff4d75d41e3ec5e135148db8004598619
+Author: Ali <elsaleh78@gmail.com>
+Date:   Wed Jun 5 11:57:23 2019 +1000
+
+    Implement pointer interaction
+
+commit e381848d2f4bb0eb6f8263de4d5ec954dd3d0b4e
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Tue Jun 4 22:08:11 2019 +1000
+
+    Implement Duck Spawner
+    
+    Improve object destroying when spawning game objects in editor
+
+commit 708ce2c57cbb810400da9fe816b247ec7e63daed
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 16:53:29 2019 +1000
+
+    Implement pointer for picking up objects
+
+commit 05d78eb2ace52b5d1e5b42dd7ad751df49cc6b06
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 15:06:12 2019 +1000
+
+    Setup oculus device
+    
+    Fix build issues
+
+commit ca6ff061582b620b5601e864f52e250e982ad7ab
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 13:59:37 2019 +1000
+
+    Add Oculus assets
+    
+    Switch platform to android
+
+commit 731d03febb9c3f5a178cd67ab829efa2c1118c1b
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 12:38:39 2019 +1000
+
+    Add comments
+
+commit f634daa02d4d038381ca1d7ce39bdc098e218c80
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 12:17:01 2019 +1000
+
+    Remove Oculus Integration package
+
+commit 83ed08e325986e5788e257c58afc357f116783cb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 12:06:43 2019 +1000
+
+    Update Floor.mat
+
+commit 87d5675694f74268ab57d65c6b0cef5865d3ead7
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 12:00:06 2019 +1000
+
+    Tweak post process settings
+
+commit f2789f748fc71a1fa99c523d810d7f22f9996149
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 11:20:29 2019 +1000
+
+    Add Postprocess package
+
+commit e93d97e038ad924e0b14c0bba1ed03ff2bd39ef3
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 11:12:10 2019 +1000
+
+    Add sphere gizmos to easily select the player in the editor
+
+commit ee5162fa869773a9269f1c820acf71b4d84cbb2e
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 11:08:59 2019 +1000
+
+    Implement player controls
+    
+    Ignore .meta files
+
+commit 501d24a2c7e40e76ecd221ac3600caf94bc0de7b
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 09:48:57 2019 +1000
+
+    Remove unused code
+    
+    Update scene
+
+commit 52005cd72d914a1a5bc00cbf6e36b4196c31a582
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 09:36:50 2019 +1000
+
+    Remove ExecuteInEditMode tag
+
+commit 8bfcdabce3d99f5f0ce8dc6799f56233e0952fbc
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri May 31 09:33:18 2019 +1000
+
+    Make targets a child of target spawner
+
+commit c6b64a59c53b207e2838b53b4328b53a2b15a087
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Thu May 30 22:46:53 2019 +1000
+
+    Update SampleScene.unity
+
+commit 9d757fd6f03998fb439043850db6ed152563e0e6
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Thu May 30 22:45:18 2019 +1000
+
+    Clean up code
+
+commit 9b6deaf0c26f9dcbaf6de06f965b132daea59176
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Thu May 30 21:53:13 2019 +1000
+
+    Implement rotating targets
+
+commit f960d361b8a9a9ccc1c2a5f7be3654ce65b37712
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 16:54:43 2019 +1000
+
+    Add rotating target
+    
+    Remove old code
+
+commit 2c91cf142e53f4dbb9f7834a4d3c565d6b5be9e4
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 12:51:40 2019 +1000
+
+    Add Oculus Integration Plugin
+
+commit 5ea24d676b4dbdc7a2b838b31e677d79cf366227
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 12:20:50 2019 +1000
+
+    Fix an issue when spawning clowns, they would not delete the previous clowns in scene
+
+commit 5e562daa6550eaa94c2e19f6896fe31f70d71bf6
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 11:31:18 2019 +1000
+
+    Clean code
+
+commit 093c388476a649d6f582e020d16b3f7f0777d161
+Author: Ali El Saleh <elsaleh78@gmail.com>
+Date:   Thu May 30 11:23:11 2019 +1000
+
+    Create README.md
+
+commit be3292c79a2c8b5d8c76acb7a0b8c28ca27a5b18
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 11:21:36 2019 +1000
+
+    Update ClownSpawner.cs
+
+commit 15c1011b98bb91b281c2cde7b40fd7d34ea8c711
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 11:20:13 2019 +1000
+
+    Update ClownSpawner.cs
+
+commit 99930b43cf34f8b5574e9ac8a1db8540a4cb12cb
+Author: Ali <elsaleh78@gmail.com>
+Date:   Thu May 30 10:49:44 2019 +1000
+
+    Initial commit

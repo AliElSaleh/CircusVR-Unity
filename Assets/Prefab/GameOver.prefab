@@ -864,7 +864,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: You lost dude!
+  m_text: 'Game
+
+    Over'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f42ffd1a1d20c145a2f9f9eccf589d7, type: 2}
   m_sharedMaterial: {fileID: 21352062747037628, guid: 6f42ffd1a1d20c145a2f9f9eccf589d7,
@@ -910,7 +912,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 9
+  m_firstOverflowCharacterIndex: 5
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -933,10 +935,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: -69.863945, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114957197275761454}
-    characterCount: 14
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -1073,7 +1075,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5.0000005, y: 0}
+  m_AnchoredPosition: {x: -5.5, y: 1.19}
   m_SizeDelta: {x: 454.5, y: 554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224123975459307616
