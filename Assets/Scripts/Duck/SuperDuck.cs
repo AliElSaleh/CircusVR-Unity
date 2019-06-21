@@ -17,6 +17,8 @@ namespace Assets.Scripts.Duck
                     ParticleHitPrefab = Instantiate(ParticleHitPrefab, Collision.contacts[0].point, Quaternion.identity);
                     ParticleHitPrefab.GetComponent<ParticleSystem>().Play();
 
+                    GameObject.Find("HitSoundSource").GetComponent<AudioSource>().Play();
+
                     if (Timer.Finished)
 						return;
 

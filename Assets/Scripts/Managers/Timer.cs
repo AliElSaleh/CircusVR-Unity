@@ -11,9 +11,6 @@ namespace Assets.Scripts
         [Range(1, 60)]
         public int TimeInSeconds = 60;
 
-        public AudioClip TickSound = null;
-        private AudioSource SoundEffectSource;
-
         private float OneSecond;
         private float TimeLeft;
 
@@ -32,8 +29,6 @@ namespace Assets.Scripts
 
             LeaderboardManager = GameObject.Find("Leaderboard").GetComponent<LeaderboardManager>();
             LevelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-
-            SoundEffectSource = GameObject.Find("SoundEffect Source").GetComponent<AudioSource>();
         }
 
         [UsedImplicitly]
@@ -61,8 +56,7 @@ namespace Assets.Scripts
             {
                 if (OneSecond <= 0.0f)
                 {
-                    SoundEffectSource.clip = TickSound;
-                    SoundEffectSource.Play();
+                    GameObject.Find("TimerSoundSource").GetComponent<AudioSource>().Play();
 
                     OneSecond = 1.0f;
                 }
