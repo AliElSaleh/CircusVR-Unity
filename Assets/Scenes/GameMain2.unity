@@ -12190,7 +12190,7 @@ Transform:
   - {fileID: 2039975339}
   - {fileID: 719319538}
   m_Father: {fileID: 1107655484}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1444310091 stripped
 Transform:
