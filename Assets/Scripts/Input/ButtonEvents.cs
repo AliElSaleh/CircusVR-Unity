@@ -97,13 +97,9 @@ namespace Assets.Scripts.Input
         {
             Timer.Paused = false;
             Pointer.bHeld = false;
-            //Events.EnableInput();
-            //Pointer.ShowLine();
-            //Pointer.ShowReticule();
             LevelManager.IsInGame = true;
             LevelManager.ShouldRestart = true;
             LevelManager.IsGameOver = false;
-            //LevelManager.Resume();
             SceneManager.LoadScene(1);
         }
     }

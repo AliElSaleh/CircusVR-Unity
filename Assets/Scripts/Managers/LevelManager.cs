@@ -46,7 +46,7 @@ namespace Assets.Scripts.Managers
         {
             Time.timeScale = 0.0f;
             IsPaused = true;
-            //FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.5f);
+            FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.5f);
             ShowPauseMenu();
 
             if (GameObject.Find("Player").GetComponent<Player.Player>().Pointer)
@@ -60,7 +60,7 @@ namespace Assets.Scripts.Managers
         {
             Time.timeScale = 1.0f;
             IsPaused = false;
-            //FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.0f);
+            FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.0f);
             HidePauseMenu();
 
             if (GameObject.Find("Player").GetComponent<Player.Player>().Pointer)
