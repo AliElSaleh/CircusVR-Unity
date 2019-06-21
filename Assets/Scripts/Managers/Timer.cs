@@ -11,9 +11,10 @@ namespace Assets.Scripts
         [Range(1, 60)]
         public int TimeInSeconds = 60;
 
-        [Range(1, 30)]
-        public int WaitingTimeInSeconds = 2;
+        public AudioClip TickSound = null;
+        private AudioSource SoundEffectSource;
 
+        private float OneSecond;
         private float TimeLeft;
 
         public static bool Paused;
@@ -31,6 +32,8 @@ namespace Assets.Scripts
 
             LeaderboardManager = GameObject.Find("Leaderboard").GetComponent<LeaderboardManager>();
             LevelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+
+            SoundEffectSource = GameObject.Find("SoundEffect Source").GetComponent<AudioSource>();
         }
 
         [UsedImplicitly]
@@ -51,6 +54,19 @@ namespace Assets.Scripts
         {
             // Decrement the time left
             TimeLeft -= Time.deltaTime;
+            OneSecond -= Time.deltaTime;
+
+            // Play tick sound every second
+            if (!Finished)
+            {
+                if (OneSecond <= 0.0f)
+                {
+                    SoundEffectSource.clip = TickSound;
+                    SoundEffectSource.Play();
+
+                    OneSecond = 1.0f;
+                }
+            }
 
             // Update UI
             if (TimeLeft > 0.0f && !Finished)
