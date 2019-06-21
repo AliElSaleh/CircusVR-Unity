@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Assets.Scripts.Player;
-using UnityEngine;
+﻿using UnityEngine;
 using JetBrains.Annotations;
 using UnityEngine.UI;
 
@@ -8,10 +6,8 @@ namespace Assets.Scripts.Managers
 {
     public class LevelManager : MonoBehaviour
     {
-        public List<TargetSpawner> TargetSpawners;
-        private List<Transform> TargetSpawnersOnTargetMovers;
-
-        public static GameObject PauseMenu = null;
+        public static GameObject PauseMenu;
+        public static GameObject GameOver;
         public Canvas FadeCanvas = null;
 
         private float AlphaFadeValue = 1.0f;
@@ -25,6 +21,9 @@ namespace Assets.Scripts.Managers
         {
             PauseMenu = GameObject.FindWithTag("PauseMenu");
             PauseMenu.SetActive(false);
+
+            GameOver = GameObject.FindWithTag("GameOver");
+            GameOver.SetActive(false);
         }
 
         [UsedImplicitly]

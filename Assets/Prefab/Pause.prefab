@@ -282,7 +282,6 @@ MonoBehaviour:
   DownColor:
     serializedVersion: 2
     rgba: 4284440575
-  FadeCanvas: {fileID: 0}
 --- !u!114 &114151037430205244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -658,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba6042bbfc03d644aaf90a1e9f3eb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 4
+  Type: 5
   NormalColor:
     serializedVersion: 2
     rgba: 16777215
@@ -668,7 +667,6 @@ MonoBehaviour:
   DownColor:
     serializedVersion: 2
     rgba: 4284440575
-  FadeCanvas: {fileID: 0}
 --- !u!114 &114637907537806402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -961,7 +959,6 @@ MonoBehaviour:
   DownColor:
     serializedVersion: 2
     rgba: 4284440575
-  FadeCanvas: {fileID: 0}
 --- !u!222 &222012661650387008
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1080,8 +1077,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337652080955420}
-  m_LocalRotation: {x: -0, y: -0.0000004768371, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.68}
+  m_LocalRotation: {x: -0, y: -0.7071071, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 0, y: 0, z: -0.05}
   m_LocalScale: {x: 0.015262454, y: 0.015262454, z: 0.015262454}
   m_Children:
   - {fileID: 224326504862876534}
@@ -1090,10 +1087,10 @@ RectTransform:
   - {fileID: 224763047197582108}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 28.27, y: 1.636}
+  m_AnchoredPosition: {x: -4.51, y: 1}
   m_SizeDelta: {x: 454.5, y: 554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224326504862876534

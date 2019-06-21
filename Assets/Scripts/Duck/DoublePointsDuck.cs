@@ -31,7 +31,7 @@ namespace Assets.Scripts.Duck
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
                         TextComponent.color = Color.red;
-                        TextComponent.fontSize = FontSize*2;
+                        TextComponent.fontSize = 38892.0f;
                         TextComponent.text = "+" + ScoreToAdd;
                         ScoreHitPrefab.transform.LookAt(new Vector3(0.0f, 0.0f, 0.0f));
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
@@ -44,7 +44,7 @@ namespace Assets.Scripts.Duck
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
                         TextComponent.color = Color.red;
-                        TextComponent.fontSize = FontSize*2;
+                        TextComponent.fontSize = 38892.0f;
                         TextComponent.text = "+" + ScoreToAdd;
                         ScoreHitPrefab.transform.LookAt(new Vector3(0.0f, 0.0f, 0.0f));
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
@@ -58,7 +58,7 @@ namespace Assets.Scripts.Duck
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
                         TextComponent.color = Color.red;
-                        TextComponent.fontSize = FontSize*2;
+                        TextComponent.fontSize = 38892.0f;
                         TextComponent.text = "+" + ScoreToAdd;
                         ScoreHitPrefab.transform.LookAt(new Vector3(0.0f, 0.0f, 0.0f));
                         ScoreHitPrefab.transform.rotation = Quaternion.LookRotation(Vector3.zero - ScoreHitPrefab.transform.position) * Quaternion.Inverse(new Quaternion(0.0f, 180.0f, 0.0f, 1.0f));
