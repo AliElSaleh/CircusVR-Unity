@@ -14,6 +14,7 @@ TagManager:
   - PauseMenu
   - FxTemporaire
   - MysteryTarget
+  - GameOver
   layers:
   - Default
   - TransparentFX
