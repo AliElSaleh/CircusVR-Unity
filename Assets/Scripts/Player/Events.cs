@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Assets.Scripts.Managers;
 using JetBrains.Annotations;
 using UnityEngine.Events;
 
@@ -66,6 +67,9 @@ namespace Assets.Scripts.Player
 
         private void Input()
         {
+            if (LevelManager.IsGameOver)
+                return;
+
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             {
                 PickupLocation = Player.Grabber.transform.position;

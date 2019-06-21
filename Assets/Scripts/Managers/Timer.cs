@@ -16,8 +16,11 @@ namespace Assets.Scripts
 
         private float TimeLeft;
 
+        public static bool Paused;
         public static bool Finished;
 
+        private LeaderboardManager LeaderboardManager;
+        private LevelManager LevelManager;
         private TextMeshProUGUI TextMeshProUGUIComponent;
 
         [UsedImplicitly]
@@ -25,12 +28,15 @@ namespace Assets.Scripts
         {
             TextMeshProUGUIComponent = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
             TimeLeft = TimeInSeconds;
+
+            LeaderboardManager = GameObject.Find("Leaderboard").GetComponent<LeaderboardManager>();
+            LevelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         }
 
         [UsedImplicitly]
         private void Update()
         {
-            if (Application.isPlaying)
+            if (Application.isPlaying && !Paused)
                 Countdown();
         }
 
@@ -56,23 +62,17 @@ namespace Assets.Scripts
             // Game over
             if (TimeLeft <= 0.0f && !Finished)
             {
-                Player.Events.DisableInput();
-                Player.Pointer.HideLine();
-                Player.Pointer.HideReticule();
                 Finished = true;
 
-                GameObject.Find("Leaderboard").GetComponent<LeaderboardManager>().AddEntry(ScoreManager.GetScore());
+                LeaderboardManager.AddEntry(ScoreManager.GetScore());
+                LevelManager.DisplayEndGame();
             }
 
             // Restart game
-            if (TimeLeft < -WaitingTimeInSeconds)
+            if (TimeLeft < 0.0f && LevelManager.ShouldRestart)
             {
                 TimeLeft = TimeInSeconds;
                 Finished = false;
-
-                Player.Events.EnableInput();
-                Player.Pointer.ShowLine();
-                Player.Pointer.ShowReticule();
 
                 ScoreManager.ResetScore();
             }

@@ -30,6 +30,7 @@ namespace Assets.Scripts.Duck
 
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                        TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                         TextComponent.color = Color.red;
                         TextComponent.fontSize = 38892.0f;
                         TextComponent.text = "+" + ScoreToAdd;
@@ -43,6 +44,7 @@ namespace Assets.Scripts.Duck
 
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                        TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                         TextComponent.color = Color.red;
                         TextComponent.fontSize = 38892.0f;
                         TextComponent.text = "+" + ScoreToAdd;
@@ -57,6 +59,7 @@ namespace Assets.Scripts.Duck
 
                         // Spawn the score hit UI element (for feedback)
                         ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                        TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                         TextComponent.color = Color.red;
                         TextComponent.fontSize = 38892.0f;
                         TextComponent.text = "+" + ScoreToAdd;

@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchForce: 300
   ThrowForce: 30
-  ParticleHitPrefab: {fileID: 100000, guid: 3156817f64ec68948ad6bb26569b9ef5, type: 2}
+  ParticleHitPrefab: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 2}
   ScoreHitPrefab: {fileID: 1694314925723712, guid: 8b65104c5faf64b48a7f26e991928584,
     type: 2}
   ScoreLoss: 100

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using JetBrains.Annotations;
 using TMPro;
-using UnityEditor;
 
 namespace Assets.Scripts.Managers
 {
@@ -11,6 +9,7 @@ namespace Assets.Scripts.Managers
 	{
 		public LeaderboardSlot LeaderboardSlot = null;
 
+        [SerializeField][HideInInspector]
 		private GameObject Entries;
 
 		[Range(1, 10)]

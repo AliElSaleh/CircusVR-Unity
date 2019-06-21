@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Managers;
+using Assets.Scripts.Player;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
@@ -59,9 +60,7 @@ namespace Assets.Scripts.Input
             switch (Type)
             {
                 case ButtonType.Start:
-                    SceneManager.LoadScene(1);
-                    LevelManager.IsInGame = true;
-                    LevelManager.Resume();
+                    StartGame();
                 break;
 
                 case ButtonType.Options:
@@ -74,8 +73,7 @@ namespace Assets.Scripts.Input
                 break;
 
                 case ButtonType.Restart:
-                    SceneManager.LoadScene(1);
-                    LevelManager.IsInGame = true;
+                    StartGame();
                     break;
 
                 case ButtonType.Resume:
@@ -93,6 +91,20 @@ namespace Assets.Scripts.Input
             LevelManager.IsInGame = false;
             AlphaFadeValue = 0.0f;
             FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
+        }
+
+        private static void StartGame()
+        {
+            Timer.Paused = false;
+            Pointer.bHeld = false;
+            //Events.EnableInput();
+            //Pointer.ShowLine();
+            //Pointer.ShowReticule();
+            LevelManager.IsInGame = true;
+            LevelManager.ShouldRestart = true;
+            LevelManager.IsGameOver = false;
+            //LevelManager.Resume();
+            SceneManager.LoadScene(1);
         }
     }
 }

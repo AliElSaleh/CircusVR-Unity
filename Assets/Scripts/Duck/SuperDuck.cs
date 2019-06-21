@@ -29,6 +29,7 @@ namespace Assets.Scripts.Duck
                     ScoreManager.Add(ScoreToAdd);
 
                     ScoreHitPrefab = Instantiate(ScoreHitPrefab, Collision.contacts[0].point, Quaternion.identity);
+                    TextComponent = ScoreHitPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                     TextComponent.color = Color.blue;
                     TextComponent.fontSize = 38892.0f;
                     TextComponent.text = "+" + ScoreToAdd;

@@ -9,13 +9,17 @@ namespace Assets.Scripts.Managers
     {
         public static GameObject PauseMenu;
         public static GameObject GameOver;
-        public Canvas FadeCanvas = null;
+        public static Canvas FadeCanvas;
+
+        public GameObject GameOverParticlePrefab;
 
         private float AlphaFadeValue = 1.0f;
         private bool FinishedFade;
 
+        public static bool ShouldRestart;
         public static bool IsPaused;
         public static bool IsInGame;
+        public static bool IsGameOver;
 
         [UsedImplicitly]
         private void Start()
@@ -25,24 +29,15 @@ namespace Assets.Scripts.Managers
 
             GameOver = GameObject.FindWithTag("GameOver");
             GameOver.SetActive(false);
+
+            FadeCanvas = GameObject.Find("FadeCanvas").GetComponent<Canvas>();
         }
 
         [UsedImplicitly]
         private void Update()
         {
             if (FinishedFade)
-            {
-                if (!IsPaused)
-                {
-                    FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.0f);
-                }
-                else
-                {
-                    FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.5f);
-                }
-
                 return;
-            }
 
             FadeIn(0.0f);
         }
@@ -51,6 +46,7 @@ namespace Assets.Scripts.Managers
         {
             Time.timeScale = 0.0f;
             IsPaused = true;
+            //FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.5f);
             ShowPauseMenu();
 
             if (GameObject.Find("Player").GetComponent<Player.Player>().Pointer)
@@ -64,6 +60,7 @@ namespace Assets.Scripts.Managers
         {
             Time.timeScale = 1.0f;
             IsPaused = false;
+            //FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0.0f);
             HidePauseMenu();
 
             if (GameObject.Find("Player").GetComponent<Player.Player>().Pointer)
@@ -87,18 +84,21 @@ namespace Assets.Scripts.Managers
             }
         }
 
-        public void FadeOut(float TargetAlpha)
+        public void DisplayEndGame()
         {
-            // Fade in
-            AlphaFadeValue += Time.deltaTime;
+            Timer.Paused = true;
+            IsGameOver = true;
+            IsPaused = true;
 
-            FadeCanvas.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, AlphaFadeValue);
+            SpawnConfetti();
 
-            if (AlphaFadeValue > TargetAlpha)
-            {
-                FinishedFade = true;
-                AlphaFadeValue = TargetAlpha;
-            }
+            ShowGameOver();
+        }
+
+        private void SpawnConfetti()
+        {
+            GameOverParticlePrefab = Instantiate(GameOverParticlePrefab, new Vector3(-4.7f, 3.65f, 0.05f), Quaternion.identity);
+            GameOverParticlePrefab.GetComponent<ParticleSystem>().Play();
         }
 
         public static void Quit()
@@ -114,6 +114,16 @@ namespace Assets.Scripts.Managers
         private static void ShowPauseMenu()
         {
             PauseMenu.SetActive(true);
+        }
+
+        private static void HideGameOver()
+        {
+            GameOver.SetActive(false);
+        }
+
+        private static void ShowGameOver()
+        {
+            GameOver.SetActive(true);
         }
     }
 }

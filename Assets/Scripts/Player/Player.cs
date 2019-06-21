@@ -24,11 +24,11 @@ namespace Assets.Scripts.Player
 
             if (OVRInput.GetDown(OVRInput.Button.One))
             {
-                if (!LevelManager.IsPaused)
+                if (!LevelManager.IsPaused && !LevelManager.IsGameOver)
                 {
                     LevelManager.Pause();
                 }
-                else
+                else if (!LevelManager.IsGameOver)
                 {
                     LevelManager.Resume();
                 }
