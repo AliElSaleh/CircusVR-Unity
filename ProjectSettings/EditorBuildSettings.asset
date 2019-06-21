@@ -5,21 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 6c5434a8ed5a3c6408974ca759740aa4
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 937570782a86db840a5a48f10dcd58fa
-  - enabled: 0
-    path: Assets/Oculus/VR/Scenes/UI.unity
-    guid: 1f4d3ae64a10d434db219de8b14348e1
-  - enabled: 0
-    path: Assets/Scenes/GameMain.unity
-    guid: 02a3bf5e10d47c140980ced647bd1263
   - enabled: 1
     path: Assets/Scenes/GameMain2.unity
     guid: 65af6abae424a8d4da02e17904caa9bb
