@@ -18,6 +18,8 @@ namespace Assets.Scripts.Duck
                         ParticleHitPrefab.GetComponent<ParticleSystem>().Play();
                     }
 
+                    GameObject.Find("HitSoundSource").GetComponent<AudioSource>().Play();
+
                     if (Timer.Finished)
 						return;
 
