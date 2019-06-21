@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Player;
+using UnityEngine;
 using JetBrains.Annotations;
 using UnityEngine.UI;
 
