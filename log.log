@@ -1,3 +1,114 @@
+commit ec60176b1ff73337b00060ccb64189dd26a1a0f8
+Merge: 856b9f2 dd9dfd3
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:55:28 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 856b9f2a9a4d397802c102de2aa7527d8b2abaad
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:55:25 2019 +1000
+
+    Add mystery target material
+
+commit dd9dfd3547a41c0b88896f7e4f2a0f16e57cc8a4
+Merge: 61d578a 654cd26
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 15:53:22 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 61d578a3429f42ef566d6f242ae5978850f91def
+Author: EdwardossLu <50994768+EdwardossLu@users.noreply.github.com>
+Date:   Fri Jun 21 15:53:15 2019 +1000
+
+    Edited the main menu
+
+commit 654cd2631302aa2122003b704fef9e0d13a055b8
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 15:50:38 2019 +1000
+
+    Mystery Target is a sprite for REAL now!
+
+commit 0dc93524ad81b13ae6319fb6fcec9369c1d9dc0b
+Merge: 344c20f 82f8cc3
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 15:49:46 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 344c20f48586a0ac4f732d41901b1f15d903956f
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 15:49:30 2019 +1000
+
+    More of the people
+
+commit 82f8cc30409d0e57bc6d0925cb2baef623b363ee
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:48:11 2019 +1000
+
+    Remove meta files
+
+commit 914a6eaa6164e11bba4296118f4413825b35c7f2
+Merge: 5b5764f ed2c669
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:47:01 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit 5b5764f57389b88a288d2ef3c8c44e8b0b1032ee
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:46:32 2019 +1000
+
+    Add remaining sound effects
+
+commit ed2c669c4a4e92c4822abf97dc7d33ba24286b1c
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 15:46:30 2019 +1000
+
+    Added the creepy people
+
+commit d8a36baa58887845660f823ec6050a32c4dd3062
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 15:40:39 2019 +1000
+
+    Silhouettes of people added
+
+commit d34f9ee5234a8e25e2b0b6a1e65fb51b4ffabb5a
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:17:49 2019 +1000
+
+    Add timer ticking sound
+
+commit 3550f26584b20712be474f40fa3411457a4b45c7
+Merge: eb5fe20 32c710c
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:16:00 2019 +1000
+
+    Merge branch 'master' of https://github.com/AliElSaleh/CircusVR-Unity
+
+commit eb5fe208f0ff0c252bbd4940f270863b8a0a1184
+Author: Ali <elsaleh78@gmail.com>
+Date:   Fri Jun 21 15:14:00 2019 +1000
+
+    Update Game scene
+    
+    Subtract score when infected duck has hit a target
+    Update game over prefab
+    Add log file
+
+commit 32c710c70ae444fc7630d37d0a0ad7cd001bc263
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 15:07:21 2019 +1000
+
+    Mystery Target now a sprite
+
+commit 9f2973f196d17266ee02899331f5c3b963a3d96a
+Author: glittika-gerdmanee <glittika.gerdmanee@gmail.com>
+Date:   Fri Jun 21 14:54:46 2019 +1000
+
+    Mystery Target image
+
 commit 5d69f54b14c5c36a2e08c9af43b9d08b81415843
 Author: Ali <elsaleh78@gmail.com>
 Date:   Fri Jun 21 14:50:05 2019 +1000
