@@ -34,6 +34,8 @@ namespace Assets.Scripts.Player
             GameObject.GetComponent<Rigidbody>().isKinematic = false;
             GameObject.transform.parent = null;
 
+            GameObject.Find("ThrowingSoundSource").GetComponent<AudioSource>().Play();
+
             Vector3 ThrowVector = (GameObject.transform.position - Events.PickupLocation);
 
             Vector3 Direction = Camera.main.transform.forward;

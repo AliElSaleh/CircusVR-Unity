@@ -174,9 +174,8 @@ namespace Assets.Scripts.Duck
                     Instantiate(SplashParticle, SpawnPoint, SplashParticle.transform.rotation);
                 }
                 break;
-			}	
-            
-		}
+			}
+        }
 	}
 }
 

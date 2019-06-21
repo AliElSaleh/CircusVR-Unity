@@ -11,9 +11,7 @@ namespace Assets.Scripts
         [Range(1, 60)]
         public int TimeInSeconds = 60;
 
-        [Range(1, 30)]
-        public int WaitingTimeInSeconds = 2;
-
+        private float OneSecond;
         private float TimeLeft;
 
         public static bool Paused;
@@ -51,6 +49,18 @@ namespace Assets.Scripts
         {
             // Decrement the time left
             TimeLeft -= Time.deltaTime;
+            OneSecond -= Time.deltaTime;
+
+            // Play tick sound every second
+            if (!Finished)
+            {
+                if (OneSecond <= 0.0f)
+                {
+                    GameObject.Find("TimerSoundSource").GetComponent<AudioSource>().Play();
+
+                    OneSecond = 1.0f;
+                }
+            }
 
             // Update UI
             if (TimeLeft > 0.0f && !Finished)
