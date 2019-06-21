@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: 31d10c6be9bc9f9448573d6026781586
+guid: c8be9779dc564604db2c5a2122e68680
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: crowdSilhouettes_spr_0
+    21300002: crowdSilhouettes_spr_1
+    21300004: crowdSilhouettes_spr_2
+    21300006: crowdSilhouettes_spr_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,11 +119,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: crowdSilhouettes_spr_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 462
+        width: 298
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82d541bee5299642b3b6e0e4efe2a1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowdSilhouettes_spr_1
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 579
+        width: 248
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fff37589ba425b41a83dd5e3f06fd6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowdSilhouettes_spr_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 255
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a5ce540ca941e40bb9295a93a84a47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowdSilhouettes_spr_3
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 313
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21358778785d5249ad60b6ad8cafcce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 054042473e37af34f8c21836b7a56f65
+    spriteID: 0a2fe6c5225af984490f219ace7fb338
     vertices: []
     indices: 
     edges: []
