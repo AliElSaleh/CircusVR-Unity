@@ -1,2 +1,2 @@
 # CircusVR-Unity
-A game in VR where you water down clowns!
+A game in VR where you throw ducks at flying targets
